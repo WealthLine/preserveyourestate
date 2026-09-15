@@ -284,6 +284,11 @@ export default function Home() {
                 </span>
               </div>
               <p className="fine" style={{ marginTop: "1.4rem" }}>
+                <Link href="/wealth-management">
+                  Explore tax-efficient wealth management →
+                </Link>
+              </p>
+              <p className="fine" style={{ marginTop: "0.6rem" }}>
                 <Link href="/calculator">See your estate tax number →</Link>
               </p>
             </div>
@@ -435,6 +440,18 @@ export default function Home() {
               <span className="guide-meta">
                 <span>Retirement planning service</span>
                 <span className="text-link">Explore Retirement Planning →</span>
+              </span>
+            </Link>
+            <Link className="guide-card" href="/guides/massachusetts-estate-planning">
+              <span className="guide-tag">Massachusetts Estate Planning</span>
+              <h3>What Does Estate Planning in Massachusetts Involve?</h3>
+              <p>
+                Review the estate-tax threshold, trust funding, beneficiary coordination, and the
+                planning questions that may need attorney and CPA input.
+              </p>
+              <span className="guide-meta">
+                <span>Massachusetts estate planning guide</span>
+                <span className="text-link">Read the Massachusetts Estate Planning Guide →</span>
               </span>
             </Link>
           </div>
