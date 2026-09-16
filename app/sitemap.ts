@@ -43,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/guides/tax-advantaged-retirement-accounts`,
+      lastModified: new Date("2026-09-16"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/privacy`,
       lastModified: LAST_UPDATED,
       changeFrequency: "yearly",
