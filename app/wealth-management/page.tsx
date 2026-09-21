@@ -196,6 +196,14 @@ export default function WealthManagementPage() {
             read the educational <Link href="/guides/ab-trust">A/B trust planning guide</Link>. Any
             trust structure should be evaluated and drafted by a qualified estate planning attorney.
           </p>
+          <p>
+            If your planning questions extend beyond investments to estate documents, retirement income,
+            business interests, and coordination with your existing professionals, explore our{" "}
+            <Link href="/financial-planning-for-high-net-worth-individuals">
+              financial planning for high-net-worth individuals
+            </Link>{" "}
+            service for Massachusetts households.
+          </p>
 
           <div className="next-step reveal-scale">
             <p className="eyebrow" style={{ justifyContent: "center" }}>
