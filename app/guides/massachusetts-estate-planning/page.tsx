@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     publishedTime: "2026-09-08",
     modifiedTime: "2026-09-08",
     authors: ["Michael Cammarata, CFP®"],
+    images: [
+      {
+        url: "https://www.preserveyourestate.com/og?topic=Massachusetts%20Estate%20Planning%20Guide&label=Educational%20guide",
+        width: 1200,
+        height: 630,
+        alt: "MSA Financial Massachusetts estate planning guide",
+      },
+    ],
   },
 };
 

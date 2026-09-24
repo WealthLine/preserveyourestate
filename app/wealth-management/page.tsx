@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     title: "Tax-Efficient Wealth Management in Massachusetts | MSA Financial",
     description:
       "Wealth management that connects your investments to your estate and tax plan, with coordinated planning for Massachusetts families.",
+    images: [
+      {
+        url: "https://www.preserveyourestate.com/og?topic=Tax-Efficient%20Wealth%20Management&label=Massachusetts%20financial%20coordination",
+        width: 1200,
+        height: 630,
+        alt: "MSA Financial tax-efficient wealth management",
+      },
+    ],
   },
 };
 

@@ -31,6 +31,14 @@ export const metadata: Metadata = {
     siteName: siteConfig.brand.displayName,
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
+    images: [
+      {
+        url: `${siteConfig.seo.siteUrl}/og?topic=Educational%20Planning%20Resources&label=Massachusetts%20financial%20coordination`,
+        width: 1200,
+        height: 630,
+        alt: "MSA Financial educational planning resources",
+      },
+    ],
   },
 };
 

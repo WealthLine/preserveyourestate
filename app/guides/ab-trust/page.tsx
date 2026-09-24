@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     publishedTime: "2026-07-01",
     modifiedTime: "2026-07-29",
     authors: ["Michael Cammarata, CFP®"],
+    images: [
+      {
+        url: "https://www.preserveyourestate.com/og?topic=A%2FB%20Trust%20Planning&label=Massachusetts%20guide",
+        width: 1200,
+        height: 630,
+        alt: "MSA Financial guide to A/B trust planning in Massachusetts",
+      },
+    ],
   },
 };
 

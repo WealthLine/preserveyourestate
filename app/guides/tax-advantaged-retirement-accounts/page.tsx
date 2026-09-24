@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     publishedTime: "2026-09-17",
     modifiedTime: "2026-09-17",
     authors: ["Michael Cammarata, CFP®"],
+    images: [
+      {
+        url: "https://www.preserveyourestate.com/og?topic=Tax-Advantaged%20Retirement%20Accounts&label=Massachusetts%20guide",
+        width: 1200,
+        height: 630,
+        alt: "MSA Financial guide to tax-advantaged retirement accounts",
+      },
+    ],
   },
 };
 

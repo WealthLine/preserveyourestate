@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     title: "Massachusetts Estate Tax Calculator (2026)",
     description:
       "Estimate your Massachusetts estate tax under 2026 law and see what coordinated planning could change.",
+    images: [
+      {
+        url: "https://www.preserveyourestate.com/og?topic=Massachusetts%20Estate%20Tax%20Calculator&label=Educational%20planning%20resource",
+        width: 1200,
+        height: 630,
+        alt: "MSA Financial Massachusetts estate tax calculator",
+      },
+    ],
   },
 };
 

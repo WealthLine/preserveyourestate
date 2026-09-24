@@ -23,6 +23,14 @@ export const metadata: Metadata = {
     title: "Massachusetts Estate Planning: Wealth Management | MSA Financial",
     description:
       "Massachusetts estate planning and tax-focused wealth management, coordinated with your attorney and CPA. Explore guidance from MSA Financial.",
+    images: [
+      {
+        url: "https://www.preserveyourestate.com/og?topic=Massachusetts%20Estate%20Planning&label=MSA%20Financial",
+        width: 1200,
+        height: 630,
+        alt: "MSA Financial Massachusetts estate planning resources",
+      },
+    ],
   },
 };
 

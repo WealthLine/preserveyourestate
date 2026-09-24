@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     title: "Retirement Income Planning in Massachusetts | Preserve Your Estate",
     description:
       "Retirement financial planning and retirement income planning for Massachusetts households, coordinated with tax, estate, and trust considerations.",
+    images: [
+      {
+        url: "https://www.preserveyourestate.com/og?topic=Retirement%20Income%20Planning&label=Massachusetts%20financial%20coordination",
+        width: 1200,
+        height: 630,
+        alt: "MSA Financial retirement income planning",
+      },
+    ],
   },
 };
 
