@@ -95,7 +95,7 @@ export default function LifetimeGiftTaxExemptionGuide() {
       </section>
 
       <section>
-        <div className="wrap article">
+        <div className="wrap article guide-gift-tax">
           <h2>A direct answer: what does the lifetime gift tax exemption mean?</h2>
           <p>
             The lifetime gift tax exemption is the federal amount that may be available to offset

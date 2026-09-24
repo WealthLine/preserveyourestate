@@ -918,6 +918,8 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 .article p { margin-bottom: 1.25rem; color: #33475e; }
 .article ul, .article ol { margin: 0 0 1.25rem 1.25rem; color: #33475e; }
 .article li { margin-bottom: 0.55rem; line-height: 1.7; }
+.guide-gift-tax .coord-card ul { list-style: disc; padding-left: 1.2rem; }
+.guide-gift-tax .coord-card li::marker { color: var(--gold); }
 .article a { color: var(--navy); text-decoration: underline; text-underline-offset: 0.15em; }
 .article .callout { background: var(--gold-bg); border-left: 3px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.5rem 1.8rem; margin: 2rem 0; font-size: 0.98rem; }
 .article table { width: 100%; border-collapse: collapse; margin: 1.8rem 0; font-size: 0.92rem; }
