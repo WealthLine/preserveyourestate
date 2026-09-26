@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -36,6 +36,21 @@ export const metadata: Metadata = {
 
 const MAIN_OFFICE_PHONE = "(781) 843-3500";
 const MAIN_OFFICE_PHONE_HREF = "tel:+17818433500";
+
+const { props: { src: HERO_POSTER_SRC } } = getImageProps({
+  src: "/hero-poster.jpg",
+  alt: "",
+  width: 960,
+  height: 540,
+  quality: 80,
+});
+
+const { props: { src: LOCATIONS_POSTER_SRC } } = getImageProps({
+  src: "/locations-poster.jpg",
+  alt: "",
+  width: 500,
+  height: 281,
+});
 
 type Office = {
   city: string;
@@ -131,7 +146,7 @@ export default function Home() {
       {/* ═══════════ ACT 1 · MAKE IT PERSONAL ═══════════ */}
 
       {/* ---- Hero ---- */}
-      <Hero />
+      <Hero posterSrc={HERO_POSTER_SRC} />
 
       {/* ---- Proof row: credibility before the first ask ---- */}
       <div className="proof-row" aria-label="Firm credentials">
@@ -504,7 +519,7 @@ export default function Home() {
               muted
               playsInline
               preload="metadata"
-              poster="/locations-poster.jpg"
+              poster={LOCATIONS_POSTER_SRC}
               aria-label="Massachusetts coastal landscape"
             >
               <source src="/locations-video.mp4" type="video/mp4" />

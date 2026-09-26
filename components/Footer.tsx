@@ -48,7 +48,7 @@ export default function Footer({ compact = false }: { compact?: boolean }) {
             </div>
           </div>
           <div>
-            <h4>{siteConfig.footer.groups[0]?.heading || "Quick Links"}</h4>
+            <h2>{siteConfig.footer.groups[0]?.heading || "Quick Links"}</h2>
             <ul>
               {(siteConfig.footer.groups[0]?.links || []).map((link) => (
                 <li key={link.href}>
@@ -58,7 +58,7 @@ export default function Footer({ compact = false }: { compact?: boolean }) {
             </ul>
           </div>
           <div>
-            <h4>Regulatory</h4>
+            <h2>Regulatory</h2>
             <p>
               <b style={{ color: "rgba(255,255,255,0.85)" }}>{siteConfig.brand.legalName}</b>
               <br />
