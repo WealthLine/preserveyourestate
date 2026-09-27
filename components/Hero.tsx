@@ -37,7 +37,7 @@ function BlurText({ text, delay = 0, em = false }: { text: string; delay?: numbe
   );
 }
 
-export default function Hero({ posterSrc }: { posterSrc: string }) {
+export default function Hero() {
   return (
     <section className="hero-video" id="top">
       {/* Background footage lives in /public. Poster paints instantly before playback;
@@ -49,7 +49,7 @@ export default function Hero({ posterSrc }: { posterSrc: string }) {
         muted
         playsInline
         preload="auto"
-        poster={posterSrc}
+        poster="/hero-poster.jpg"
         aria-hidden="true"
       >
         <source src="/hero-video.mp4" type="video/mp4" />
