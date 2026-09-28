@@ -44,7 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/guides/massachusetts-estate-planning`,
-      lastModified: new Date("2026-09-08"),
+      lastModified: new Date("2026-09-28"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/guides/estate-tax-vs-inheritance-tax`,
+      lastModified: new Date("2026-09-28"),
       changeFrequency: "monthly",
       priority: 0.8,
     },

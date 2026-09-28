@@ -136,6 +136,11 @@ export default function MassachusettsEstatePlanningGuide() {
             </Link>
           </div>
 
+          <p>
+            Wondering who pays tax when someone inherits? Read our focused comparison of{" "}
+            <Link href="/guides/estate-tax-vs-inheritance-tax">estate tax versus inheritance tax in Massachusetts</Link>.
+          </p>
+
           <h3>Massachusetts does not offer spousal portability</h3>
           <p>
             Under Massachusetts rules, an unused state estate tax exemption generally does not
