@@ -53,7 +53,6 @@ type Intent = "review" | "guide";
 export function BookingForm() {
   const [state, formAction, pending] = useActionState<LeadState, FormData>(submitLead, { status: "idle" });
   const [intent, setIntent] = useState<Intent>("review");
-  const done = state.status === "success";
 
   useEffect(() => {
     const syncFromHash = () => {
@@ -72,22 +71,17 @@ export function BookingForm() {
       id="booking-guide"
       className="form-card reveal-scale"
       style={{ border: "1px solid var(--line)" }}
+      action={formAction}
       onSubmit={(e) => {
-        // Submitting via the `action` prop would reset the fields, losing input on a validation error.
+        // `action` only covers submits before hydration; after that, submitting through it would
+        // reset the fields and lose input on a validation error.
         e.preventDefault();
         const data = new FormData(e.currentTarget);
         startTransition(() => formAction(data));
       }}
     >
-      {done ? (
-        <Success
-          title={isReview ? "Request received" : "Check your inbox"}
-          body={
-            isReview
-              ? "You'll hear from Michael's office within one business day. A confirmation is on its way to your inbox."
-              : "The guide is on its way. Check your inbox for a confirmation from Michael's office."
-          }
-        />
+      {state.status === "success" ? (
+        <Success title={state.title} body={state.message} />
       ) : (
         <>
           <input type="hidden" name="intent" value={intent} />
@@ -99,13 +93,14 @@ export function BookingForm() {
             aria-hidden="true"
             style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
           />
-          <h3>{isReview ? "Request a Complimentary Review" : "Download the Free Guide"}</h3>
+          <h3>{isReview ? "Request a Complimentary Review" : "Get the Free Guide"}</h3>
           <div className="intent-toggle" role="radiogroup" aria-label="What would you like?">
             <button
               type="button"
               className={isReview ? "on" : ""}
               role="radio"
               aria-checked={isReview}
+              disabled={pending}
               onClick={() => setIntent("review")}
             >
               The 45-Minute Review
@@ -115,6 +110,7 @@ export function BookingForm() {
               className={!isReview ? "on" : ""}
               role="radio"
               aria-checked={!isReview}
+              disabled={pending}
               onClick={() => setIntent("guide")}
             >
               Just the Free Guide
@@ -123,7 +119,7 @@ export function BookingForm() {
           <p className="form-sub">
             {isReview
               ? "For Massachusetts families with $2M+ in investable assets."
-              : "Delivered immediately by email."}
+              : "Sent to your inbox by Michael's office."}
           </p>
           <div className="field-row">
             <Input id="b-first" label="First Name" required />
@@ -153,7 +149,7 @@ export function BookingForm() {
             </p>
           )}
           <button className={`btn ${isReview ? "btn-navy" : "btn-gold"}`} type="submit" disabled={pending}>
-            {pending ? "Sending…" : isReview ? "Request a Complimentary Review" : "Download the Free Guide"}
+            {pending ? "Sending…" : isReview ? "Request a Complimentary Review" : "Send Me the Free Guide"}
           </button>
           <p className="fine" style={{ marginTop: "1rem" }}>
             {isReview
