@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-/* Front-end demo forms, wire to CRM/Convert at integration. */
+import { startTransition, useActionState, useEffect, useState } from "react";
+import { submitLead, type LeadState } from "@/app/actions/lead";
 
 const ASSET_OPTIONS = ["Under $1M", "$1M–$2M", "$2M–$3M", "$3M–$5M", "$5M–$10M", "Over $10M"];
 const TIMELINE_OPTIONS = [
@@ -52,8 +51,9 @@ type Intent = "review" | "guide";
 /* Single lead form serving both conversion paths. Linking to #booking-guide
    (the form's own id) pre-selects the guide intent. */
 export function BookingForm() {
-  const [done, setDone] = useState(false);
+  const [state, formAction, pending] = useActionState<LeadState, FormData>(submitLead, { status: "idle" });
   const [intent, setIntent] = useState<Intent>("review");
+  const done = state.status === "success";
 
   useEffect(() => {
     const syncFromHash = () => {
@@ -73,8 +73,10 @@ export function BookingForm() {
       className="form-card reveal-scale"
       style={{ border: "1px solid var(--line)" }}
       onSubmit={(e) => {
+        // Submitting via the `action` prop would reset the fields, losing input on a validation error.
         e.preventDefault();
-        setDone(true);
+        const data = new FormData(e.currentTarget);
+        startTransition(() => formAction(data));
       }}
     >
       {done ? (
@@ -82,12 +84,21 @@ export function BookingForm() {
           title={isReview ? "Request received" : "Check your inbox"}
           body={
             isReview
-              ? "You'll hear from Michael's office within one business day. (Demo build, form submissions will connect to your CRM at integration.)"
-              : "The guide is on its way. (Demo build, form submissions will connect to your CRM at integration.)"
+              ? "You'll hear from Michael's office within one business day. A confirmation is on its way to your inbox."
+              : "The guide is on its way. Check your inbox for a confirmation from Michael's office."
           }
         />
       ) : (
         <>
+          <input type="hidden" name="intent" value={intent} />
+          <input
+            type="text"
+            name="company"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+          />
           <h3>{isReview ? "Request a Complimentary Review" : "Download the Free Guide"}</h3>
           <div className="intent-toggle" role="radiogroup" aria-label="What would you like?">
             <button
@@ -136,8 +147,13 @@ export function BookingForm() {
               </div>
             </>
           )}
-          <button className={`btn ${isReview ? "btn-navy" : "btn-gold"}`} type="submit">
-            {isReview ? "Request a Complimentary Review" : "Download the Free Guide"}
+          {state.status === "error" && (
+            <p className="small" role="alert" style={{ color: "#b42318", marginBottom: "0.75rem" }}>
+              {state.message}
+            </p>
+          )}
+          <button className={`btn ${isReview ? "btn-navy" : "btn-gold"}`} type="submit" disabled={pending}>
+            {pending ? "Sending…" : isReview ? "Request a Complimentary Review" : "Download the Free Guide"}
           </button>
           <p className="fine" style={{ marginTop: "1rem" }}>
             {isReview
