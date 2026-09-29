@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-/* Front-end demo forms, wire to CRM/Convert at integration. */
+import { startTransition, useActionState, useEffect, useState } from "react";
+import { submitLead, type LeadState } from "@/app/actions/lead";
 
 const ASSET_OPTIONS = ["Under $1M", "$1M–$2M", "$2M–$3M", "$3M–$5M", "$5M–$10M", "Over $10M"];
 const TIMELINE_OPTIONS = [
@@ -52,7 +51,7 @@ type Intent = "review" | "guide";
 /* Single lead form serving both conversion paths. Linking to #booking-guide
    (the form's own id) pre-selects the guide intent. */
 export function BookingForm() {
-  const [done, setDone] = useState(false);
+  const [state, formAction, pending] = useActionState<LeadState, FormData>(submitLead, { status: "idle" });
   const [intent, setIntent] = useState<Intent>("review");
 
   useEffect(() => {
@@ -72,29 +71,36 @@ export function BookingForm() {
       id="booking-guide"
       className="form-card reveal-scale"
       style={{ border: "1px solid var(--line)" }}
+      action={formAction}
       onSubmit={(e) => {
+        // `action` only covers submits before hydration; after that, submitting through it would
+        // reset the fields and lose input on a validation error.
         e.preventDefault();
-        setDone(true);
+        const data = new FormData(e.currentTarget);
+        startTransition(() => formAction(data));
       }}
     >
-      {done ? (
-        <Success
-          title={isReview ? "Request received" : "Check your inbox"}
-          body={
-            isReview
-              ? "You'll hear from Michael's office within one business day. (Demo build, form submissions will connect to your CRM at integration.)"
-              : "The guide is on its way. (Demo build, form submissions will connect to your CRM at integration.)"
-          }
-        />
+      {state.status === "success" ? (
+        <Success title={state.title} body={state.message} />
       ) : (
         <>
-          <h3>{isReview ? "Request a Complimentary Review" : "Download the Free Guide"}</h3>
+          <input type="hidden" name="intent" value={intent} />
+          <input
+            type="text"
+            name="company"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+          />
+          <h3>{isReview ? "Request a Complimentary Review" : "Get the Free Guide"}</h3>
           <div className="intent-toggle" role="radiogroup" aria-label="What would you like?">
             <button
               type="button"
               className={isReview ? "on" : ""}
               role="radio"
               aria-checked={isReview}
+              disabled={pending}
               onClick={() => setIntent("review")}
             >
               The 45-Minute Review
@@ -104,6 +110,7 @@ export function BookingForm() {
               className={!isReview ? "on" : ""}
               role="radio"
               aria-checked={!isReview}
+              disabled={pending}
               onClick={() => setIntent("guide")}
             >
               Just the Free Guide
@@ -112,7 +119,7 @@ export function BookingForm() {
           <p className="form-sub">
             {isReview
               ? "For Massachusetts families with $2M+ in investable assets."
-              : "Delivered immediately by email."}
+              : "Sent to your inbox by Michael's office."}
           </p>
           <div className="field-row">
             <Input id="b-first" label="First Name" required />
@@ -136,8 +143,13 @@ export function BookingForm() {
               </div>
             </>
           )}
-          <button className={`btn ${isReview ? "btn-navy" : "btn-gold"}`} type="submit">
-            {isReview ? "Request a Complimentary Review" : "Download the Free Guide"}
+          {state.status === "error" && (
+            <p className="small" role="alert" style={{ color: "#b42318", marginBottom: "0.75rem" }}>
+              {state.message}
+            </p>
+          )}
+          <button className={`btn ${isReview ? "btn-navy" : "btn-gold"}`} type="submit" disabled={pending}>
+            {pending ? "Sending…" : isReview ? "Request a Complimentary Review" : "Send Me the Free Guide"}
           </button>
           <p className="fine" style={{ marginTop: "1rem" }}>
             {isReview
