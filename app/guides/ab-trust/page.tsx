@@ -82,9 +82,9 @@ export default function AbTrustGuide() {
           <p className={styles.heroByline}>Michael Cammarata, CFP® · MSA Financial, LLC</p>
           </div>
           <div className={styles.heroVisual} aria-label="Illustration: the estate can be divided between credit shelter and marital trusts">
-            <span className={styles.visualLabel}>THE A/B STRUCTURE</span>
-            <div className={styles.visualNode}>Combined estate <span>first spouse&apos;s death</span></div>
-            <div className={styles.visualStem} aria-hidden="true" />
+            <span className={styles.visualLabel}>HOW THE ESTATE MAY DIVIDE</span>
+            <div className={styles.visualNode}><span>START HERE</span>Combined estate</div>
+            <div className={styles.visualStem} aria-hidden="true"><span>At the first death</span></div>
             <div className={styles.visualBranches}>
               <div className={styles.visualTrust}><span>TRUST B</span><strong>Credit shelter</strong><small>First spouse&apos;s available exemption</small></div>
               <div className={styles.visualTrust}><span>TRUST A</span><strong>Marital / QTIP</strong><small>Potentially the remaining assets</small></div>
@@ -104,10 +104,10 @@ export default function AbTrustGuide() {
           <p className={styles.kicker}>01 / THE ESSENTIALS</p>
           <h2>The short version</h2>
           <ul className={styles.overviewGrid}>
-            <li>Massachusetts provides a $2 million estate tax threshold, but unlike the federal system, it does not allow a surviving spouse to inherit the first spouse&apos;s unused state exemption. <a href={maGuide}>Source: Massachusetts Department of Revenue</a>.</li>
-            <li>An A/B trust can divide assets at the first death so each spouse&apos;s exemption may be used, depending on the estate and the trust&apos;s terms.</li>
-            <li>Under the simplified assumptions below, an unplanned $4 million estate produces an estimated $180,800 Massachusetts estate tax at the second death. A properly designed and funded plan could reduce that amount, potentially to zero. Actual results depend on individual circumstances.</li>
-            <li>The trust document alone is not enough. Titling and beneficiary designations must be reviewed with the estate planning team.</li>
+            <li><span className={styles.overviewNumber}>01</span><div><b>The gap</b><span>Massachusetts has a $2 million estate tax threshold, but no portability of a spouse&apos;s unused state exemption. <a href={maGuide}>Massachusetts Department of Revenue</a></span></div></li>
+            <li><span className={styles.overviewNumber}>02</span><div><b>The structure</b><span>An A/B trust can divide assets at the first death so both spouses&apos; exemptions may be used, depending on the trust terms and estate.</span></div></li>
+            <li><span className={styles.overviewNumber}>03</span><div><b>The possible impact</b><span>Under the simplified assumptions below, an unplanned $4 million estate has estimated Massachusetts tax of $180,800 at the second death. Proper planning could reduce it, potentially to zero; actual results vary.</span></div></li>
+            <li><span className={styles.overviewNumber}>04</span><div><b>The follow-through</b><span>Documents alone are not enough. The estate planning team needs to review asset titling and beneficiary designations.</span></div></li>
           </ul>
           </div>
 
