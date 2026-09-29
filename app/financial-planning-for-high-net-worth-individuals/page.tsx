@@ -188,6 +188,14 @@ export default function HighNetWorthFinancialPlanningPage() {
             general estimate before discussing your own facts with qualified professionals.
           </p>
 
+          <p>
+            If a business interest is part of your retirement picture, read the{" "}
+            <Link href="/guides/business-owner-retirement-planning">Massachusetts business owner retirement planning guide</Link>{" "}
+            for questions about household income, ownership and liquidity, estate documents, and
+            coordination with your CPA and attorney. A business transition can involve uncertain
+            timing and proceeds, so this guide is a starting point for professional discussion.
+          </p>
+
           <div className="callout reveal">
             <p>
               <b>A balanced planning conversation recognizes limits.</b> Financial planning can help

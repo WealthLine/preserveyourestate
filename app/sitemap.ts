@@ -38,13 +38,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/guides/ab-trust`,
-      lastModified: LAST_UPDATED,
+      lastModified: new Date("2026-09-29"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/guides/massachusetts-estate-planning`,
-      lastModified: new Date("2026-09-08"),
+      lastModified: new Date("2026-09-28"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/guides/estate-tax-vs-inheritance-tax`,
+      lastModified: new Date("2026-09-28"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -63,6 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${BASE_URL}/guides/retirement-planning-tools`,
       lastModified: new Date("2026-09-17"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/guides/business-owner-retirement-planning`,
+      lastModified: new Date("2026-09-28"),
       changeFrequency: "monthly",
       priority: 0.8,
     },

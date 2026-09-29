@@ -228,6 +228,15 @@ export default function RetirementPlanningPage() {
             outcome.
           </p>
 
+          <h2>How should business owners organize a retirement transition?</h2>
+          <p>
+            For a household with a business interest, retirement may also change owner compensation,
+            control, and access to cash. Our <Link href="/guides/business-owner-retirement-planning">business owner retirement planning guide</Link>{" "}
+            offers an educational checklist for connecting household income, ownership questions,
+            estate documents, and conversations with your CPA and attorney. The timing and terms of any
+            business transition are uncertain and require individual professional review.
+          </p>
+
           <h2>What is the retirement income planning process?</h2>
           <div className="process-grid">
             <div className="step">
