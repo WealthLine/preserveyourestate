@@ -1,19 +1,11 @@
 import type { Metadata } from "next";
-import { Source_Serif_4, Inter } from "next/font/google";
+import { display, body } from "./google-fonts";
 import Script from "next/script";
 import Effects from "@/components/Effects";
 import "./globals.css";
 import siteConfig from "../data/site-config.json";
 
 const GA_MEASUREMENT_ID = "G-S0DQ7Z2J61";
-
-const display = Source_Serif_4({ 
-  subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-display", display: "swap",
-});
-
-const body = Inter({
-  subsets: ["latin"], variable: "--font-body", display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.seo.siteUrl),
