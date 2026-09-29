@@ -89,7 +89,8 @@
 .content .taxTable th, .content .taxTable td { overflow-wrap: normal; white-space: nowrap; }
 .content .taxTable thead { background: #e9f1f8; }
 .content .taxTable thead th { color: var(--navy); }
-.content .taxTable td:last-child { color: var(--navy); font-weight: 800; font-variant-numeric: tabular-nums; }
+.content .taxTable tbody td:first-child { color: var(--navy-dark); font-weight: 700; font-variant-numeric: tabular-nums; }
+.content .taxTable tbody td:last-child { color: var(--navy); font-weight: 800; font-variant-numeric: tabular-nums; }
 .content .taxPanel p.fine { font-size: .78rem; }
 .exampleTable { margin: 1.8rem 0 1rem; }
 .content .exampleTable tbody tr:last-child { background: #f9efd8; }
