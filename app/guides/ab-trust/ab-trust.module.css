@@ -70,7 +70,11 @@
 .content .tableCard tbody tr:last-child td, .content .tableCard tbody tr:last-child th { border-bottom: 0; }
 
 .taxPanel { background: linear-gradient(135deg, #0a233e, #173e69); border-radius: 18px; padding: clamp(1.5rem, 4vw, 3.2rem); color: #fff; box-shadow: 0 22px 55px rgba(13,43,78,.16); }
-.taxIntro { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(205px, .75fr); gap: clamp(1.4rem, 4vw, 3rem); align-items: center; }
+.taxLayout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, .8fr); gap: clamp(1.4rem, 3vw, 2.5rem); align-items: start; }
+.taxTableColumn, .taxExplanation { min-width: 0; }
+.content .taxPanel .taxTableHeading { color: var(--gold-pale); font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 .7rem; }
+.taxExplanation { padding-top: 1.5rem; }
+.taxExplanation > p { font-size: .91rem; line-height: 1.7; margin-top: 1.3rem; }
 .taxPanel h2 { color: #fff; }
 .content .taxPanel p { color: #e2eef9; }
 .content .taxPanel .kicker { color: var(--gold-pale); }
@@ -79,8 +83,10 @@
 .taxFeature span, .taxFeature small { display: block; font-size: .74rem; color: #e2eef9; line-height: 1.5; }
 .taxFeature span { font-weight: 700; text-transform: uppercase; letter-spacing: .09em; }
 .taxFeature strong { font: 600 clamp(3rem, 5vw, 4.4rem)/1.3 var(--serif); color: var(--gold-pale); display: block; }
-.taxPanel .taxTable { margin: 1.8rem 0 1.2rem; }
-.content .taxTable table { min-width: 450px; }
+.taxPanel .taxTable { margin: 0; }
+.content .taxTable table { min-width: 0; width: 100%; table-layout: fixed; font-variant-numeric: tabular-nums; }
+.content .taxTable th:first-child, .content .taxTable td:first-child { width: 52%; }
+.content .taxTable th, .content .taxTable td { overflow-wrap: normal; white-space: nowrap; }
 .content .taxTable thead { background: #e9f1f8; }
 .content .taxTable thead th { color: var(--navy); }
 .content .taxTable td:last-child { color: var(--navy); font-weight: 800; font-variant-numeric: tabular-nums; }
@@ -99,6 +105,9 @@
 .fundingGrid li { padding-left: 3.3rem; position: relative; }
 .fundingGrid li::before { content: "✓"; position: absolute; left: 1.2rem; top: 1.2rem; border-radius: 50%; width: 1.45rem; height: 1.45rem; display: grid; place-items: center; background: #d6e6d9; color: #255b40; font-weight: 800; }
 .fundingCaution { margin-top: 1.5rem; padding: 1.2rem 1.5rem; border-left: 4px solid var(--gold); background: #fff; border-radius: 0 8px 8px 0; font-size: .9rem; }
+.networkCallout { background: #e8f1f9; border-left: 4px solid var(--gold); border-radius: 0 12px 12px 0; padding: 1.4rem 1.7rem; max-width: 900px; margin: 1.5rem 0 2rem; }
+.networkCallout b { display: block; color: var(--navy); font: 600 1.3rem/1.3 var(--serif); margin-bottom: .5rem; }
+.content .networkCallout p { margin: 0; font-size: .95rem; }
 .processGrid { counter-reset: process; }
 .processGrid li { position: relative; padding-left: 4.3rem; counter-increment: process; }
 .processGrid li::before { content: counter(process, decimal-leading-zero); position: absolute; top: 1.3rem; left: 1.35rem; color: #9b6b2b; font: 600 1.4rem var(--serif); }
@@ -115,10 +124,12 @@
   .heroVisual { padding: 1.2rem; }
   .jumpNav > div { min-height: 60px; }
   .jumpNav span { margin-right: 0; }
-  .trustCards, .taxIntro, .content .tradeoffs, .content .fundingGrid, .content .processGrid { grid-template-columns: 1fr; }
+  .trustCards, .taxLayout, .content .tradeoffs, .content .fundingGrid, .content .processGrid { grid-template-columns: 1fr; }
+  .taxExplanation { padding-top: 0; }
   .attorneyNote { grid-template-columns: 1fr; gap: .5rem; }
   .content .tableCard table { min-width: 600px; }
-  .content .taxTable table { min-width: 420px; }
+  .content .taxTable table { min-width: 0; }
+  .content .taxTable thead th, .content .taxTable tbody td { padding: .85rem .6rem; font-size: .82rem; letter-spacing: 0; }
   .sectionBlock { padding: 2.8rem 0; }
 }
 @media (max-width: 400px) {

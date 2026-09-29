@@ -150,17 +150,22 @@ export default function AbTrustGuide() {
           </div>
 
           <div className={styles.taxPanel} id="tax">
-          <div className={styles.taxIntro}>
-          <div><p className={styles.kicker}>03 / THE NUMBERS</p>
+          <p className={styles.kicker}>03 / THE NUMBERS</p>
           <h2>How Massachusetts calculates the tax</h2>
-          <p>For deaths under current law, Massachusetts uses a graduated schedule, Table B, based on the taxable estate after applicable deductions and adjustments, not simply a flat rate on the dollars over $2 million. It then allows a credit of up to $99,600 under M.G.L. c. 65C, §2A(f). The filing threshold, taxable estate, and resulting liability are different calculations. Read the <a href={maGuide}>Department of Revenue&apos;s computation and Table B</a> and <a href={maLaw}>the statute</a>.</p></div>
-          <div className={styles.taxFeature}><span>2026 MA estate tax threshold</span><strong>$2M</strong><small>Filing and tax calculations differ.</small></div>
-          </div>
-          <div className={`table-scroll ${styles.tableCard} ${styles.taxTable}`}>
-            <table>
-              <thead><tr><th scope="col">Illustrative Massachusetts taxable estate</th><th scope="col">Estimated estate tax</th></tr></thead>
-              <tbody>{taxExamples.map(([estate, tax]) => <tr key={estate}><td>{estate}</td><td>{tax}</td></tr>)}</tbody>
-            </table>
+          <div className={styles.taxLayout}>
+            <div className={styles.taxTableColumn}>
+              <p className={styles.taxTableHeading}>Estate value and estimated tax</p>
+              <div className={`table-scroll ${styles.tableCard} ${styles.taxTable}`}>
+                <table>
+                  <thead><tr><th scope="col">Taxable estate</th><th scope="col">Estimated tax</th></tr></thead>
+                  <tbody>{taxExamples.map(([estate, tax]) => <tr key={estate}><td>{estate}</td><td>{tax}</td></tr>)}</tbody>
+                </table>
+              </div>
+            </div>
+            <div className={styles.taxExplanation}>
+              <div className={styles.taxFeature}><span>2026 MA estate tax threshold</span><strong>$2M</strong><small>Filing and tax calculations differ.</small></div>
+              <p>For deaths under current law, Massachusetts uses a graduated schedule, Table B, based on the taxable estate after applicable deductions and adjustments, not simply a flat rate on the dollars over $2 million. It then allows a credit of up to $99,600 under M.G.L. c. 65C, §2A(f). The filing threshold, taxable estate, and resulting liability are different calculations. Read the <a href={maGuide}>Department of Revenue&apos;s computation and Table B</a> and <a href={maLaw}>the statute</a>.</p>
+            </div>
           </div>
           <p className="fine">Illustrative calculations using the <a href={maGuide}>Massachusetts Department of Revenue Table B</a> as of September 2026: assume all taxable property is subject to Massachusetts estate tax, no deductions and no prior taxable gifts; the Table B adjusted taxable estate is the stated taxable estate less $60,000, followed by the $99,600 state credit. This is not an estimate for a particular family. An estate planning attorney or CPA should calculate the actual liability.</p>
           </div>
@@ -218,7 +223,8 @@ export default function AbTrustGuide() {
           <p className={styles.kicker}>07 / THE PROFESSIONAL TEAM</p>
           <h2>Who does what</h2>
           <p>A Massachusetts estate planning attorney drafts the legal documents. Michael Cammarata, CFP®, does not draft trusts, provide legal or tax advice, or prepare tax returns. His role is to coordinate the financial planning and implementation with the professionals you engage.</p>
-          <p>If you already work with an attorney and CPA, Michael can coordinate with them on the asset picture, titling, and the plan&apos;s financial assumptions. When needed, he can help identify independent professionals; clients choose and engage their attorney and CPA directly.</p>
+          <p>If you already have an attorney and CPA, Michael can coordinate with them on the asset picture, titling, and the plan&apos;s financial assumptions.</p>
+          <div className={styles.networkCallout}><b>A professional network for coordinated planning</b><p>Michael also works with a network of independent Massachusetts estate planning attorneys and CPAs to help coordinate these plans. If you need an attorney or CPA, he can make an introduction. You choose whom to hire and engage them directly; Michael remains the point of coordination for the financial plan.</p></div>
           <ol className={styles.processGrid}>
             <li><b>Map the estate.</b> Organize assets, titling, and beneficiary designations for review with the attorney.</li>
             <li><b>Support the design.</b> Provide financial information and illustrations to help the attorney evaluate the trust structure.</li>
