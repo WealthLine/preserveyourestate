@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import styles from "./ab-trust.module.css";
 
 const guideUrl = "https://www.preserveyourestate.com/guides/ab-trust";
 const maGuide = "https://www.mass.gov/info-details/estate-tax-guide";
@@ -65,9 +66,10 @@ export default function AbTrustGuide() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
       <Nav solid />
 
-      <section className="page-hero">
+      <section className={`page-hero ${styles.hero}`}>
         <div className="hero-glow"></div>
-        <div className="wrap">
+        <div className={`wrap ${styles.heroGrid}`}>
+          <div className={styles.heroCopy}>
           <nav className="crumbs hero-anim d1">
             <Link href="/">Home</Link><span>/</span><Link href="/#guides">Guides</Link><span>/</span><span>A/B Trust Planning</span>
           </nav>
@@ -77,29 +79,62 @@ export default function AbTrustGuide() {
             <span className="badge" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.2)", color: "var(--gold-pale)" }}>Estate Structure Guide</span>{" "}
             <span className="badge" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.2)", color: "var(--gold-pale)" }}>Updated September 2026</span>
           </p>
+          <p className={styles.heroByline}>Michael Cammarata, CFP® · MSA Financial, LLC</p>
+          </div>
+          <div className={styles.heroVisual} aria-label="Illustration: the estate can be divided between credit shelter and marital trusts">
+            <span className={styles.visualLabel}>THE A/B STRUCTURE</span>
+            <div className={styles.visualNode}>Combined estate <span>first spouse&apos;s death</span></div>
+            <div className={styles.visualStem} aria-hidden="true" />
+            <div className={styles.visualBranches}>
+              <div className={styles.visualTrust}><span>TRUST B</span><strong>Credit shelter</strong><small>First spouse&apos;s available exemption</small></div>
+              <div className={styles.visualTrust}><span>TRUST A</span><strong>Marital / QTIP</strong><small>Potentially the remaining assets</small></div>
+            </div>
+            <p>Allocation and tax treatment depend on the trust and elections.</p>
+          </div>
         </div>
       </section>
 
-      <section>
-        <div className="wrap article">
+      <nav className={styles.jumpNav} aria-label="On this page">
+        <div className="wrap"><span>In this guide</span><a href="#overview">Overview</a><a href="#structure">The trusts</a><a href="#tax">Tax examples</a><a href="#funding">Funding</a><a href="#team">Your team</a></div>
+      </nav>
+
+      <section className={styles.guideBody}>
+        <div className={`wrap article ${styles.content}`}>
+          <div className={styles.overview} id="overview">
+          <p className={styles.kicker}>01 / THE ESSENTIALS</p>
           <h2>The short version</h2>
-          <ul>
+          <ul className={styles.overviewGrid}>
             <li>Massachusetts provides a $2 million estate tax threshold, but unlike the federal system, it does not allow a surviving spouse to inherit the first spouse&apos;s unused state exemption. <a href={maGuide}>Source: Massachusetts Department of Revenue</a>.</li>
             <li>An A/B trust can divide assets at the first death so each spouse&apos;s exemption may be used, depending on the estate and the trust&apos;s terms.</li>
             <li>Under the simplified assumptions below, an unplanned $4 million estate produces an estimated $180,800 Massachusetts estate tax at the second death. A properly designed and funded plan could reduce that amount, potentially to zero. Actual results depend on individual circumstances.</li>
             <li>The trust document alone is not enough. Titling and beneficiary designations must be reviewed with the estate planning team.</li>
           </ul>
+          </div>
 
+          <div className={styles.explainer}>
+          <p className={styles.kicker}>THE MA EXEMPTION GAP</p>
           <h2>Why couples can lose an exemption</h2>
           <p>At the federal level, a surviving spouse may be able to use the first spouse&apos;s unused estate tax exclusion through a portability election. Massachusetts has no equivalent portability election. If everything passes outright to the surviving spouse, the first spouse&apos;s Massachusetts exemption may go unused. The survivor then owns the combined estate with only their own state exemption available. See the <a href={maGuide}>Massachusetts estate tax guide</a>.</p>
+          </div>
 
+          <div className={styles.sectionBlock} id="structure">
+          <p className={styles.kicker}>02 / THE STRUCTURE</p>
           <h2>How an A/B trust works</h2>
           <p>An attorney may design an A/B arrangement within a revocable trust. At the first death, the plan can divide assets between two trusts, subject to the document&apos;s funding formula and elections.</p>
+          <div className={styles.trustCards}>
+          <div className={styles.trustCardB}>
+          <span className={styles.trustBadge}>TRUST B · CREDIT SHELTER</span>
           <h3>Trust B: the credit shelter trust</h3>
           <p>Also called a bypass or family trust, Trust B can receive assets up to the first spouse&apos;s available Massachusetts exemption. Depending on the terms, the surviving spouse may receive income and principal for health, education, maintenance, and support (HEMS). Assets that are not included in the survivor&apos;s estate generally pass to the named beneficiaries without a second estate tax on those assets.</p>
+          </div>
+          <div className={styles.trustCardA}>
+          <span className={styles.trustBadge}>TRUST A · MARITAL</span>
           <h3>Trust A: the QTIP or marital trust</h3>
           <p>Trust A can hold the remaining assets. If the trust meets the requirements and the appropriate election is made, qualified terminable interest property (QTIP) may receive the marital deduction under IRC §2056(b)(7). The surviving spouse must be entitled to all income at least annually. QTIP property is generally included in the survivor&apos;s estate at the second death. The executor and attorney should determine which federal and Massachusetts elections apply. See the <a href={maForms}>Massachusetts Form M-706 guidance</a>.</p>
-          <div className="table-scroll">
+          </div>
+          </div>
+          <p className={styles.tableLabel}>At a glance: how the trusts differ</p>
+          <div className={`table-scroll ${styles.tableCard}`}>
             <table>
               <thead><tr><th scope="col">Feature</th><th scope="col">Trust B (credit shelter)</th><th scope="col">Trust A (QTIP)</th></tr></thead>
               <tbody>
@@ -112,20 +147,29 @@ export default function AbTrustGuide() {
             </table>
           </div>
           <p>The beneficiary terms can matter especially in a blended family. Ask your attorney who can change them and under what circumstances. For basis treatment and exceptions, see <a href={irsBasis}>IRS Revenue Ruling 2023-2</a>.</p>
+          </div>
 
+          <div className={styles.taxPanel} id="tax">
+          <div className={styles.taxIntro}>
+          <div><p className={styles.kicker}>03 / THE NUMBERS</p>
           <h2>How Massachusetts calculates the tax</h2>
-          <p>For deaths under current law, Massachusetts uses a graduated schedule, Table B, based on the taxable estate after applicable deductions and adjustments, not simply a flat rate on the dollars over $2 million. It then allows a credit of up to $99,600 under M.G.L. c. 65C, §2A(f). The filing threshold, taxable estate, and resulting liability are different calculations. Read the <a href={maGuide}>Department of Revenue&apos;s computation and Table B</a> and <a href={maLaw}>the statute</a>.</p>
-          <div className="table-scroll">
+          <p>For deaths under current law, Massachusetts uses a graduated schedule, Table B, based on the taxable estate after applicable deductions and adjustments, not simply a flat rate on the dollars over $2 million. It then allows a credit of up to $99,600 under M.G.L. c. 65C, §2A(f). The filing threshold, taxable estate, and resulting liability are different calculations. Read the <a href={maGuide}>Department of Revenue&apos;s computation and Table B</a> and <a href={maLaw}>the statute</a>.</p></div>
+          <div className={styles.taxFeature}><span>2026 MA estate tax threshold</span><strong>$2M</strong><small>Filing and tax calculations differ.</small></div>
+          </div>
+          <div className={`table-scroll ${styles.tableCard} ${styles.taxTable}`}>
             <table>
               <thead><tr><th scope="col">Illustrative Massachusetts taxable estate</th><th scope="col">Estimated estate tax</th></tr></thead>
               <tbody>{taxExamples.map(([estate, tax]) => <tr key={estate}><td>{estate}</td><td>{tax}</td></tr>)}</tbody>
             </table>
           </div>
           <p className="fine">Illustrative calculations using the <a href={maGuide}>Massachusetts Department of Revenue Table B</a> as of September 2026: assume all taxable property is subject to Massachusetts estate tax, no deductions and no prior taxable gifts; the Table B adjusted taxable estate is the stated taxable estate less $60,000, followed by the $99,600 state credit. This is not an estimate for a particular family. An estate planning attorney or CPA should calculate the actual liability.</p>
+          </div>
 
+          <div className={styles.sectionBlock}>
+          <p className={styles.kicker}>04 / A SIDE-BY-SIDE EXAMPLE</p>
           <h2>Worked example: an $8 million estate</h2>
           <p>Holding asset values constant and using the same simplified Table B assumptions, the illustration compares what would be included in the survivor&apos;s estate at the second death. It does not account for growth, distributions, expenses, gifts, changes in law, or income tax consequences.</p>
-          <div className="table-scroll">
+          <div className={`table-scroll ${styles.tableCard} ${styles.exampleTable}`}>
             <table>
               <thead><tr><th scope="col">Approach</th><th scope="col">Estate taxed at second death</th><th scope="col">Estimated MA tax</th></tr></thead>
               <tbody>
@@ -136,38 +180,52 @@ export default function AbTrustGuide() {
             </table>
           </div>
           <p className="fine">These figures are a current-law tax illustration, not a projection or a promised result. A properly drafted, elected, and funded plan is required; individual tax outcomes can differ. <a href={maGuide}>Source: Massachusetts Department of Revenue estate tax guide</a>.</p>
+          </div>
 
+          <div className={styles.attorneyNote}>
+          <span className={styles.noteIcon} aria-hidden="true">?</span>
+          <div><p className={styles.kicker}>DOCUMENT REVIEW</p>
           <h2>A wrinkle worth asking your attorney about</h2>
           <p>Some older trusts use a formula tied to the federal estate tax exclusion. That amount is <a href={irsExclusion}>$15 million per person in 2026 according to the IRS</a>, much higher than the Massachusetts $2 million threshold. A formula tied to the federal figure may therefore direct more assets to the credit shelter trust than a Massachusetts plan intended. Whether tax is due at the first death depends on the actual terms, funding, deductions, and elections.</p>
-          <p>Massachusetts permits a state QTIP election separate from a federal QTIP election on Form M-706. Ask your attorney whether an older trust supports the intended election and how its funding formula works. See the <a href={maForms}>Massachusetts estate tax forms and instructions</a>.</p>
+          <p>Massachusetts permits a state QTIP election separate from a federal QTIP election on Form M-706. Ask your attorney whether an older trust supports the intended election and how its funding formula works. See the <a href={maForms}>Massachusetts estate tax forms and instructions</a>.</p></div>
+          </div>
 
+          <div className={styles.sectionBlock}>
+          <p className={styles.kicker}>05 / TRADE-OFFS</p>
           <h2>What to weigh before choosing this structure</h2>
-          <ul>
+          <ul className={styles.tradeoffs}>
             <li><b>Income tax basis.</b> Assets excluded from the survivor&apos;s estate generally do not receive another basis adjustment at that death; eligible QTIP assets generally do. That can create an income tax trade-off if heirs later sell appreciated assets. Treatment depends on the assets and trust terms. <a href={irsBasis}>IRS basis guidance</a>.</li>
             <li><b>Flexibility.</b> The survivor&apos;s access to Trust B principal depends on its terms, which may limit future choices.</li>
             <li><b>Administration.</b> Two trusts may mean separate accounting and tax filings, adding work and cost.</li>
             <li><b>Alternatives.</b> Titling changes, a disclaimer-based plan, or lifetime gifts may fit differently. An attorney and CPA can assess the legal and tax trade-offs.</li>
           </ul>
+          </div>
 
+          <div className={styles.fundingPanel} id="funding">
+          <p className={styles.kicker}>06 / IMPLEMENTATION</p>
           <h2>Where these plans can go wrong: funding</h2>
           <p>A signed trust does not by itself change ownership of assets. The attorney&apos;s plan needs to be carried through to titling and beneficiary designations. Funding discussions often cover:</p>
-          <ul>
+          <ul className={styles.fundingGrid}>
             <li>Which taxable accounts should be retitled in accordance with the trust documents</li>
             <li>How IRA and workplace retirement plan beneficiary designations interact with the trust</li>
             <li>Ownership of the home and life insurance</li>
             <li>Whether each spouse&apos;s assets support the intended funding at the first death</li>
           </ul>
-          <div className="callout reveal">Retirement accounts need separate beneficiary-designation review. They generally are not retitled into a living trust the way a taxable brokerage account may be. Make changes only with the attorney and tax professional&apos;s guidance.</div>
+          <div className={styles.fundingCaution}>Retirement accounts need separate beneficiary-designation review. They generally are not retitled into a living trust the way a taxable brokerage account may be. Make changes only with the attorney and tax professional&apos;s guidance.</div>
+          </div>
 
+          <div className={styles.sectionBlock} id="team">
+          <p className={styles.kicker}>07 / THE PROFESSIONAL TEAM</p>
           <h2>Who does what</h2>
           <p>A Massachusetts estate planning attorney drafts the legal documents. Michael Cammarata, CFP®, does not draft trusts, provide legal or tax advice, or prepare tax returns. His role is to coordinate the financial planning and implementation with the professionals you engage.</p>
           <p>If you already work with an attorney and CPA, Michael can coordinate with them on the asset picture, titling, and the plan&apos;s financial assumptions. When needed, he can help identify independent professionals; clients choose and engage their attorney and CPA directly.</p>
-          <ol>
+          <ol className={styles.processGrid}>
             <li><b>Map the estate.</b> Organize assets, titling, and beneficiary designations for review with the attorney.</li>
             <li><b>Support the design.</b> Provide financial information and illustrations to help the attorney evaluate the trust structure.</li>
             <li><b>Coordinate funding.</b> Track the retitling and beneficiary changes specified by the attorney and follow up on implementation.</li>
             <li><b>Review periodically.</b> Revisit the plan when asset values, tax rules, or family circumstances change.</li>
           </ol>
+          </div>
 
           <div className="byline-card">
             <Image className="byline-photo" src="/michael-cammarata.jpg" alt="" width={60} height={60} />
