@@ -6,16 +6,19 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, type Variants } from "motion/react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import BrandLogo from "@/components/BrandLogo";
+import { headerCta, headerNav } from "@/lib/site-manifest";
 
 type Item = { label: string; id?: string; href?: string };
 
-const ITEMS: Item[] = [
-  { label: "The Problem", id: "problem" },
-  { label: "How We Help", id: "coordination" },
-  { label: "Guides", id: "guides" },
-  { label: "About", id: "about" },
-  { label: "FAQ", id: "faq" },
-];
+/* A home-page section link ("/#faq") becomes a scroll-spy target; anything else is a plain href. */
+function toItem(link: { label: string; href: string }): Item {
+  const section = /^\/#([\w-]+)$/.exec(link.href);
+  return section ? { label: link.label, id: section[1] } : { label: link.label, href: link.href };
+}
+
+/* Tabs and the CTA come from data/site-config.json (`header.nav`, `header.cta`). */
+const ITEMS: Item[] = headerNav.map(toItem);
+const CTA = toItem(headerCta);
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -96,7 +99,7 @@ export default function Nav({ solid = false }: { solid?: boolean }) {
   }, [open]);
 
   const hrefFor = (it: Item) => (it.href ? it.href : onHome ? `#${it.id}` : `/#${it.id}`);
-  const bookingHref = onHome ? "#booking" : "/#booking";
+  const bookingHref = hrefFor(CTA);
 
   return (
     <div className="nav-float">
@@ -138,7 +141,7 @@ export default function Nav({ solid = false }: { solid?: boolean }) {
 
         <div className="nav-right">
           <Link href={bookingHref} className="btn btn-gold nav-cta">
-            Schedule a Review
+            {CTA.label}
           </Link>
           <button
             type="button"
@@ -187,7 +190,7 @@ export default function Nav({ solid = false }: { solid?: boolean }) {
               ))}
               <motion.div variants={menuItem} className="nav-mobile-cta">
                 <Link href={bookingHref} className="btn btn-gold" onClick={() => setOpen(false)}>
-                  Schedule a Review <ArrowRight size={15} />
+                  {`${CTA.label} `}<ArrowRight size={15} />
                 </Link>
               </motion.div>
             </motion.nav>

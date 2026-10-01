@@ -3,29 +3,29 @@ import { display, body } from "./google-fonts";
 import Script from "next/script";
 import Effects from "@/components/Effects";
 import "./globals.css";
-import siteConfig from "../data/site-config.json";
+import { brand, seo } from "@/lib/site-manifest";
 
 const GA_MEASUREMENT_ID = "G-S0DQ7Z2J61";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.seo.siteUrl),
+  metadataBase: new URL(seo.siteUrl),
   title: {
-    default: siteConfig.seo.defaultTitle,
-    template: siteConfig.seo.titleTemplate,
+    default: seo.defaultTitle,
+    template: seo.titleTemplate,
   },
-  description: siteConfig.seo.defaultDescription,
+  description: seo.defaultDescription,
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    url: siteConfig.seo.siteUrl,
-    siteName: siteConfig.brand.displayName,
-    title: siteConfig.seo.defaultTitle,
-    description: siteConfig.seo.defaultDescription,
+    url: seo.siteUrl,
+    siteName: brand.displayName,
+    title: seo.defaultTitle,
+    description: seo.defaultDescription,
     images: [
       {
-        url: `${siteConfig.seo.siteUrl}/og?topic=Educational%20Planning%20Resources&label=Massachusetts%20financial%20coordination`,
+        url: `${seo.siteUrl}/og?topic=Educational%20Planning%20Resources&label=Massachusetts%20financial%20coordination`,
         width: 1200,
         height: 630,
         alt: "MSA Financial educational planning resources",

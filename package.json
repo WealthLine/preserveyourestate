@@ -8,10 +8,11 @@
     "start": "next start",
     "lint": "eslint",
     "test": "node --test site-content.test.mjs",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "lint:hardcode": "node scripts/anti-hardcode-lint.mjs",
     "verify": "npm run typecheck && npm run build",
-    "conformance": "npm run lint:hardcode"
+    "conformance": "npm run lint:hardcode && npm run check:manifest",
+    "check:manifest": "node scripts/check-manifest-wiring.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.24.0",
