@@ -45,7 +45,11 @@
         "label": "FAQ",
         "href": "/#faq"
       }
-    ]
+    ],
+    "cta": {
+      "label": "Schedule a Review",
+      "href": "/#booking"
+    }
   },
   "footer": {
     "groups": [
@@ -75,6 +79,28 @@
         ]
       }
     ],
+    "legal": [
+      {
+        "label": "Form ADV Part 2A & 2B",
+        "href": "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1008692"
+      },
+      {
+        "label": "Form CRS",
+        "href": "https://reports.adviserinfo.sec.gov/crs/crs_107768.pdf"
+      },
+      {
+        "label": "SEC IAPD",
+        "href": "https://adviserinfo.sec.gov/firm/summary/107768"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "/privacy"
+      },
+      {
+        "label": "Website Disclosures",
+        "href": "/disclosures"
+      }
+    ],
     "socialLinks": []
   },
   "seo": {
@@ -87,7 +113,9 @@
     "disclosures": [
       "Investment advisory services are offered through MSA Financial, LLC, a Registered Investment Adviser (CRD #107768). Michael Cammarata is not an attorney or CPA and does not provide legal or tax advice. He does not draft legal documents or prepare tax returns. He coordinates with clients' existing estate attorneys and CPAs. When needed, he can help identify qualified independent professionals; clients choose and engage them directly.",
       "Investment advisory services are offered through MSA Financial, LLC, a Registered Investment Adviser. Registration with the SEC does not imply a certain level of skill or training. This website is for educational purposes only and does not constitute legal, tax, or investment advice, or a solicitation to buy or sell any security. Michael Cammarata is not an attorney or CPA, does not provide legal advice, draft legal documents, or prepare tax returns. He coordinates with clients' existing professionals and may help identify qualified independent attorneys or CPAs when needed; clients choose and engage those professionals directly. Illustrative tax figures reflect 2026 Massachusetts and federal law and individual results will vary. Consult a qualified professional regarding your specific circumstances."
-    ]
+    ],
+    "formAdvUrl": "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1008692",
+    "crd": "107768"
   },
   "theme": {
     "typography": {
@@ -134,5 +162,7 @@
   },
   "framework": "nextjs_app_router",
   "appRoot": "app",
-  "blogModel": "data-blog"
+  "blog": {
+    "enabled": false
+  }
 }

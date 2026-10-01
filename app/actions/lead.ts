@@ -1,7 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
-import siteConfig from "../../data/site-config.json";
+import { brand, compliance, contact, seo } from "@/lib/site-manifest";
 
 type Intent = "review" | "guide";
 
@@ -98,7 +98,7 @@ export async function submitLead(_prev: LeadState, formData: FormData): Promise<
   const to = process.env.LEAD_TO_EMAIL?.split(",").map((s) => s.trim()).filter(Boolean);
   if (!apiKey || !from || !to?.length) {
     console.error("Lead form: RESEND_API_KEY, LEAD_FROM_EMAIL, or LEAD_TO_EMAIL is not set");
-    return { status: "error", message: `Something went wrong. Please call ${siteConfig.contact.phone}.` };
+    return { status: "error", message: `Something went wrong. Please call ${contact.phone}.` };
   }
 
   const resend = new Resend(apiKey);
@@ -117,7 +117,7 @@ export async function submitLead(_prev: LeadState, formData: FormData): Promise<
       replyTo: email,
       subject: `New ${label}: ${name}`,
       text: [
-        `New ${label} from ${siteConfig.seo.siteUrl}`,
+        `New ${label} from ${seo.siteUrl}`,
         ...(actionNote ? ["", actionNote] : []),
         "",
         ...rows.map(([key, l]) => `${l}: ${values[key]}`),
@@ -132,12 +132,12 @@ ${rows
   )
   .join("\n")}
 </table>
-<p style="font-family:sans-serif;font-size:12px;color:#888">Submitted via ${escapeHtml(siteConfig.seo.siteUrl)}. Reply to this email to respond to ${escapeHtml(name)}.</p>`,
+<p style="font-family:sans-serif;font-size:12px;color:#888">Submitted via ${escapeHtml(seo.siteUrl)}. Reply to this email to respond to ${escapeHtml(name)}.</p>`,
     },
     "office notification",
   );
   if (!notified) {
-    return { status: "error", message: `Something went wrong. Please try again or call ${siteConfig.contact.phone}.` };
+    return { status: "error", message: `Something went wrong. Please try again or call ${contact.phone}.` };
   }
 
   // The office already has the lead from here on, so a failed confirmation must not surface as a retryable error.
@@ -161,13 +161,13 @@ ${rows
       to: email,
       replyTo: to,
       subject: intent === "review" ? "Your complimentary review request" : "Your Massachusetts estate & tax planning guide",
-      text: `Hi ${first},\n\n${body}\n\nQuestions in the meantime? Reply to this email or call ${siteConfig.contact.phone}.\n\nMichael Cammarata, CFP®\n${siteConfig.brand.legalName}`,
+      text: `Hi ${first},\n\n${body}\n\nQuestions in the meantime? Reply to this email or call ${contact.phone}.\n\nMichael Cammarata, CFP®\n${brand.legalName}`,
       html: `<div style="font-family:sans-serif;font-size:15px;line-height:1.5">
 <p>Hi ${escapeHtml(first)},</p>
 <p>${bodyHtml}</p>
-<p>Questions in the meantime? Reply to this email or call ${escapeHtml(siteConfig.contact.phone)}.</p>
-<p>Michael Cammarata, CFP®<br>${escapeHtml(siteConfig.brand.legalName)}</p>
-<p style="font-size:12px;color:#888">${escapeHtml(siteConfig.compliance.disclosures[0])}</p>
+<p>Questions in the meantime? Reply to this email or call ${escapeHtml(contact.phone)}.</p>
+<p>Michael Cammarata, CFP®<br>${escapeHtml(brand.legalName)}</p>
+<p style="font-size:12px;color:#888">${escapeHtml(compliance.disclosures[0])}</p>
 </div>`,
     },
     "submitter confirmation",

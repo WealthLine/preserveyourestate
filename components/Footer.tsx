@@ -1,7 +1,12 @@
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
 import MsaLockup from "@/components/MsaLockup";
-import siteConfig from "../data/site-config.json";
+import { Fragment } from "react";
+import { brand, compliance, contact, footerGroups, footerLegal, isExternalHref } from "@/lib/site-manifest";
+
+// Chrome derives from data/site-config.json through lib/site-manifest.ts. The regulatory
+// column lists every `footer.legal` link; the bottom row repeats the on-site ones.
+const legalOnSite = footerLegal.filter((link) => !isExternalHref(link.href));
 
 export default function Footer({ compact = false }: { compact?: boolean }) {
   if (compact) {
@@ -14,15 +19,17 @@ export default function Footer({ compact = false }: { compact?: boolean }) {
             </Link>
             <div className="footer-legal" style={{ paddingTop: 0 }}>
               <p>
-                {siteConfig.compliance.disclosures[0]}
+                {compliance.disclosures[0]}
               </p>
               <p>
-                © 2026 {siteConfig.brand.legalName} · All Rights Reserved ·{" "}
+                © 2026 {brand.legalName} · All Rights Reserved ·{" "}
                 <Link href="/">PreserveYourEstate.com</Link>
-                {" · "}
-                <Link href="/privacy">Privacy Policy</Link>
-                {" · "}
-                <Link href="/disclosures">Website Disclosures</Link>
+                {legalOnSite.map((link) => (
+                  <Fragment key={link.href}>
+                    {" · "}
+                    <Link href={link.href}>{link.label}</Link>
+                  </Fragment>
+                ))}
               </p>
             </div>
           </div>
@@ -40,17 +47,17 @@ export default function Footer({ compact = false }: { compact?: boolean }) {
               <BrandLogo variant="lockup" tone="dark" className="footer-brand-logo" />
             </Link>
             <p>
-              {siteConfig.brand.tagline}
+              {brand.tagline}
             </p>
-            <p style={{ marginTop: "0.8rem" }}>SEC Registered RIA · CRD #107768</p>
+            <p style={{ marginTop: "0.8rem" }}>{`SEC Registered RIA · CRD #${compliance.crd}`}</p>
             <div className="footer-adviser-mark">
               <MsaLockup />
             </div>
           </div>
           <div>
-            <h4>{siteConfig.footer.groups[0]?.heading || "Quick Links"}</h4>
+            <h4>{footerGroups[0]?.heading || "Quick Links"}</h4>
             <ul>
-              {(siteConfig.footer.groups[0]?.links || []).map((link) => (
+              {(footerGroups[0]?.links || []).map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>{link.label}</Link>
                 </li>
@@ -60,56 +67,41 @@ export default function Footer({ compact = false }: { compact?: boolean }) {
           <div>
             <h4>Regulatory</h4>
             <p>
-              <b style={{ color: "rgba(255,255,255,0.85)" }}>{siteConfig.brand.legalName}</b>
+              <b style={{ color: "rgba(255,255,255,0.85)" }}>{brand.legalName}</b>
               <br />
-              SEC Registered Investment Adviser · CRD #107768
+              {`SEC Registered Investment Adviser · CRD #${compliance.crd}`}
               <br />
-              {siteConfig.contact.address}
+              {contact.address}
               <br />
-              All offices: <a href={`tel:${siteConfig.contact.phone}`}>{siteConfig.contact.phone}</a>
+              All offices: <a href={`tel:${contact.phone}`}>{contact.phone}</a>
             </p>
             <ul style={{ marginTop: "1.2rem" }}>
-              <li>
-                <a
-                  href="https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1008692"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Form ADV Part 2A &amp; 2B →
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://reports.adviserinfo.sec.gov/crs/crs_107768.pdf"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Form CRS →
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://adviserinfo.sec.gov/firm/summary/107768"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  SEC IAPD →
-                </a>
-              </li>
-              <li><Link href="/privacy">Privacy Policy</Link></li>
-              <li><Link href="/disclosures">Website Disclosures</Link></li>
+              {footerLegal.map((link) => (
+                <li key={link.href}>
+                  {isExternalHref(link.href) ? (
+                    <a href={link.href} rel="noopener noreferrer" target="_blank">
+                      {`${link.label} →`}
+                    </a>
+                  ) : (
+                    <Link href={link.href}>{link.label}</Link>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="footer-legal">
           <p>
-            {siteConfig.compliance.disclosures[1]}
+            {compliance.disclosures[1]}
           </p>
           <p>
-            © 2026 {siteConfig.brand.legalName} · All Rights Reserved ·{" "}
-            <Link href="/privacy">Privacy Policy</Link>
-            {" · "}
-            <Link href="/disclosures">Website Disclosures</Link>
+            © 2026 {brand.legalName} · All Rights Reserved ·{" "}
+            {legalOnSite.map((link, index) => (
+              <Fragment key={link.href}>
+                {index > 0 ? " · " : null}
+                <Link href={link.href}>{link.label}</Link>
+              </Fragment>
+            ))}
           </p>
         </div>
       </div>
