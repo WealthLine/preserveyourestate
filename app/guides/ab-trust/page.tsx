@@ -12,17 +12,20 @@ const maForms = "https://www.mass.gov/info-details/dor-estate-tax-forms-and-inst
 const irsExclusion = "https://www.irs.gov/businesses/small-businesses-self-employed/whats-new-estate-and-gift-tax";
 const irsBasis = "https://www.irs.gov/pub/irs-drop/rr-23-02.pdf";
 
+const seoTitle = "A/B Trust in Massachusetts: Using Both $2M Exemptions";
+const seoDescription =
+  "How may an A/B trust use both $2M Massachusetts exemptions? See how credit shelter and QTIP trusts work and how to coordinate with your attorney and CPA.";
+
 export const metadata: Metadata = {
-  title: "A/B Trust Planning in Massachusetts: Using Both $2 Million Exemptions",
-  description:
-    "A Massachusetts guide to credit shelter and QTIP trusts, estate tax illustrations, trust funding, and coordinating with an attorney and CPA. By Michael Cammarata, CFP®.",
+  title: { absolute: seoTitle },
+  description: seoDescription,
   alternates: { canonical: "/guides/ab-trust" },
   openGraph: {
     type: "article",
     url: "/guides/ab-trust",
     siteName: "MSA Financial",
-    title: "A/B Trust Planning in Massachusetts",
-    description: "How married couples may use both Massachusetts estate tax exemptions through a properly designed and funded trust plan.",
+    title: seoTitle,
+    description: seoDescription,
     publishedTime: "2026-07-01",
     modifiedTime: "2026-09-29",
     authors: ["Michael Cammarata, CFP®"],
