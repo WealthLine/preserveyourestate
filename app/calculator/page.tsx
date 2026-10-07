@@ -104,6 +104,13 @@ export default function CalculatorPage() {
               Read the full A/B trust guide →
             </Link>
           </div>
+          <p className="reveal" style={{ marginTop: "1.5rem" }}>
+            Two related educational guides: see{" "}
+            <Link href="/guides/estate-tax-vs-inheritance-tax">how the Massachusetts estate tax differs from an inheritance tax</Link>{" "}
+            and{" "}
+            <Link href="/guides/lifetime-gift-tax-exemption">how the federal lifetime gift tax exemption differs from the Massachusetts estate tax</Link>.
+            Both are educational only; your attorney and CPA can address your individual situation.
+          </p>
         </div>
       </section>
 

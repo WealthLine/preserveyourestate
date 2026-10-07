@@ -202,7 +202,7 @@ export default function AbTrustGuide() {
             <li><b>Income tax basis.</b> Assets excluded from the survivor&apos;s estate generally do not receive another basis adjustment at that death; eligible QTIP assets generally do. That can create an income tax trade-off if heirs later sell appreciated assets. Treatment depends on the assets and trust terms. <a href={irsBasis}>IRS basis guidance</a>.</li>
             <li><b>Flexibility.</b> The survivor&apos;s access to Trust B principal depends on its terms, which may limit future choices.</li>
             <li><b>Administration.</b> Two trusts may mean separate accounting and tax filings, adding work and cost.</li>
-            <li><b>Alternatives.</b> Titling changes, a disclaimer-based plan, or lifetime gifts may fit differently. An attorney and CPA can assess the legal and tax trade-offs.</li>
+            <li><b>Alternatives.</b> Titling changes, a disclaimer-based plan, or lifetime gifts may fit differently. An attorney and CPA can assess the legal and tax trade-offs. For background on gifting, read <Link href="/guides/lifetime-gift-tax-exemption">how the federal lifetime gift tax exemption works alongside Massachusetts estate tax planning</Link>.</li>
           </ul>
           </div>
 

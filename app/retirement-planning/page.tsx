@@ -146,7 +146,11 @@ export default function RetirementPlanningPage() {
             only one input. A distribution may also relate to capital gains, deductions, charitable giving,
             required distributions, an anticipated move, or a surviving spouse&apos;s future filing status.
             The approach should be reviewed with the client&apos;s CPA because tax rules and personal facts
-            can change.
+            can change. Our educational guide to{" "}
+            <Link href="/guides/tax-advantaged-retirement-accounts">tax-advantaged retirement accounts in Massachusetts</Link>{" "}
+            outlines trade-offs and questions to bring to your CPA and attorney, and the{" "}
+            <Link href="/guides/retirement-planning-tools">retirement planning tools guide</Link>{" "}
+            describes how to organize an account and income inventory before those conversations.
           </p>
           <p>
             Rather than applying a universal ordering rule, MSA Financial helps put account choices in

@@ -139,6 +139,9 @@ export default function MassachusettsEstatePlanningGuide() {
           <p>
             Wondering who pays tax when someone inherits? Read our focused comparison of{" "}
             <Link href="/guides/estate-tax-vs-inheritance-tax">estate tax versus inheritance tax in Massachusetts</Link>.
+            Considering lifetime gifts? This educational explanation of{" "}
+            <Link href="/guides/lifetime-gift-tax-exemption">how the federal lifetime gift tax exemption differs from the Massachusetts estate tax</Link>{" "}
+            may help you prepare questions for your attorney and CPA.
           </p>
 
           <h3>Massachusetts does not offer spousal portability</h3>
