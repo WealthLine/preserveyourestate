@@ -233,6 +233,11 @@ export default function MassachusettsEstatePlanningGuide() {
             </p>
           </div>
 
+          <p>
+            To understand the financial advisor&apos;s role alongside your attorney and CPA, see how{" "}
+            <Link href="/financial-advisor-estate-planning">a financial advisor coordinates estate planning in Massachusetts</Link>.
+          </p>
+
           <h2>A common gap: the unfunded trust</h2>
           <p>
             A trust document alone may not carry out its intended role if assets are never retitled

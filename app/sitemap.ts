@@ -37,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/financial-advisor-estate-planning`,
+      lastModified: new Date("2026-10-07"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/guides/ab-trust`,
       lastModified: new Date("2026-09-29"),
       changeFrequency: "monthly",

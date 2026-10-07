@@ -213,6 +213,12 @@ export default function WealthManagementPage() {
             service for Massachusetts households.
           </p>
 
+          <p>
+            To see how a financial advisor fits alongside your attorney and CPA, read how{" "}
+            <Link href="/financial-advisor-estate-planning">a financial advisor fits into estate planning</Link>{" "}
+            for Massachusetts families.
+          </p>
+
           <div className="next-step reveal-scale">
             <p className="eyebrow" style={{ justifyContent: "center" }}>
               Next Step

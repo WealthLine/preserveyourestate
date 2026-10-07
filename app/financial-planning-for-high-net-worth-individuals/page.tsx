@@ -196,6 +196,12 @@ export default function HighNetWorthFinancialPlanningPage() {
             timing and proceeds, so this guide is a starting point for professional discussion.
           </p>
 
+          <p>
+            For a closer look at the estate-planning side of that coordination, read how{" "}
+            <Link href="/financial-advisor-estate-planning">a financial advisor fits into estate planning</Link>{" "}
+            alongside your attorney and CPA.
+          </p>
+
           <div className="callout reveal">
             <p>
               <b>A balanced planning conversation recognizes limits.</b> Financial planning can help

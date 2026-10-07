@@ -297,6 +297,11 @@ export default function Home() {
                 </Link>
               </p>
               <p className="fine" style={{ marginTop: "0.6rem" }}>
+                <Link href="/financial-advisor-estate-planning">
+                  See how a financial advisor fits into estate planning →
+                </Link>
+              </p>
+              <p className="fine" style={{ marginTop: "0.6rem" }}>
                 <Link href="/calculator">See your estate tax number →</Link>
               </p>
             </div>
