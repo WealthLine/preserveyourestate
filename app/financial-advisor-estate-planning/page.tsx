@@ -241,8 +241,10 @@ export default function FinancialAdvisorEstatePlanningPage() {
             a surviving spouse generally cannot use a deceased spouse&apos;s unused Massachusetts
             exemption. Married couples sometimes discuss trust structures with their attorney for this
             reason. For general background, read the educational{" "}
-            <Link href="/guides/ab-trust">A/B trust planning guide</Link>. Any structure should be
-            evaluated and drafted by a qualified estate planning attorney.
+            <Link href="/guides/ab-trust">A/B trust planning guide</Link>, and for the marital trust
+            often paired with it, read{" "}
+            <Link href="/guides/qtip-trust">how a QTIP trust may work for a married Massachusetts couple</Link>.
+            Any structure should be evaluated and drafted by a qualified estate planning attorney.
           </p>
           <p>
             To organize a general estimate before you speak with your professionals, use the{" "}

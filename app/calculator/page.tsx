@@ -109,7 +109,9 @@ export default function CalculatorPage() {
             <Link href="/guides/estate-tax-vs-inheritance-tax">how the Massachusetts estate tax differs from an inheritance tax</Link>{" "}
             and{" "}
             <Link href="/guides/lifetime-gift-tax-exemption">how the federal lifetime gift tax exemption differs from the Massachusetts estate tax</Link>.
-            Both are educational only; your attorney and CPA can address your individual situation.
+            For married couples, see also{" "}
+            <Link href="/guides/qtip-trust">how a QTIP trust may interact with the Massachusetts estate tax threshold</Link>.
+            All three are educational only; your attorney and CPA can address your individual situation.
           </p>
         </div>
       </section>

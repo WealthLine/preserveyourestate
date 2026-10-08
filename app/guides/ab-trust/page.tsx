@@ -133,7 +133,7 @@ export default function AbTrustGuide() {
           <div className={styles.trustCardA}>
           <span className={styles.trustBadge}>TRUST A · MARITAL</span>
           <h3>Trust A: the QTIP or marital trust</h3>
-          <p>Trust A can hold the remaining assets. If the trust meets the requirements and the appropriate election is made, qualified terminable interest property (QTIP) may receive the marital deduction under IRC §2056(b)(7). The surviving spouse must be entitled to all income at least annually. QTIP property is generally included in the survivor&apos;s estate at the second death. The executor and attorney should determine which federal and Massachusetts elections apply. See the <a href={maForms}>Massachusetts Form M-706 guidance</a>.</p>
+          <p>Trust A can hold the remaining assets. If the trust meets the requirements and the appropriate election is made, qualified terminable interest property (QTIP) may receive the marital deduction under IRC §2056(b)(7). The surviving spouse must be entitled to all income at least annually. QTIP property is generally included in the survivor&apos;s estate at the second death. The executor and attorney should determine which federal and Massachusetts elections apply. See the <a href={maForms}>Massachusetts Form M-706 guidance</a>, or read <Link href="/guides/qtip-trust">what a QTIP trust is and how it may work for a married Massachusetts couple</Link>.</p>
           </div>
           </div>
           <p className={styles.tableLabel}>At a glance: how the trusts differ</p>
@@ -195,7 +195,7 @@ export default function AbTrustGuide() {
           <div><p className={styles.kicker}>DOCUMENT REVIEW</p>
           <h2>A wrinkle worth asking your attorney about</h2>
           <p>Some older trusts use a formula tied to the federal estate tax exclusion. That amount is <a href={irsExclusion}>$15 million per person in 2026 according to the IRS</a>, much higher than the Massachusetts $2 million threshold. A formula tied to the federal figure may therefore direct more assets to the credit shelter trust than a Massachusetts plan intended. Whether tax is due at the first death depends on the actual terms, funding, deductions, and elections.</p>
-          <p>Massachusetts permits a state QTIP election separate from a federal QTIP election on Form M-706. Ask your attorney whether an older trust supports the intended election and how its funding formula works. See the <a href={maForms}>Massachusetts estate tax forms and instructions</a>.</p></div>
+          <p>Massachusetts permits a state QTIP election separate from a federal QTIP election on Form M-706. Ask your attorney whether an older trust supports the intended election and how its funding formula works. For the requirements and trade-offs, see the <Link href="/guides/qtip-trust">QTIP trust guide for Massachusetts families</Link>. See the <a href={maForms}>Massachusetts estate tax forms and instructions</a>.</p></div>
           </div>
 
           <div className={styles.sectionBlock}>

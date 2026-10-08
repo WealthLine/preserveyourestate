@@ -252,7 +252,9 @@ export default function MassachusettsEstatePlanningGuide() {
           </p>
           <p>
             For married Massachusetts families exploring how both spouses&apos; estate tax exemptions
-            may be considered, read our educational <Link href="/guides/ab-trust">A/B trust planning guide</Link>.
+            may be considered, read our educational <Link href="/guides/ab-trust">A/B trust planning guide</Link>,
+            and for the marital trust piece of that structure, see{" "}
+            <Link href="/guides/qtip-trust">what a QTIP trust is and what the requirements may be</Link>.
             Any trust structure should be evaluated and drafted by a qualified estate planning
             attorney for your specific circumstances.
           </p>
