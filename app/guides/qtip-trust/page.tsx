@@ -14,6 +14,8 @@ const OG_IMAGE =
 
 const MA_ESTATE_TAX_GUIDE = "https://www.mass.gov/info-details/estate-tax-guide";
 const MA_FORMS = "https://www.mass.gov/info-details/dor-estate-tax-forms-and-instructions";
+const MA_M706_INSTRUCTIONS =
+  "https://www.mass.gov/doc/form-m-706-instructions-for-dates-of-death-on-or-after-8125/download";
 const IRC_2056 = "https://www.law.cornell.edu/uscode/text/26/2056";
 const TREAS_REG_QTIP = "https://www.law.cornell.edu/cfr/text/26/20.2056(b)-7";
 const IRS_706_INSTRUCTIONS = "https://www.irs.gov/instructions/i706";
@@ -36,6 +38,10 @@ const FAQ_TEXT: { q: string; a: string }[] = [
   {
     q: "Who decides who receives a QTIP trust's assets after the surviving spouse dies?",
     a: "The first spouse generally decides, through the trust document, because the surviving spouse receives the income rather than the right to redirect the principal. That feature is why some families, including blended families, consider this structure. It may also limit the surviving spouse's flexibility, so it is worth discussing with your attorney.",
+  },
+  {
+    q: "Can a Massachusetts QTIP election differ from the federal election?",
+    a: "According to the Massachusetts Department of Revenue's Form M-706 instructions, the executor or other fiduciary is not required to make the same QTIP election for federal purposes in order to make the election for Massachusetts purposes, and the Massachusetts election is irrevocable. Because the two elections can differ, the value of QTIP property in the survivor's estate may differ for federal and Massachusetts purposes. Your attorney and CPA can explain how this applies to your trust.",
   },
   {
     q: "Does the financial advisor draft or elect a QTIP trust?",
@@ -87,6 +93,7 @@ const JSON_LD = {
       citation: [
         MA_ESTATE_TAX_GUIDE,
         MA_FORMS,
+        MA_M706_INSTRUCTIONS,
         IRC_2056,
         TREAS_REG_QTIP,
         IRS_706_INSTRUCTIONS,
@@ -141,7 +148,7 @@ export default function QtipTrustGuide() {
             <span>QTIP Trust</span>
           </nav>
           <h1 className="hero-anim d2">
-            What is a QTIP trust, and how may it work <em>in Massachusetts</em>?
+            What is a QTIP trust, and how does it fit into a <em>Massachusetts estate plan</em>?
           </h1>
           <p className="lead hero-anim d3">
             A QTIP trust is one way married couples may provide for a surviving spouse while the
@@ -203,9 +210,10 @@ export default function QtipTrustGuide() {
             The name describes the property rather than a single kind of document. &ldquo;Terminable
             interest&rdquo; refers to the fact that the surviving spouse&apos;s interest ends,
             typically at that spouse&apos;s death. &ldquo;Qualified&rdquo; refers to meeting the
-            federal rules that allow the marital deduction despite that ending. The trust is
-            commonly created within a revocable living trust or a will, and it generally takes
-            effect after the first spouse dies.
+            federal rules that allow the marital deduction despite that ending. In estate
+            planning, the trust is commonly created within a revocable living trust or a will and
+            generally takes effect after the first spouse dies. A QTIP trust can also be created by
+            lifetime gift, which this guide does not cover.
           </p>
 
           <h2>What are the requirements for a QTIP trust?</h2>
@@ -219,17 +227,17 @@ export default function QtipTrustGuide() {
             <div className="coord-card">
               <h3>What the trust terms generally need</h3>
               <ul>
-                <li>The surviving spouse is entitled to all of the income from the property, payable at least annually.</li>
-                <li>During the surviving spouse&apos;s lifetime, no person may have the power to appoint any part of the property to anyone other than the surviving spouse.</li>
+                <li>The surviving spouse is entitled to all of the income from the property for life, payable annually or more often.</li>
+                <li>No person, including the surviving spouse, may have a power to appoint any part of the property to anyone other than the surviving spouse. A power that can be exercised only at or after the survivor&apos;s death is treated differently.</li>
                 <li>The property passes from the first spouse, for example through a trust created at death.</li>
               </ul>
             </div>
             <div className="coord-card">
               <h3>What happens after the first death</h3>
               <ul>
-                <li>The executor makes an election to treat the property as QTIP, generally on a timely filed estate tax return.</li>
-                <li>The election is generally irrevocable once made, and it may cover all or a defined share of the property.</li>
-                <li>Massachusetts has its own estate tax return and its own definition of QTIP, discussed below.</li>
+                <li>The executor makes the QTIP election on the estate tax return. Federal rules generally look to the last return filed on or before the due date, including extensions.</li>
+                <li>The election is generally irrevocable, and it may cover all or a fractional or percentage share of the property.</li>
+                <li>Massachusetts has its own estate tax return and its own QTIP election, discussed below.</li>
               </ul>
             </div>
           </div>
@@ -306,25 +314,34 @@ export default function QtipTrustGuide() {
             Two Massachusetts features frame the discussion. First, according to the Massachusetts
             Department of Revenue, a Massachusetts estate tax return is generally required for a
             resident decedent dying on or after January 1, 2023 when the gross estate plus adjusted
-            taxable gifts exceeds $2,000,000, and a credit of $99,600 may reduce the tax. Second,
-            Massachusetts generally does not allow a surviving spouse to use a deceased spouse&apos;s
-            unused state exemption, so there is no state equivalent of federal portability.
+            taxable gifts exceeds $2,000,000, and a credit of up to $99,600 may reduce the tax.
+            Second, Massachusetts has no portability election for its estate tax. The
+            Department&apos;s guidance provides the $2,000,000 threshold and the credit, but no way to
+            carry a deceased spouse&apos;s unused amount to the survivor.
           </p>
           <p>
             That is why the interaction matters. If a couple&apos;s combined estate is near or above
             $2 million, assets passing to a surviving spouse may qualify for a marital deduction at
-            the first death, but they may then be counted in the survivor&apos;s estate. The
-            Department of Revenue defines &ldquo;MA QTIP&rdquo; as QTIP property that is not included
-            in the decedent&apos;s federal gross estate and for which a Massachusetts estate tax
-            deduction was allowed, and its computation steps include adding back MA QTIP assets
-            claimed on the predeceased spouse&apos;s Massachusetts return. Your attorney and CPA can
-            explain whether a federal election, a Massachusetts election, or both are relevant to
-            your trust.
+            the first death, but they may then be counted in the survivor&apos;s estate. Massachusetts
+            also lets the executor make a QTIP election for Massachusetts purposes without making
+            the same election federally. The Department&apos;s Form M-706 instructions state that this
+            Massachusetts election is irrevocable, and that different federal and Massachusetts
+            elections may lead to a different value of QTIP property in the survivor&apos;s estate for
+            federal and Massachusetts purposes.
+          </p>
+          <p>
+            For decedents dying on or after August 1, 2025, the Department&apos;s instructions also
+            require &ldquo;Massachusetts QTIP&rdquo; to be added to the decedent&apos;s federal gross
+            estate when computing the Massachusetts tax. The Department defines it as QTIP that is
+            not included in the decedent&apos;s federal gross estate and for which a Massachusetts
+            estate tax deduction was allowed when it was transferred to the decedent. Your attorney
+            and CPA can explain whether a federal election, a Massachusetts election, or both are
+            relevant to your trust.
           </p>
           <p>
             Federal law is a separate calculation. The IRS states that the federal basic exclusion
-            amount is $15,000,000 for calendar year 2026, but Massachusetts computes its estate tax
-            by reference to the Internal Revenue Code as of December 31, 2000, and the Department
+            amount is $15,000,000 for calendar year 2026. Massachusetts, however, computes its estate
+            tax by reference to the Internal Revenue Code as of December 31, 2000, and the Department
             of Revenue states that later federal changes have no impact on the Massachusetts estate
             tax.
           </p>
@@ -333,7 +350,11 @@ export default function QtipTrustGuide() {
             <a href={MA_ESTATE_TAX_GUIDE} target="_blank" rel="noopener noreferrer">
               Estate Tax Guide
             </a>{" "}
-            (page updated April 23, 2026) and{" "}
+            (page updated April 23, 2026),{" "}
+            <a href={MA_M706_INSTRUCTIONS} target="_blank" rel="noopener noreferrer">
+              Instructions for Form M-706 (dates of death on or after August 1, 2025)
+            </a>{" "}
+            and{" "}
             <a href={MA_FORMS} target="_blank" rel="noopener noreferrer">
               Estate Tax Forms and Instructions
             </a>
