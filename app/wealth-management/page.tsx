@@ -205,6 +205,14 @@ export default function WealthManagementPage() {
             trust structure should be evaluated and drafted by a qualified estate planning attorney.
           </p>
           <p>
+            If you are comparing advisors, the guide on{" "}
+            <Link href="/guides/fiduciary-vs-financial-advisor">
+              fiduciary vs financial advisor standards and how advisors are paid
+            </Link>{" "}
+            explains how SEC standards of conduct differ and lists questions you may want to ask any
+            advisor.
+          </p>
+          <p>
             If your planning questions extend beyond investments to estate documents, retirement income,
             business interests, and coordination with your existing professionals, explore our{" "}
             <Link href="/financial-planning-for-high-net-worth-individuals">

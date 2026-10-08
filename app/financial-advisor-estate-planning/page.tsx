@@ -273,7 +273,12 @@ export default function FinancialAdvisorEstatePlanningPage() {
           <p>
             MSA Financial is a fee-based, fiduciary SEC-registered investment adviser serving
             households in Braintree, Sandwich, Framingham, and Barnstable County, Massachusetts. A
-            conversation can help determine whether this scope fits your circumstances. For the
+            conversation can help determine whether this scope fits your circumstances. To
+            understand what a fiduciary standard means, read the guide on{" "}
+            <Link href="/guides/fiduciary-vs-financial-advisor">
+              what a fiduciary financial advisor is and how it differs from other advisors
+            </Link>
+            . For the
             investment side of the relationship, see our{" "}
             <Link href="/wealth-management">tax-efficient wealth management service</Link>. For a
             broader view of planning across estate, tax, retirement, and business questions, see{" "}

@@ -202,6 +202,15 @@ export default function HighNetWorthFinancialPlanningPage() {
             alongside your attorney and CPA.
           </p>
 
+          <p>
+            When you are evaluating who to work with, the{" "}
+            <Link href="/guides/fiduciary-vs-financial-advisor">
+              fiduciary vs financial advisor guide
+            </Link>{" "}
+            outlines how advisors may be paid, what conflicts can remain, and questions about
+            coordination with your attorney and CPA.
+          </p>
+
           <div className="callout reveal">
             <p>
               <b>A balanced planning conversation recognizes limits.</b> Financial planning can help
