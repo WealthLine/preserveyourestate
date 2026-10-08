@@ -163,8 +163,8 @@ export default function FundingATrustGuide() {
             </p>
             <ul>
               <li>
-                A trust document alone does not change who owns an account. Each asset needs its own
-                follow-through.
+                A trust document alone generally does not change who owns an account. Each asset may
+                need its own follow-through.
               </li>
               <li>
                 Different asset types are handled differently: retitling, beneficiary designations,
@@ -193,8 +193,8 @@ export default function FundingATrustGuide() {
             In practice, funding is a set of small administrative steps spread across several
             institutions: a brokerage custodian, a bank, an insurance company, a retirement plan
             administrator, and the registry of deeds. Each has its own forms and its own timing.
-            Because the steps are scattered, it is common for a few items to remain open long after
-            the signing meeting.
+            Because the steps are scattered, a few items may remain open long after the signing
+            meeting.
           </p>
           <p>
             Funding also varies with the type of trust. A revocable living trust is usually funded
@@ -216,8 +216,8 @@ export default function FundingATrustGuide() {
             administration. According to the Massachusetts Department of Revenue, a Massachusetts
             estate tax return is generally required when the gross estate plus adjusted taxable
             gifts exceeds $2,000,000 for decedents dying on or after January 1, 2023, and a credit of
-            up to $99,600 may apply. Massachusetts also has no spousal portability for that
-            exemption. Married couples sometimes work with an attorney on an A/B trust structure so
+            up to $99,600 may apply. Massachusetts also generally does not allow a surviving
+            spouse to use a deceased spouse&apos;s unused state exemption. Married couples sometimes work with an attorney on an A/B trust structure so
             that both spouses&apos; exemptions may be considered, but that structure generally
             depends on assets being titled so the plan can operate as drafted.
           </p>
@@ -283,7 +283,7 @@ export default function FundingATrustGuide() {
             <div className="coord-card">
               <h3>Real estate</h3>
               <ul>
-                <li>Your attorney prepares and records any deed that moves property into the trust.</li>
+                <li>Your attorney typically prepares and records any deed that moves property into the trust.</li>
                 <li>Ask the attorney how a transfer interacts with mortgage and homeowner&apos;s insurance terms.</li>
                 <li>Keep the recorded deed with your estate documents.</li>
                 <li>Your advisor may add the property to the household inventory for reference.</li>
@@ -339,9 +339,8 @@ export default function FundingATrustGuide() {
 
           <h2>What funding gaps are common after the signing meeting?</h2>
           <p>
-            Gaps rarely come from a single large mistake. They tend to build up from ordinary
-            events that nobody thought to connect back to the trust. A few examples that families
-            may want to look for:
+            Gaps may come from ordinary events that nobody thought to connect back to the trust,
+            rather than from one large mistake. A few examples that families may want to look for:
           </p>
           <ul className="strategy-list stagger">
             <li>
@@ -355,8 +354,9 @@ export default function FundingATrustGuide() {
               <h3>Beneficiary forms that were never updated</h3>
               <p>
                 Older designations may name a former spouse, a deceased relative, or no contingent
-                beneficiary at all, and they generally control the account regardless of what a
-                trust or will says.
+                beneficiary at all, and depending on the account, they may control who receives it
+                regardless of what a trust or will says. Your attorney can explain how this applies
+                to your accounts.
               </p>
             </li>
             <li>
