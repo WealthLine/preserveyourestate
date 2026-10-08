@@ -244,6 +244,11 @@ export default function MassachusettsEstatePlanningGuide() {
             or beneficiary designations are left inconsistent with the plan. This is often called an
             unfunded trust. Reviewing account registration, beneficiaries, insurance ownership, and
             other asset details with the appropriate professionals can help surface follow-up items.
+            For a checklist by account type, see{" "}
+            <Link href="/guides/funding-a-trust">
+              how a Massachusetts trust may be funded and who coordinates each step
+            </Link>
+            .
           </p>
           <p>
             For married Massachusetts families exploring how both spouses&apos; estate tax exemptions

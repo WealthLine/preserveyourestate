@@ -137,7 +137,11 @@ export default function FinancialAdvisorEstatePlanningPage() {
               <p>
                 Organize account registrations and ownership details so that retitling steps your
                 attorney identifies can be tracked and completed. A trust document alone may not
-                address assets that were never retitled.
+                address assets that were never retitled. See{" "}
+                <Link href="/guides/funding-a-trust">
+                  how funding a trust works and how the attorney, advisor and CPA hand off the steps
+                </Link>
+                .
               </p>
             </li>
             <li>

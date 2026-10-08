@@ -220,6 +220,7 @@ export default function AbTrustGuide() {
             <li>Whether each spouse&apos;s assets support the intended funding at the first death</li>
           </ul>
           <div className={styles.fundingCaution}>Retirement accounts need separate beneficiary-designation review. They generally are not retitled into a living trust the way a taxable brokerage account may be. Make changes only with the attorney and tax professional&apos;s guidance.</div>
+          <p style={{ marginTop: "1.2rem" }}>For a step-by-step view of who handles each account type, read <Link href="/guides/funding-a-trust">how a Massachusetts trust may be funded and how the attorney, advisor and CPA coordinate it</Link>.</p>
           </div>
 
           <div className={styles.sectionBlock} id="team">

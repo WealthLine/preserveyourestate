@@ -49,6 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/guides/funding-a-trust`,
+      lastModified: new Date("2026-10-08"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/guides/massachusetts-estate-planning`,
       lastModified: new Date("2026-09-28"),
       changeFrequency: "monthly",
