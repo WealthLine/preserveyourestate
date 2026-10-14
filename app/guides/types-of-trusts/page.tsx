@@ -177,7 +177,8 @@ export default function TypesOfTrustsGuide() {
               </li>
               <li>
                 Your attorney decides what the documents say, and your CPA advises on the tax
-                effects. Neither this guide nor an advisor can recommend a structure for you.
+                effects. This guide does not recommend a structure, and any choice is made with
+                your attorney and CPA.
               </li>
             </ul>
           </div>
@@ -337,7 +338,7 @@ export default function TypesOfTrustsGuide() {
           <h2>What is a grantor trust?</h2>
           <p>
             A grantor trust is a trust whose income is generally taxed to the person who created
-            it (the grantor) under federal income tax rules. A revocable living trust is commonly a
+            it (the grantor), or to another person treated as its owner, under federal income tax rules. A revocable living trust is commonly a
             grantor trust, and some irrevocable trusts are drafted to be grantor trusts as well. The
             label is about income tax treatment, not about whether a trust is revocable. Your CPA
             can explain how the rules apply to a specific trust.
@@ -363,11 +364,13 @@ export default function TypesOfTrustsGuide() {
 
           <h2>What is a charitable trust?</h2>
           <p>
-            A charitable trust is a trust set up to benefit a charity, and some versions also pay
-            income to the donor or family for a period. Charitable remainder and charitable lead
-            trusts are two commonly discussed categories. They involve specific rules, irrevocable
-            decisions, and tax reporting, so they are generally reviewed with an attorney and CPA
-            well before any assets are transferred.
+            A charitable trust is a trust set up to benefit a charity. Charitable remainder and
+            charitable lead trusts are two commonly discussed categories. In a charitable remainder
+            trust, individuals may receive payments for a period before the remainder goes to
+            charity. In a charitable lead trust, a charity may receive payments for a period before
+            the remainder goes to family or other beneficiaries. Both involve specific rules,
+            generally irrevocable decisions, and tax reporting, so they are typically reviewed with
+            an attorney and CPA well before any assets are transferred.
           </p>
 
           <h2>What is a special-needs trust?</h2>
