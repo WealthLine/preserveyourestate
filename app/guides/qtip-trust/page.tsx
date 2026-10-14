@@ -213,7 +213,12 @@ export default function QtipTrustGuide() {
             federal rules that allow the marital deduction despite that ending. In estate
             planning, the trust is commonly created within a revocable living trust or a will and
             generally takes effect after the first spouse dies. A QTIP trust can also be created by
-            lifetime gift, which this guide does not cover.
+            lifetime gift, which this guide does not cover. To see how a QTIP trust compares with
+            revocable, irrevocable, testamentary and other trust categories, read{" "}
+            <Link href="/guides/types-of-trusts">
+              the main types of trusts Massachusetts families review
+            </Link>
+            .
           </p>
 
           <h2>What are the requirements for a QTIP trust?</h2>

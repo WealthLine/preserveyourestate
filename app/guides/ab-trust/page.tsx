@@ -123,7 +123,7 @@ export default function AbTrustGuide() {
           <div className={styles.sectionBlock} id="structure">
           <p className={styles.kicker}>02 / THE STRUCTURE</p>
           <h2>How an A/B trust works</h2>
-          <p>An attorney may design an A/B arrangement within a revocable trust. At the first death, the plan can divide assets between two trusts, subject to the document&apos;s funding formula and elections.</p>
+          <p>An attorney may design an A/B arrangement within a revocable trust. At the first death, the plan can divide assets between two trusts, subject to the document&apos;s funding formula and elections. If you are still sorting out how this structure differs from other trust labels, see <Link href="/guides/types-of-trusts">the main types of trusts Massachusetts families review, from revocable and irrevocable to credit shelter and QTIP</Link>.</p>
           <div className={styles.trustCards}>
           <div className={styles.trustCardB}>
           <span className={styles.trustBadge}>TRUST B · CREDIT SHELTER</span>

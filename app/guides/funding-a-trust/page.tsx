@@ -243,6 +243,10 @@ export default function FundingATrustGuide() {
             <Link href="/guides/massachusetts-estate-planning">
               Massachusetts estate planning guide
             </Link>
+            . If the trust labels themselves are unfamiliar, start with{" "}
+            <Link href="/guides/types-of-trusts">
+              the main types of trusts Massachusetts families review and how they differ
+            </Link>
             .
           </p>
 

@@ -255,7 +255,11 @@ export default function MassachusettsEstatePlanningGuide() {
             may be considered, read our educational <Link href="/guides/ab-trust">A/B trust planning guide</Link>,
             and for the marital trust piece of that structure, see{" "}
             <Link href="/guides/qtip-trust">what a QTIP trust is and what the requirements may be</Link>.
-            Any trust structure should be evaluated and drafted by a qualified estate planning
+            For a plain-English overview of the trust categories you may hear about, see{" "}
+            <Link href="/guides/types-of-trusts">
+              the main types of trusts Massachusetts families review
+            </Link>
+            . Any trust structure should be evaluated and drafted by a qualified estate planning
             attorney for your specific circumstances.
           </p>
 
