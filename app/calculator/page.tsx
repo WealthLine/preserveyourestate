@@ -111,7 +111,9 @@ export default function CalculatorPage() {
             <Link href="/guides/lifetime-gift-tax-exemption">how the federal lifetime gift tax exemption differs from the Massachusetts estate tax</Link>.
             For married couples, see also{" "}
             <Link href="/guides/qtip-trust">how a QTIP trust may interact with the Massachusetts estate tax threshold</Link>.
-            All three are educational only; your attorney and CPA can address your individual situation.
+            To turn an estimate into questions for your professionals, read{" "}
+            <Link href="/guides/massachusetts-estate-tax-planning">what Massachusetts pre-retirees may want to review before the $2M estate tax threshold</Link>.
+            All of these guides are educational only; your attorney and CPA can address your individual situation.
           </p>
         </div>
       </section>

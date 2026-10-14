@@ -249,7 +249,12 @@ export default function FinancialAdvisorEstatePlanningPage() {
           <p>
             To organize a general estimate before you speak with your professionals, use the{" "}
             <Link href="/calculator">Massachusetts estate tax calculator</Link>. It is an educational
-            tool, not legal or tax advice.
+            tool, not legal or tax advice. For the planning questions to prepare before that
+            discussion, read{" "}
+            <Link href="/guides/massachusetts-estate-tax-planning">
+              what Massachusetts pre-retirees may want to review before the $2M estate tax threshold
+            </Link>
+            .
           </p>
 
           <h2>Who does MSA Financial work with?</h2>

@@ -185,7 +185,12 @@ export default function HighNetWorthFinancialPlanningPage() {
             distribution questions. For estate-planning education, read the{" "}
             <Link href="/guides/massachusetts-estate-planning">Massachusetts estate planning guide</Link>{" "}
             or use the <Link href="/calculator">Massachusetts estate tax calculator</Link> to organize a
-            general estimate before discussing your own facts with qualified professionals.
+            general estimate before discussing your own facts with qualified professionals. For the
+            questions that may come up in that discussion, read{" "}
+            <Link href="/guides/massachusetts-estate-tax-planning">
+              Massachusetts estate tax planning questions to bring to your attorney and CPA
+            </Link>
+            .
           </p>
 
           <p>

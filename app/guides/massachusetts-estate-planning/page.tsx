@@ -144,6 +144,14 @@ export default function MassachusettsEstatePlanningGuide() {
             may help you prepare questions for your attorney and CPA.
           </p>
 
+          <p>
+            For a question-by-question checklist to prepare before meeting your professionals, read{" "}
+            <Link href="/guides/massachusetts-estate-tax-planning">
+              what Massachusetts pre-retirees may want to review in estate tax planning
+            </Link>
+            .
+          </p>
+
           <h3>Massachusetts does not offer spousal portability</h3>
           <p>
             Under Massachusetts rules, an unused state estate tax exemption generally does not
