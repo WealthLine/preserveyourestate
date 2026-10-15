@@ -35,7 +35,7 @@ export default function VisitorTracking() {
       setMode(value);
       setGpc(signal);
       setReady(true);
-      setOpen(stored === null && value === "opt-in");
+      setOpen(openedByVisitor.current || (stored === null && value === "opt-in"));
     }
     const value = readCookie(MODE_COOKIE);
     if (value === "opt-in" || value === "opt-out") {
@@ -98,7 +98,7 @@ export default function VisitorTracking() {
         gtag('config', '${GA_ID}');
       `}</Script>
     </>}
-    {ready && open && <section ref={dialog} tabIndex={-1} id="visitor-consent" role="dialog" className={styles.banner} aria-label="Cookie settings"
+    {ready && open && <section ref={dialog} tabIndex={-1} id="visitor-consent" role="dialog" aria-modal={false} className={styles.banner} aria-label="Cookie settings"
       onKeyDown={event => { if (event.key === "Escape" && dismissible) close(); }}>
       <p>We use WealthReach and analytics cookies to understand website visits and connect browsing activity with inquiries. {mode === "opt-out" ? "You may opt out at any time using the choices below. " : "You may accept or reject this below and change your choice at any time. "}<a href="/privacy">Privacy policy</a></p>
       <div className={styles.actions}>
