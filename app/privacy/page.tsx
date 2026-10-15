@@ -88,8 +88,9 @@ export default function PrivacyPage() {
 
           <h2>Cookies and tracking</h2>
           <p>
-            This website uses a cookie to remember your privacy choice. If you allow analytics,
-            we also use WealthReach and its service providers, along with Google Analytics, to
+            This website uses cookies to remember your privacy choice and location-based default.
+            Depending on your location, analytics starts after you allow it or remains enabled
+            unless you opt out. We use WealthReach and its service providers, along with Google Analytics, to
             understand website visits. These services use cookies and similar technologies to
             collect pages visited, referral sources, device and browser information, and website
             interactions. Where identification is available, browsing activity may be associated
@@ -97,8 +98,9 @@ export default function PrivacyPage() {
             to contact us.
           </p>
           <p>
-            You can allow or decline analytics using the cookie banner, and change your choice at
-            any time using the Privacy choices button. Declining analytics does not prevent you
+            You can accept or reject analytics using the cookie banner, and change your choice at
+            any time using Cookie Settings in the footer. We honor Global Privacy Control as an
+            opt-out signal unless you explicitly choose to allow analytics. Rejecting analytics does not prevent you
             from using the website or submitting an inquiry. We do not use third-party advertising
             cookies for targeted ads. You can also refuse or delete cookies in your browser
             settings.

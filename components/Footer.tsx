@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CookieSettingsButton from "@/components/CookieSettingsButton";
 import BrandLogo from "@/components/BrandLogo";
 import MsaLockup from "@/components/MsaLockup";
 import { Fragment } from "react";
@@ -30,6 +31,7 @@ export default function Footer({ compact = false }: { compact?: boolean }) {
                     <Link href={link.href}>{link.label}</Link>
                   </Fragment>
                 ))}
+                {" · "}<CookieSettingsButton />
               </p>
             </div>
           </div>
@@ -102,6 +104,7 @@ export default function Footer({ compact = false }: { compact?: boolean }) {
                 <Link href={link.href}>{link.label}</Link>
               </Fragment>
             ))}
+            {" · "}<CookieSettingsButton />
           </p>
         </div>
       </div>
