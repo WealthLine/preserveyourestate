@@ -14,10 +14,11 @@ export default function VisitorTracking() {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     const cookie = document.cookie.split("; ").find(value => value.startsWith(`${COOKIE}=`));
-    const consent = cookie ? decodeURIComponent(cookie.slice(COOKIE.length + 1)) : null;
+    let consent: string | null = null;
+    try { consent = cookie ? decodeURIComponent(cookie.slice(COOKIE.length + 1)) : null; } catch { /* Invalid cookies require a new choice. */ }
     const frame = requestAnimationFrame(() => {
       setAllowed(consent === "analytics:yes");
-      setOpen(!consent);
+      setOpen(consent !== "analytics:yes" && consent !== "analytics:no");
     });
     return () => cancelAnimationFrame(frame);
   }, []);
