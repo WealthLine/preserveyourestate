@@ -100,7 +100,7 @@ export default function VisitorTracking() {
     </>}
     {ready && open && <section ref={dialog} tabIndex={-1} id="visitor-consent" role="dialog" aria-modal={false} className={styles.banner} aria-label="Cookie settings"
       onKeyDown={event => { if (event.key === "Escape" && dismissible) close(); }}>
-      <p>We use WealthReach and analytics cookies to understand website visits and connect browsing activity with inquiries. {mode === "opt-out" ? "You may opt out at any time using the choices below. " : "You may accept or reject this below and change your choice at any time. "}<a href="/privacy">Privacy policy</a></p>
+      <p>We use analytics cookies to understand website visits and connect browsing activity with inquiries. {mode === "opt-out" ? "You may opt out at any time using the choices below. " : "You may accept or reject this below and change your choice at any time. "}<a href="/privacy">Privacy policy</a></p>
       <div className={styles.actions}>
         <button type="button" onClick={() => choose(false)}>Reject All</button>
         <button type="button" className={styles.accept} onClick={() => choose(true)}>Accept All</button>
