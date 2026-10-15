@@ -27,7 +27,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="lead hero-anim d3">
-            Effective August 12, 2026. This policy describes how MSA Financial, LLC
+            Effective October 15, 2026. This policy describes how MSA Financial, LLC
             (&ldquo;MSA,&rdquo; &ldquo;we,&rdquo; or &ldquo;us&rdquo;) handles information collected
             through PreserveYourEstate.com.
           </p>
@@ -88,10 +88,20 @@ export default function PrivacyPage() {
 
           <h2>Cookies and tracking</h2>
           <p>
-            This website may use cookies or similar technologies that are needed for the site to
-            function. We do not currently use third-party advertising cookies to track you across
-            other sites for targeted ads. You can refuse or delete cookies in your browser
-            settings; some site features may not work as intended if you do.
+            This website uses a cookie to remember your privacy choice. If you allow analytics,
+            we also use WealthReach and its service providers, along with Google Analytics, to
+            understand website visits. These services use cookies and similar technologies to
+            collect pages visited, referral sources, device and browser information, and website
+            interactions. Where identification is available, browsing activity may be associated
+            with a visitor or an inquiry to help us understand which sources and pages lead people
+            to contact us.
+          </p>
+          <p>
+            You can allow or decline analytics using the cookie banner, and change your choice at
+            any time using the Privacy choices button. Declining analytics does not prevent you
+            from using the website or submitting an inquiry. We do not use third-party advertising
+            cookies for targeted ads. You can also refuse or delete cookies in your browser
+            settings.
           </p>
 
           <h2>Links to other sites</h2>
