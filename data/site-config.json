@@ -12,7 +12,7 @@
   },
   "contact": {
     "phone": "(781) 843-3500",
-    "address": "Braintree, MA (Main) · Sandwich · Framingham",
+    "address": "Braintree, MA (Main) \u00b7 Sandwich \u00b7 Framingham",
     "calendarUrl": "/#booking"
   },
   "booking": {
@@ -21,7 +21,8 @@
     "mode": "link"
   },
   "consent": {
-    "enabled": false
+    "enabled": true,
+    "policyUrl": "/privacy"
   },
   "header": {
     "nav": [
@@ -105,8 +106,8 @@
   },
   "seo": {
     "defaultTitle": "MSA Financial, LLC",
-    "defaultDescription": "Massachusetts taxes estates over $2M. Michael Cammarata, CFP® coordinates wealth, estate, and tax planning for MA families, backed by MSA Financial, an independent RIA since 1997. Free MA estate tax calculator.",
-    "titleTemplate": "%s — MSA Financial",
+    "defaultDescription": "Massachusetts taxes estates over $2M. Michael Cammarata, CFP\u00ae coordinates wealth, estate, and tax planning for MA families, backed by MSA Financial, an independent RIA since 1997. Free MA estate tax calculator.",
+    "titleTemplate": "%s \u2014 MSA Financial",
     "siteUrl": "https://www.preserveyourestate.com"
   },
   "compliance": {
@@ -164,5 +165,10 @@
   "appRoot": "app",
   "blog": {
     "enabled": false
+  },
+  "visitors": {
+    "enabled": true,
+    "siteScriptUrl": "https://attract.wealthreach.ai/api/embed/site.js?site=2113a51e-4f3a-41cd-87d2-1ef7b17a649d&privacy=strict",
+    "recordings": false
   }
 }
