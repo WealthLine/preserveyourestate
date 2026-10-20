@@ -117,7 +117,7 @@ export default function AbTrustGuide() {
           <div className={styles.explainer}>
           <p className={styles.kicker}>THE MA EXEMPTION GAP</p>
           <h2>Why couples can lose an exemption</h2>
-          <p>At the federal level, a surviving spouse may be able to use the first spouse&apos;s unused estate tax exclusion through a portability election. Massachusetts has no equivalent portability election. If everything passes outright to the surviving spouse, the first spouse&apos;s Massachusetts exemption may go unused. The survivor then owns the combined estate with only their own state exemption available. See the <a href={maGuide}>Massachusetts estate tax guide</a>.</p>
+          <p>At the federal level, a surviving spouse may be able to use the first spouse&apos;s unused estate tax exclusion through a portability election. Massachusetts has no equivalent portability election. If everything passes outright to the surviving spouse, the first spouse&apos;s Massachusetts exemption may go unused. The survivor then owns the combined estate with only their own state exemption available. See the <a href={maGuide}>Massachusetts estate tax guide</a>. For a general explanation of the threshold and credit, read <Link href="/guides/massachusetts-estate-tax-planning">how the Massachusetts estate tax exemption applies to your household and what to review with your attorney and CPA</Link>.</p>
           </div>
 
           <div className={styles.sectionBlock} id="structure">

@@ -6,17 +6,27 @@ import Faq, { type FaqItem } from "@/components/Faq";
 
 const GUIDE_PATH = "/guides/massachusetts-estate-tax-planning";
 const GUIDE_URL = `https://www.preserveyourestate.com${GUIDE_PATH}`;
-const SEO_TITLE = "Massachusetts Estate Tax Planning: Questions to Review";
+const SEO_TITLE = "Massachusetts Estate Tax Exemption (2026): What to Review";
 const SEO_DESCRIPTION =
-  "Massachusetts estate tax planning questions for pre-retirees near the $2M threshold: what to review with your attorney and CPA, and how an advisor coordinates.";
+  "Massachusetts estate tax exemption for 2026: the $2M filing threshold, $99,600 credit, spousal portability, and questions for your attorney and CPA.";
+const LAST_REVIEWED = "October 20, 2026";
 const OG_IMAGE =
-  "https://www.preserveyourestate.com/og?topic=Massachusetts%20Estate%20Tax%20Planning&label=Massachusetts%20guide";
+  "https://www.preserveyourestate.com/og?topic=Massachusetts%20Estate%20Tax%20Exemption&label=Massachusetts%20guide";
 
 const MA_ESTATE_TAX_GUIDE = "https://www.mass.gov/info-details/estate-tax-guide";
 const MA_ESTATE_TAX_FAQ = "https://www.mass.gov/info-details/faqs-new-estate-tax-changes";
 const MA_SURTAX = "https://www.mass.gov/info-details/massachusetts-4-surtax-on-taxable-income";
+const MA_MARITAL = "https://www.mass.gov/directive/directive-95-1-the-massachusetts-unlimited-marital-deduction";
 
 const FAQ_TEXT: { q: string; a: string }[] = [
+  {
+    q: "How does the Massachusetts estate tax exemption work?",
+    a: "For decedents dying on or after January 1, 2023, Massachusetts uses a $2,000,000 filing threshold and a $99,600 credit rather than a simple deduction. The tax is calculated from a federal credit table and then reduced by the credit, so any actual result for an estate is a question for your CPA. Figures were verified against mass.gov as of October 20, 2026 and may change.",
+  },
+  {
+    q: "Does Massachusetts allow spouses to share the exemption?",
+    a: "Not through a portability election. The Department of Revenue's Estate Tax Guide describes the threshold and credit for each decedent's estate and describes no election that lets a surviving spouse add a first spouse's unused Massachusetts amount. Ask your attorney and CPA how that may affect your documents and what limits, such as cost or less flexibility, any structure could bring.",
+  },
   {
     q: "Can a household reduce its Massachusetts estate tax exposure?",
     a: "This guide cannot say for any household. Some families discuss categories such as changes to ownership and beneficiary designations, trust structures, lifetime gifts, or charitable giving with their attorney and CPA. Each may involve cost, less flexibility, reporting, and rules that change, and the right answer depends on individual circumstances.",
@@ -48,14 +58,14 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description: SEO_DESCRIPTION,
     publishedTime: "2026-10-14",
-    modifiedTime: "2026-10-14",
+    modifiedTime: "2026-10-20",
     authors: ["Michael Cammarata, CFP®"],
     images: [
       {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "MSA Financial guide to Massachusetts estate tax planning questions",
+        alt: "MSA Financial guide to the Massachusetts estate tax exemption",
       },
     ],
   },
@@ -69,14 +79,14 @@ const JSON_LD = {
       "@id": `${GUIDE_URL}#article`,
       headline: SEO_TITLE,
       description:
-        "An educational guide to the estate tax planning questions Massachusetts pre-retirees may want to prepare for their attorney and CPA, including balance sheet, ownership and beneficiaries, spousal portability, liquidity, lifetime gifts and review timing.",
+        "An educational guide to the Massachusetts estate tax exemption, including the $2,000,000 filing threshold, the $99,600 credit, spousal portability, and the planning questions Massachusetts pre-retirees may want to prepare for their attorney and CPA.",
       mainEntityOfPage: GUIDE_URL,
       image: OG_IMAGE,
       author: { "@id": "https://www.preserveyourestate.com/#michael" },
       publisher: { "@id": "https://www.preserveyourestate.com/#org" },
       datePublished: "2026-10-14",
-      dateModified: "2026-10-14",
-      citation: [MA_ESTATE_TAX_GUIDE, MA_ESTATE_TAX_FAQ, MA_SURTAX],
+      dateModified: "2026-10-20",
+      citation: [MA_ESTATE_TAX_GUIDE, MA_ESTATE_TAX_FAQ, MA_SURTAX, MA_MARITAL],
     },
     {
       "@type": "Person",
@@ -123,11 +133,11 @@ export default function MassachusettsEstateTaxPlanningGuide() {
             <span>/</span>
             <Link href="/#guides">Guides</Link>
             <span>/</span>
-            <span>Massachusetts Estate Tax Planning</span>
+            <span>Massachusetts Estate Tax Exemption</span>
           </nav>
           <h1 className="hero-anim d2">
-            What should Massachusetts pre-retirees review in <em>estate tax planning</em> before
-            the $2M threshold?
+            What does the Massachusetts <em>estate tax exemption</em> mean for your estate
+            planning?
           </h1>
           <p className="lead hero-anim d3">
             A question-by-question guide to what a household may want to prepare before meeting
@@ -143,7 +153,7 @@ export default function MassachusettsEstateTaxPlanningGuide() {
                 color: "var(--gold-pale)",
               }}
             >
-              Estate Tax Guide · Updated October 2026
+              Estate Tax Guide · Last reviewed {LAST_REVIEWED}
             </span>
           </p>
         </div>
@@ -151,6 +161,27 @@ export default function MassachusettsEstateTaxPlanningGuide() {
 
       <section>
         <div className="wrap article guide-fiduciary">
+          <div className="callout reveal">
+            <p>
+              <b>Short answer</b>
+            </p>
+            <p>
+              As of {LAST_REVIEWED}, for Massachusetts residents dying on or after January 1, 2023,
+              the Department of Revenue requires an estate tax return when the gross estate plus
+              adjusted taxable gifts exceeds $2,000,000, and allows a $99,600 credit. Mass.gov
+              describes no portability election, so a spouse&apos;s unused amount may not carry over.
+              Rules may change.
+            </p>
+            <p className="fine">
+              Last reviewed: {LAST_REVIEWED}. Source: Massachusetts Department of Revenue,{" "}
+              <a href={MA_ESTATE_TAX_GUIDE} target="_blank" rel="noopener noreferrer">
+                Estate Tax Guide
+              </a>{" "}
+              (page updated April 23, 2026). Educational only; your attorney and CPA can address your
+              situation.
+            </p>
+          </div>
+
           <h2>What should you review first in Massachusetts estate tax planning?</h2>
           <p>
             Massachusetts pre-retirees may want to review a complete balance sheet, how assets are
@@ -201,8 +232,8 @@ export default function MassachusettsEstateTaxPlanningGuide() {
             (page updated April 23, 2026) and{" "}
             <a href={MA_ESTATE_TAX_FAQ} target="_blank" rel="noopener noreferrer">
               FAQs: New Estate Tax Changes
-            </a>
-            . Verified against mass.gov as of October 14, 2026. Thresholds, credits and calculation
+            </a>{" "}
+            (page updated October 31, 2024). Verified against mass.gov as of {LAST_REVIEWED}. Thresholds, credits and calculation
             steps may change, and the tax for any estate is a question for your attorney and CPA.
           </p>
           <p>
@@ -216,6 +247,35 @@ export default function MassachusettsEstateTaxPlanningGuide() {
               how estate tax differs from inheritance tax in Massachusetts
             </Link>
             .
+          </p>
+
+          <h2>How does the Massachusetts estate tax exemption work?</h2>
+          <p>
+            Department of Revenue materials use the terms filing threshold and credit rather than
+            exemption, but many households search for it as an exemption. Two separate steps are
+            involved. The first is the filing test: for decedents dying on or after January 1,
+            2023, a return is required when the gross estate plus adjusted taxable gifts exceeds
+            $2,000,000. The second is the tax calculation: the amount subject to Massachusetts
+            estate tax is worked out after excluding real and tangible property located outside
+            Massachusetts and applying allowable deductions, run through a federal credit table
+            (Table B, based on the Internal Revenue Code as of December 31, 2000), and then reduced
+            by a $99,600 credit, never below zero.
+          </p>
+          <p>
+            That is why the $2 million figure is not simply a deduction that is subtracted from an
+            estate before a flat rate is applied. The filing test and the tax calculation measure
+            different things, so an estate may need to file a return even when the calculation
+            produces little or no tax. The department also notes that the calculation steps changed
+            for decedents dying on or after August 1, 2025, and the rules may change again. Your
+            CPA calculates any actual tax for an estate; this page does not estimate one.
+          </p>
+          <p className="fine">
+            Source: Massachusetts Department of Revenue,{" "}
+            <a href={MA_ESTATE_TAX_GUIDE} target="_blank" rel="noopener noreferrer">
+              Estate Tax Guide
+            </a>{" "}
+            (page updated April 23, 2026), including the Massachusetts Estate Tax Computation
+            section and Table B. Verified against mass.gov as of {LAST_REVIEWED}.
           </p>
 
           <div className="callout reveal">
@@ -260,19 +320,40 @@ export default function MassachusettsEstateTaxPlanningGuide() {
             their own income tax and beneficiary questions for your CPA.
           </p>
 
-          <h2>Why does the lack of spousal portability matter for married couples?</h2>
+          <h2>Does Massachusetts allow spouses to share the exemption?</h2>
           <p>
-            At the federal level, a surviving spouse may be able to use the first spouse&apos;s
-            unused exclusion through a portability election. Massachusetts has no equivalent
-            election for its own estate tax exemption, so a first spouse&apos;s unused Massachusetts
-            exemption generally does not carry over to the survivor. If everything passes outright
-            to the survivor, the combined estate may later be measured against a single state
-            threshold. Whether any document structure fits a particular couple, and what limits it
-            would bring, is a question for your attorney and CPA. For general background, read the{" "}
+            Not through a portability election. At the federal level, a surviving spouse may be
+            able to use the first spouse&apos;s unused exclusion through a portability election. The
+            Department of Revenue&apos;s Estate Tax Guide describes the $2,000,000 filing threshold
+            and the $99,600 credit for each decedent&apos;s estate and describes no comparable
+            election, so a first spouse&apos;s unused Massachusetts amount generally may not carry
+            over to the survivor. If everything passes outright to the survivor, the combined
+            estate may later be measured against a single state threshold. Massachusetts does allow
+            an{" "}
+            <a href={MA_MARITAL} target="_blank" rel="noopener noreferrer">
+              unlimited marital deduction
+            </a>{" "}
+            (Directive 95-1), which may defer rather than remove the question for the survivor&apos;s
+            estate. Whether any document structure fits a particular couple, and what limits it would
+            bring, such as cost, irrevocability, or rules that change, is a question for your
+            attorney and CPA. For general background, read the{" "}
             <Link href="/guides/ab-trust">
               A/B trust guide on how both spouses&apos; Massachusetts exemptions may be considered
             </Link>
-            .
+            , and use the{" "}
+            <Link href="/calculator">Massachusetts estate tax calculator</Link> for a general,
+            educational estimate.
+          </p>
+          <p className="fine">
+            Sources: Massachusetts Department of Revenue,{" "}
+            <a href={MA_ESTATE_TAX_GUIDE} target="_blank" rel="noopener noreferrer">
+              Estate Tax Guide
+            </a>{" "}
+            and{" "}
+            <a href={MA_MARITAL} target="_blank" rel="noopener noreferrer">
+              Directive 95-1
+            </a>
+            . Verified against mass.gov as of {LAST_REVIEWED}.
           </p>
 
           <h2>Is there liquidity for a possible tax bill?</h2>
@@ -294,7 +375,7 @@ export default function MassachusettsEstateTaxPlanningGuide() {
             <a href={MA_SURTAX} target="_blank" rel="noopener noreferrer">
               Massachusetts 4% Surtax on Taxable Income
             </a>{" "}
-            (page updated June 1, 2026). Verified against mass.gov as of October 14, 2026. The
+            (page updated June 1, 2026). Verified against mass.gov as of {LAST_REVIEWED}. The
             threshold is adjusted annually for inflation.
           </p>
 
@@ -421,7 +502,7 @@ export default function MassachusettsEstateTaxPlanningGuide() {
             legal documents or prepare tax returns. He coordinates with clients&apos; existing
             estate attorneys and CPAs. Tax treatment depends on individual circumstances, and legal
             and tax advice should be obtained from your own attorney and CPA. The Massachusetts tax
-            figures were verified against mass.gov as of October 14, 2026 and may change.
+            figures were verified against mass.gov as of October 20, 2026 and may change.
           </p>
         </div>
       </section>
