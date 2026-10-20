@@ -194,6 +194,14 @@ export default function HighNetWorthFinancialPlanningPage() {
           </p>
 
           <p>
+            For a definition of the planning process itself, read{" "}
+            <Link href="/comprehensive-financial-planning">
+              what comprehensive financial planning is and how it works with your attorney and CPA
+            </Link>
+            .
+          </p>
+
+          <p>
             If a business interest is part of your retirement picture, read the{" "}
             <Link href="/guides/business-owner-retirement-planning">Massachusetts business owner retirement planning guide</Link>{" "}
             for questions about household income, ownership and liquidity, estate documents, and

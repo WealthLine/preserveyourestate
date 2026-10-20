@@ -222,6 +222,14 @@ export default function WealthManagementPage() {
           </p>
 
           <p>
+            To see how investments, retirement income, and estate structure fit into one process, read{" "}
+            <Link href="/comprehensive-financial-planning">
+              what comprehensive financial planning includes and how it is coordinated with your attorney and CPA
+            </Link>
+            .
+          </p>
+
+          <p>
             To see how a financial advisor fits alongside your attorney and CPA, read how{" "}
             <Link href="/financial-advisor-estate-planning">a financial advisor fits into estate planning</Link>{" "}
             for Massachusetts families.

@@ -336,7 +336,11 @@ export default function Home() {
             </p>
             <p>
               Preserve Your Estate reflects an important part of Michael&apos;s practice, but not
-              its full scope. His work includes comprehensive financial planning, investment
+              its full scope. His work includes{" "}
+              <Link href="/comprehensive-financial-planning">
+                comprehensive financial planning coordinated with your attorney and CPA
+              </Link>
+              , investment
               management, retirement-income planning, Roth-conversion and RMD strategies,
               capital-gains management, charitable planning, trust-funding and beneficiary
               reviews, business-owner succession planning, and executive compensation strategies.

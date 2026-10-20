@@ -229,7 +229,11 @@ export default function RetirementPlanningPage() {
             client&apos;s existing professionals. He can then help maintain a clearer sequence of follow-up
             items. Clients choose and engage their own attorney and CPA. This coordination may help reduce
             missed handoffs, but it cannot substitute for legal or tax advice or guarantee a particular
-            outcome.
+            outcome. For the broader process that retirement income planning sits within, read{" "}
+            <Link href="/comprehensive-financial-planning">
+              what comprehensive financial planning includes and how the roles are divided
+            </Link>
+            .
           </p>
 
           <h2>How should business owners organize a retirement transition?</h2>

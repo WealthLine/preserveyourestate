@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/comprehensive-financial-planning`,
+      lastModified: new Date("2026-10-20"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/financial-planning-for-high-net-worth-individuals`,
       lastModified: new Date("2026-09-21"),
       changeFrequency: "monthly",

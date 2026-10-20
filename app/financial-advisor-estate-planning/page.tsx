@@ -296,6 +296,10 @@ export default function FinancialAdvisorEstatePlanningPage() {
             <Link href="/financial-planning-for-high-net-worth-individuals">
               financial planning for high-net-worth individuals
             </Link>
+            . To see how estate coordination fits into a broader plan, read{" "}
+            <Link href="/comprehensive-financial-planning">
+              what comprehensive financial planning includes
+            </Link>
             . For general estate-planning education, read the{" "}
             <Link href="/guides/massachusetts-estate-planning">Massachusetts estate planning guide</Link>.
           </p>
