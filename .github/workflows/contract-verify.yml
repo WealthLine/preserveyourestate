@@ -24,4 +24,8 @@ jobs:
       # template (and conformed repos) these scripts always
       # exist; on imported repos mid-conform they may not yet — don't hard-fail.
       - run: npm run verify --if-present
+      # The post `published:` rule runs on every site, whatever its own
+      # `conformance` script says (ENG-1334). No skip when the script is
+      # missing: a site gets this workflow and the script in the same conform.
+      - run: node scripts/check-post-frontmatter.mjs
       - run: npm run conformance --if-present

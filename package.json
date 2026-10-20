@@ -11,7 +11,7 @@
     "typecheck": "next typegen && tsc --noEmit",
     "lint:hardcode": "node scripts/anti-hardcode-lint.mjs",
     "verify": "npm run typecheck && npm run test:consent && npm run build",
-    "conformance": "npm run lint:hardcode && npm run check:manifest",
+    "conformance": "npm run lint:hardcode && npm run check:manifest && node scripts/check-post-frontmatter.mjs",
     "check:manifest": "node scripts/check-manifest-wiring.mjs",
     "test:consent": "node --experimental-strip-types --test tests/consent.test.mjs"
   },
