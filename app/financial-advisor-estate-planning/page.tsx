@@ -44,6 +44,22 @@ const FAQ_TEXT: { q: string; a: string }[] = [
     q: "How does Massachusetts estate tax affect planning?",
     a: "Massachusetts requires an estate tax return when a decedent's gross estate plus adjusted taxable gifts exceeds $2,000,000, and it does not offer spousal portability of an unused exemption. Because the rules are specific and may change, questions about how they apply to your family belong with your estate attorney and CPA. As of October 7, 2026, see the Massachusetts Department of Revenue Estate Tax Guide.",
   },
+  {
+    q: "Should I involve a financial advisor before or after I meet with an estate attorney?",
+    a: "Either order can work, and it depends on your situation. Some households gather an account and beneficiary inventory first so the attorney starts with a fuller picture. Others bring the advisor in after documents are drafted, to track retitling and beneficiary follow-up. In both cases, the attorney decides what the documents say and the CPA advises on taxes.",
+  },
+  {
+    q: "What if my attorney and CPA have never worked together?",
+    a: "That is common. With your permission, an advisor may share the financial information each professional requests and keep a single list of open questions and follow-up items. You decide what is shared and with whom, and each professional remains responsible for their own advice and work.",
+  },
+  {
+    q: "Does coordination mean the advisor makes changes to my documents or accounts?",
+    a: "No. Your attorney prepares and changes legal documents. Account changes, such as retitling or updating a beneficiary, are made only on your instruction and typically after your attorney or CPA has weighed in. Coordination seeks to keep those steps organized and moving, and it cannot guarantee any particular outcome.",
+  },
+  {
+    q: "How often should estate coordination be reviewed?",
+    a: "An annual review is a common starting point, and a life or financial change, such as a new grandchild, a property sale, or a rule change, may call for an earlier one. Each review revisits assumptions with your professionals. It does not guarantee any outcome, and what applies to you depends on your circumstances.",
+  },
 ];
 
 const FAQ_ITEMS: FaqItem[] = FAQ_TEXT;
@@ -115,7 +131,7 @@ export default function FinancialAdvisorEstatePlanningPage() {
       </section>
 
       <section>
-        <div className="wrap article">
+        <div className="wrap article guide-gift-tax">
           <h2>What does a financial advisor coordinate in estate planning?</h2>
           <p>
             Estate documents and financial accounts are handled by different professionals, and the
@@ -159,6 +175,48 @@ export default function FinancialAdvisorEstatePlanningPage() {
               </p>
             </li>
           </ul>
+
+          <h2>What might coordination look like for different types of assets?</h2>
+          <p>
+            The details differ by asset type, and the right steps depend on your documents and your
+            circumstances. The lists below are general, category-level prompts for a conversation
+            with your professionals. They are not instructions, and your attorney and CPA determine
+            what applies to you.
+          </p>
+          <div className="grid g2 stagger">
+            <div className="coord-card">
+              <h3>Retirement accounts</h3>
+              <ul>
+                <li>List each account and the primary and contingent beneficiaries on file.</li>
+                <li>Compare those designations with your signed estate documents.</li>
+                <li>Ask your attorney and CPA, before any change, how a designation may interact with your plan and your taxes.</li>
+              </ul>
+            </div>
+            <div className="coord-card">
+              <h3>Taxable and bank accounts</h3>
+              <ul>
+                <li>Record how each account is currently titled and who is named on it.</li>
+                <li>Ask your attorney whether any account is intended to be retitled to a trust.</li>
+                <li>Ask your CPA whether a change could affect tax reporting or cost basis records.</li>
+              </ul>
+            </div>
+            <div className="coord-card">
+              <h3>Real estate and business interests</h3>
+              <ul>
+                <li>Note who holds title to each property or ownership interest.</li>
+                <li>Share that ownership information so your attorney can see how it fits the documents.</li>
+                <li>Ask whether valuation or timing questions should be raised with your CPA.</li>
+              </ul>
+            </div>
+            <div className="coord-card">
+              <h3>Insurance and other designated assets</h3>
+              <ul>
+                <li>Gather policies and other assets that pass by named beneficiary.</li>
+                <li>Confirm that owners and beneficiaries are recorded the way you intend.</li>
+                <li>Ask your professionals how those assets fit alongside the rest of the plan.</li>
+              </ul>
+            </div>
+          </div>
 
           <h2>What stays with your estate attorney and CPA?</h2>
           <p>
@@ -217,6 +275,76 @@ export default function FinancialAdvisorEstatePlanningPage() {
               <p>Update the picture as assets, family priorities, or Massachusetts rules change.</p>
             </div>
           </div>
+
+          <h2>What information may be helpful to gather before meeting your professionals?</h2>
+          <p>
+            A complete picture can make a first meeting with your attorney or CPA more productive,
+            although the documents and details each professional requests may differ.
+          </p>
+          <div className="grid g2 stagger">
+            <div className="coord-card">
+              <h3>Financial information</h3>
+              <ul>
+                <li>A list of accounts with current titling and beneficiaries.</li>
+                <li>Recent account statements for each institution.</li>
+                <li>A summary of real estate, business interests, and other significant assets.</li>
+                <li>Notes on expected income needs and the timing of retirement.</li>
+              </ul>
+            </div>
+            <div className="coord-card">
+              <h3>Documents and contacts</h3>
+              <ul>
+                <li>Copies of existing wills, trusts, and powers of attorney, if any.</li>
+                <li>Recent tax returns, if your CPA has asked for them.</li>
+                <li>Contact details for your attorney and CPA.</li>
+                <li>A list of family changes or events you expect in the next few years.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2>What questions may be worth asking each professional?</h2>
+          <div className="grid g2 stagger">
+            <div className="coord-card">
+              <h3>Questions for your estate attorney</h3>
+              <ul>
+                <li>Which accounts, if any, need to be retitled to match the documents?</li>
+                <li>Do my beneficiary designations agree with my signed documents?</li>
+                <li>How often should the documents be reviewed, and what changes might prompt an update?</li>
+              </ul>
+            </div>
+            <div className="coord-card">
+              <h3>Questions for your CPA</h3>
+              <ul>
+                <li>Which upcoming financial events may affect my taxes?</li>
+                <li>How might a change in account titling or beneficiaries affect my reporting?</li>
+                <li>When would you like to hear about a planned transaction?</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2>When may it be worth revisiting the coordination?</h2>
+          <p>
+            Coordination is not a one-time project. An annual review is a common starting point, and
+            some events may call for an earlier conversation with your professionals:
+          </p>
+          <ul className="strategy-list stagger">
+            <li>
+              <h3>Family changes</h3>
+              <p>Marriage, divorce, births, the death of a family member, or a change in a trustee or beneficiary.</p>
+            </li>
+            <li>
+              <h3>Financial events</h3>
+              <p>A sale of property or a business, an inheritance, or a significant change in account balances.</p>
+            </li>
+            <li>
+              <h3>Rule changes</h3>
+              <p>Updates to Massachusetts or federal tax and estate rules that your attorney and CPA may want to review.</p>
+            </li>
+            <li>
+              <h3>Life transitions</h3>
+              <p>A retirement date, a move, or a change in income needs.</p>
+            </li>
+          </ul>
 
           <h2>Which Massachusetts factors may affect estate planning?</h2>
           <p>
