@@ -21,6 +21,8 @@ const TREAS_REG_QTIP = "https://www.law.cornell.edu/cfr/text/26/20.2056(b)-7";
 const IRS_706_INSTRUCTIONS = "https://www.irs.gov/instructions/i706";
 const IRS_WHATS_NEW =
   "https://www.irs.gov/businesses/small-businesses-self-employed/whats-new-estate-and-gift-tax";
+const IRS_1041_INSTRUCTIONS = "https://www.irs.gov/instructions/i1041";
+const LAST_REVIEWED = "October 23, 2026";
 
 const FAQ_TEXT: { q: string; a: string }[] = [
   {
@@ -32,8 +34,8 @@ const FAQ_TEXT: { q: string; a: string }[] = [
     a: "Not exactly. An A/B trust is a two-trust arrangement in which one trust, often called the credit shelter or bypass trust, uses the first spouse's available exemption, and the other, often called the marital trust, may be a QTIP trust. A QTIP trust is one possible component of an A/B plan, and it may also be used on its own. Your attorney can explain which design fits your documents.",
   },
   {
-    q: "Does a QTIP trust avoid the Massachusetts estate tax?",
-    a: "A QTIP trust generally defers estate tax rather than avoiding it. If the election is made, the trust assets may qualify for the marital deduction at the first death, but QTIP property is generally included in the surviving spouse's estate at the second death. Whether any Massachusetts estate tax is due depends on the size of the estate, the trust terms, the elections made, and the law at that time.",
+    q: "How does a QTIP trust affect the Massachusetts estate tax?",
+    a: "A QTIP trust generally defers estate tax rather than removing it. If the election is made, the trust assets may qualify for the marital deduction at the first death, but QTIP property is generally included in the surviving spouse's estate at the second death. Whether any Massachusetts estate tax is due depends on the size of the estate, the trust terms, the elections made, and the law at that time.",
   },
   {
     q: "Who decides who receives a QTIP trust's assets after the surviving spouse dies?",
@@ -42,6 +44,22 @@ const FAQ_TEXT: { q: string; a: string }[] = [
   {
     q: "Can a Massachusetts QTIP election differ from the federal election?",
     a: "According to the Massachusetts Department of Revenue's Form M-706 instructions, the executor or other fiduciary is not required to make the same QTIP election for federal purposes in order to make the election for Massachusetts purposes, and the Massachusetts election is irrevocable. Because the two elections can differ, the value of QTIP property in the survivor's estate may differ for federal and Massachusetts purposes. Your attorney and CPA can explain how this applies to your trust.",
+  },
+  {
+    q: "What is the difference between a marital trust and a QTIP trust?",
+    a: "Marital trust is a broad planning term for a trust designed to qualify for the marital deduction. A QTIP trust is one common kind. Another kind gives the surviving spouse a general power of appointment, which allows broader control over who ultimately receives the property. In a QTIP trust, the surviving spouse generally receives the income and the first spouse decides who receives the remainder. Your attorney can explain which kind, if either, fits your documents.",
+  },
+  {
+    q: "What interest does a surviving spouse have in a QTIP trust?",
+    a: "A qualifying income interest for life, which generally means the right to all of the trust's income, payable at least annually. Access to principal depends on the trust terms, and the surviving spouse generally cannot redirect the remainder to someone else. Your attorney applies the federal rules to the actual document.",
+  },
+  {
+    q: "Does a QTIP trust file a tax return?",
+    a: "Two different filings can be involved. The QTIP election is made on the first spouse's estate tax return, and for Massachusetts purposes through the Massachusetts estate tax filing. Separately, a trust that holds property may need to file an income tax return: under the IRS instructions for Form 1041, a domestic trust generally files when it has any taxable income, gross income of $600 or more, or a nonresident alien beneficiary. Whether and how a particular trust files is a question for your CPA.",
+  },
+  {
+    q: "Is a QTIP trust revocable or irrevocable?",
+    a: "A QTIP trust is commonly created within a revocable living trust or a will and generally takes effect after the first spouse dies, at which point its terms typically can no longer be changed. The QTIP election itself is generally irrevocable. Your attorney can explain how this applies to your documents.",
   },
   {
     q: "Does the financial advisor draft or elect a QTIP trust?",
@@ -62,7 +80,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description: SEO_DESCRIPTION,
     publishedTime: "2026-10-08",
-    modifiedTime: "2026-10-08",
+    modifiedTime: "2026-10-23",
     authors: ["Michael Cammarata, CFP®"],
     images: [
       {
@@ -89,8 +107,9 @@ const JSON_LD = {
       author: { "@id": "https://www.preserveyourestate.com/#michael" },
       publisher: { "@id": "https://www.preserveyourestate.com/#org" },
       datePublished: "2026-10-08",
-      dateModified: "2026-10-08",
+      dateModified: "2026-10-23",
       citation: [
+        IRS_1041_INSTRUCTIONS,
         MA_ESTATE_TAX_GUIDE,
         MA_FORMS,
         MA_M706_INSTRUCTIONS,
@@ -151,10 +170,11 @@ export default function QtipTrustGuide() {
             What is a QTIP trust, and how does it fit into a <em>Massachusetts estate plan</em>?
           </h1>
           <p className="lead hero-anim d3">
-            A QTIP trust is one way married couples may provide for a surviving spouse while the
-            first spouse decides who receives the remainder. This guide explains the basics, how it
-            may relate to the Massachusetts estate tax and an A/B trust, and where your attorney
-            and CPA fit in.
+            A QTIP (qualified terminable interest property) trust is a trust that may provide a
+            surviving spouse with all income for life while the first spouse&apos;s named
+            beneficiaries receive what remains afterward. If the requirements are met and the
+            executor makes the election, it may qualify for the marital deduction. Your attorney
+            drafts it, and the rules may change.
           </p>
           <p className="hero-anim d4" style={{ marginTop: "1.4rem" }}>
             <span
@@ -165,7 +185,7 @@ export default function QtipTrustGuide() {
                 color: "var(--gold-pale)",
               }}
             >
-              Estate Structure Guide · Updated October 2026
+              Estate Structure Guide · Last reviewed {LAST_REVIEWED}
             </span>
           </p>
         </div>
@@ -174,14 +194,6 @@ export default function QtipTrustGuide() {
       <section>
         <div className="wrap article guide-fiduciary">
           <h2>What is a QTIP trust?</h2>
-          <p>
-            A QTIP (qualified terminable interest property) trust is a trust that may provide a
-            surviving spouse with all income for life while the first spouse&apos;s named
-            beneficiaries receive what remains afterward. If the requirements are met and the
-            executor makes the election, the trust may qualify for the marital deduction. Your
-            attorney drafts it.
-          </p>
-
           <div className="callout reveal">
             <p>
               <b>Key takeaways</b>
@@ -367,7 +379,7 @@ export default function QtipTrustGuide() {
             <a href={IRS_WHATS_NEW} target="_blank" rel="noopener noreferrer">
               What&apos;s new: Estate and gift tax
             </a>
-            . Verified against mass.gov and irs.gov as of October 8, 2026. Thresholds, credits and
+            . Verified against mass.gov and irs.gov as of {LAST_REVIEWED}. Thresholds, credits and
             calculation steps may change, and the amount of tax for any estate is a question for
             your attorney and CPA.
           </p>
@@ -584,7 +596,7 @@ export default function QtipTrustGuide() {
             clients&apos; existing estate attorneys and CPAs. Tax treatment depends on individual
             circumstances, and legal and tax advice should be obtained from your own attorney and
             CPA. Massachusetts and federal estate tax figures were verified against mass.gov and
-            irs.gov as of October 8, 2026 and may change.
+            irs.gov as of October 23, 2026 and may change.
           </p>
         </div>
       </section>
