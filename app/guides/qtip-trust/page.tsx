@@ -55,7 +55,7 @@ const FAQ_TEXT: { q: string; a: string }[] = [
   },
   {
     q: "Does a QTIP trust file a tax return?",
-    a: "Two different filings can be involved. The QTIP election is made on the first spouse's estate tax return, and for Massachusetts purposes through the Massachusetts estate tax filing. Separately, a trust that holds property may need to file an income tax return: under the IRS instructions for Form 1041, a domestic trust generally files when it has any taxable income, gross income of $600 or more, or a nonresident alien beneficiary. Whether and how a particular trust files is a question for your CPA.",
+    a: "Two different filings can be involved. The QTIP election is made on the first spouse's estate tax return, and for Massachusetts purposes through the Massachusetts estate tax filing. Separately, a trust that holds property may need to file an income tax return: under the IRS instructions for Form 1041, a domestic trust generally files when it has any taxable income, gross income of $600 or more, or a nonresident alien beneficiary, and special rules apply to some trusts. Whether and how a particular trust files is a question for your CPA.",
   },
   {
     q: "Is a QTIP trust revocable or irrevocable?",
@@ -235,17 +235,17 @@ export default function QtipTrustGuide() {
 
           <h2>What are the requirements for a QTIP trust?</h2>
           <p>
-            Federal law sets the conditions. In general terms, the property must pass from the
-            first spouse to the surviving spouse, the surviving spouse must have a qualifying
-            income interest for life, and the executor must make the QTIP election. Each point
-            below is general information, and your attorney applies it to the actual document.
+            Federal law sets the conditions. In general terms, the property passes from the first
+            spouse to the surviving spouse, the surviving spouse has a qualifying income interest
+            for life, and the executor makes the QTIP election. Each point below is general
+            information, not legal advice, and your attorney applies it to the actual document.
           </p>
           <div className="grid g2 stagger">
             <div className="coord-card">
               <h3>What the trust terms generally need</h3>
               <ul>
-                <li>The surviving spouse is entitled to all of the income from the property for life, payable annually or more often.</li>
-                <li>No person, including the surviving spouse, may have a power to appoint any part of the property to anyone other than the surviving spouse. A power that can be exercised only at or after the survivor&apos;s death is treated differently.</li>
+                <li>Federal rules generally call for the surviving spouse to be entitled to all of the income from the property for life, payable annually or more often.</li>
+                <li>Federal rules generally do not allow any person, including the surviving spouse, to have a power to appoint any part of the property to anyone other than the surviving spouse during the survivor&apos;s lifetime. Special rules apply to powers that can be exercised only at or after the survivor&apos;s death.</li>
                 <li>The property passes from the first spouse, for example through a trust created at death.</li>
               </ul>
             </div>
@@ -296,7 +296,7 @@ export default function QtipTrustGuide() {
               <h3>Assets reach the trust</h3>
               <p>
                 At the first death, assets pass into the trust as the documents direct. Titling
-                and beneficiary designations need to match the plan for that to happen.
+                and beneficiary designations may need to match the plan for that to happen.
               </p>
             </div>
             <div className="step">
@@ -332,9 +332,9 @@ export default function QtipTrustGuide() {
             Department of Revenue, a Massachusetts estate tax return is generally required for a
             resident decedent dying on or after January 1, 2023 when the gross estate plus adjusted
             taxable gifts exceeds $2,000,000, and a credit of up to $99,600 may reduce the tax.
-            Second, Massachusetts has no portability election for its estate tax. The
-            Department&apos;s guidance provides the $2,000,000 threshold and the credit, but no way to
-            carry a deceased spouse&apos;s unused amount to the survivor.
+            Second, the Department&apos;s guidance describes no portability election for the
+            Massachusetts estate tax. It provides the $2,000,000 threshold and the credit, but
+            describes no way to carry a deceased spouse&apos;s unused amount to the survivor.
           </p>
           <p>
             That is why the interaction matters. If a couple&apos;s combined estate is near or above
@@ -398,9 +398,10 @@ export default function QtipTrustGuide() {
             An A/B trust usually splits the estate at the first death into two trusts. Trust B, the
             credit shelter trust, may hold assets up to the first spouse&apos;s available
             exemption. Trust A, the marital trust, may hold the rest, and it is often designed as a
-            QTIP trust. In that design, the QTIP trust helps defer tax on the portion above the
+            QTIP trust. In that design, the QTIP trust may help defer tax on the portion above the
             exemption, while the credit shelter trust may use the first spouse&apos;s Massachusetts
-            exemption that would otherwise go unused.
+            exemption that might otherwise go unused. Either trust may involve limits, such as
+            less flexibility for the survivor, cost, and rules that change.
           </p>
           <div className="table-scroll">
             <table>
@@ -425,7 +426,7 @@ export default function QtipTrustGuide() {
                 <tr>
                   <td>At the survivor&apos;s death</td>
                   <td>Generally included in the survivor&apos;s estate</td>
-                  <td>Generally not included, if properly structured</td>
+                  <td>May not be included, depending on how it is structured</td>
                 </tr>
                 <tr>
                   <td>Who sets the final beneficiaries</td>
@@ -542,7 +543,7 @@ export default function QtipTrustGuide() {
               <span className="step-tag">Support</span>
               <h3>Share financial information</h3>
               <p>
-                Provide asset values and illustrations so the attorney can evaluate whether a QTIP
+                Provide asset values and account summaries so the attorney can evaluate whether a QTIP
                 or A/B structure may fit.
               </p>
             </div>
