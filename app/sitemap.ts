@@ -74,7 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/guides/massachusetts-estate-planning`,
-      lastModified: new Date("2026-09-28"),
+      lastModified: new Date("2026-10-23"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
