@@ -68,7 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/guides/funding-a-trust`,
-      lastModified: new Date("2026-10-08"),
+      lastModified: new Date("2026-10-23"),
       changeFrequency: "monthly",
       priority: 0.8,
     },

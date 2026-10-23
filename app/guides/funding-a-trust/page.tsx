@@ -6,14 +6,20 @@ import Faq, { type FaqItem } from "@/components/Faq";
 
 const GUIDE_PATH = "/guides/funding-a-trust";
 const GUIDE_URL = `https://www.preserveyourestate.com${GUIDE_PATH}`;
-const SEO_TITLE = "How to Fund a Trust in Massachusetts: Who Coordinates It?";
+const SEO_TITLE = "Funding a Trust in Massachusetts: Who Coordinates It?";
 const SEO_DESCRIPTION =
-  "Learn what funding a trust means, why an unfunded trust may fall short, and how your attorney, advisor and CPA may coordinate the steps in Massachusetts.";
+  "Funding a trust means moving assets so the trust may govern them. Learn what it involves in Massachusetts, why gaps matter, and who may coordinate each step.";
+const LAST_REVIEWED = "October 23, 2026";
 const OG_IMAGE =
   "https://www.preserveyourestate.com/og?topic=How%20to%20Fund%20a%20Trust%20in%20Massachusetts&label=Massachusetts%20guide";
 
 const MA_ESTATE_TAX_GUIDE = "https://www.mass.gov/info-details/estate-tax-guide";
-const MA_WHO_MUST_FILE = "https://www.mass.gov/info-details/who-must-file-estate-tax-returns";
+const MA_ESTATE_TAX_FAQ = "https://www.mass.gov/info-details/faqs-new-estate-tax-changes";
+const MA_CERT_OF_TRUST = "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter203E/Section1013";
+const MA_HOMESTEAD_TERMINATION = "https://malegislature.gov/laws/generallaws/partii/titlei/chapter188/section10";
+const MA_HOMESTEAD_DECLARATION = "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter188/Section5";
+const MA_DEEDS_EXCISE_GIFT = "https://www.mass.gov/directive/directive-89-16-deeds-excise-bona-fide-gift";
+const IRS_PUB_590B = "https://www.irs.gov/publications/p590b";
 
 const FAQ_TEXT: { q: string; a: string }[] = [
   {
@@ -30,7 +36,23 @@ const FAQ_TEXT: { q: string; a: string }[] = [
   },
   {
     q: "Do retirement accounts go into a trust?",
-    a: "Retirement accounts such as IRAs and workplace plans generally are not retitled into a living trust the way a taxable brokerage account may be, because a change of ownership could be treated as a distribution. Instead, a trust is sometimes named as a beneficiary. Whether that fits your situation is a question for your attorney and CPA, who can weigh the legal and tax trade-offs.",
+    a: "Retirement accounts such as IRAs and workplace plans generally are not retitled into a living trust the way a taxable brokerage account may be, because a change of ownership could be treated as a distribution. Instead, a trust is sometimes named as a beneficiary. IRS Publication 590-B explains that a trust is not itself treated as a designated beneficiary, although the people behind a trust may be treated as one if specific requirements are met. Whether naming a trust fits your situation is a question for your attorney and CPA, who can weigh the legal and tax trade-offs.",
+  },
+  {
+    q: "What are the usual steps to fund a trust?",
+    a: "A common sequence is to inventory every account and how it is titled, ask your attorney which assets belong in the trust, complete each custodian's or insurer's forms (and any deed your attorney prepares), and recheck as life changes. Your attorney's instructions control, and your CPA can advise on tax effects before anything is moved.",
+  },
+  {
+    q: "Who legally owns the property in a trust?",
+    a: "Generally the trustee holds legal title and manages the property for the beneficiaries, who hold the beneficial interest. In a revocable living trust, the person who created it often serves as the initial trustee and a beneficiary, which is why day-to-day control may feel unchanged. Your attorney can explain how this works under your trust's terms.",
+  },
+  {
+    q: "How much money is required to fund a trust?",
+    a: "The amount depends on the purpose of the trust and on what your attorney directs. Funding a revocable living trust is generally about retitling the assets your plan calls for, not about meeting a set dollar amount. Ask your attorney whether your particular trust sets any requirement.",
+  },
+  {
+    q: "What are the downsides of funding a trust?",
+    a: "Possible drawbacks include upfront legal and administrative cost, the retitling work itself, ongoing recordkeeping, and in some cases tax, insurance, or lender questions for specific assets. A trust may not fit every household, so ask your attorney and CPA how the trade-offs apply to you.",
   },
 ];
 
@@ -47,7 +69,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description: SEO_DESCRIPTION,
     publishedTime: "2026-10-08",
-    modifiedTime: "2026-10-08",
+    modifiedTime: "2026-10-23",
     authors: ["Michael Cammarata, CFP®"],
     images: [
       {
@@ -74,8 +96,15 @@ const JSON_LD = {
       author: { "@id": "https://www.preserveyourestate.com/#michael" },
       publisher: { "@id": "https://www.preserveyourestate.com/#org" },
       datePublished: "2026-10-08",
-      dateModified: "2026-10-08",
-      citation: [MA_ESTATE_TAX_GUIDE, MA_WHO_MUST_FILE],
+      dateModified: "2026-10-23",
+      citation: [
+        MA_ESTATE_TAX_GUIDE,
+        MA_ESTATE_TAX_FAQ,
+        MA_CERT_OF_TRUST,
+        MA_HOMESTEAD_TERMINATION,
+        MA_DEEDS_EXCISE_GIFT,
+        IRS_PUB_590B,
+      ],
     },
     {
       "@type": "Person",
@@ -128,9 +157,11 @@ export default function FundingATrustGuide() {
             How should a Massachusetts trust be <em>funded</em>, and who coordinates it?
           </h1>
           <p className="lead hero-anim d3">
-            A signed trust is only the first step. This guide explains what funding a trust means,
-            why gaps may matter, and how the attorney, financial advisor and CPA each fit into the
-            follow-through.
+            Funding a trust means transferring ownership of assets into the trust, or updating
+            beneficiary designations where appropriate, so the trust document may govern them. Your
+            attorney drafts and titles the documents, your CPA advises on tax effects, and a
+            financial advisor may coordinate the account-level follow-through. Details vary by asset
+            and by trust.
           </p>
           <p className="hero-anim d4" style={{ marginTop: "1.4rem" }}>
             <span
@@ -141,7 +172,7 @@ export default function FundingATrustGuide() {
                 color: "var(--gold-pale)",
               }}
             >
-              Estate Structure Guide · Updated October 2026
+              Estate Structure Guide · Last reviewed {LAST_REVIEWED}
             </span>
           </p>
         </div>
@@ -149,14 +180,6 @@ export default function FundingATrustGuide() {
 
       <section>
         <div className="wrap article guide-fiduciary">
-          <h2>A direct answer: funding moves assets so the trust may govern them</h2>
-          <p>
-            Funding a trust means moving ownership of assets, or updating beneficiary designations
-            where appropriate, so the trust document may actually govern them. The attorney drafts
-            the documents and directs the titling, the CPA advises on tax effects, and a financial
-            advisor may coordinate the account changes between them.
-          </p>
-
           <div className="callout reveal">
             <p>
               <b>Key takeaways</b>
@@ -181,7 +204,7 @@ export default function FundingATrustGuide() {
             </ul>
           </div>
 
-          <h2>What does it mean to fund a trust?</h2>
+          <h2>What does it mean to fund a trust, including a living trust?</h2>
           <p>
             A trust is a legal arrangement created by a written document. The document names who
             manages the trust, who may benefit, and the rules that apply. But a trust can generally
@@ -216,22 +239,25 @@ export default function FundingATrustGuide() {
             administration. According to the Massachusetts Department of Revenue, a Massachusetts
             estate tax return is generally required when the gross estate plus adjusted taxable
             gifts exceeds $2,000,000 for decedents dying on or after January 1, 2023, and a credit of
-            up to $99,600 may apply. Massachusetts also generally does not allow a surviving
-            spouse to use a deceased spouse&apos;s unused state exemption. Married couples sometimes work with an attorney on an A/B trust structure so
-            that both spouses&apos; exemptions may be considered, but that structure generally
-            depends on assets being titled so the plan can operate as drafted.
+            up to $99,600 may apply. The department&apos;s guide describes no election that
+            lets a surviving spouse add a first spouse&apos;s unused Massachusetts amount. Married
+            couples sometimes work with an attorney on an A/B trust structure so that both
+            spouses&apos; exemptions may be considered, but that structure generally depends on
+            assets being titled so the plan can operate as drafted.
           </p>
           <p className="fine">
             Source: Massachusetts Department of Revenue,{" "}
             <a href={MA_ESTATE_TAX_GUIDE} target="_blank" rel="noopener noreferrer">
               Estate Tax Guide
             </a>{" "}
-            and{" "}
-            <a href={MA_WHO_MUST_FILE} target="_blank" rel="noopener noreferrer">
-              Who Must File Estate Tax Returns
-            </a>
-            . Verified against mass.gov as of October 8, 2026. Thresholds and calculation steps may
-            change, and the amount of tax for any estate is a question for your attorney and CPA.
+            (page updated April 23, 2026) and{" "}
+            <a href={MA_ESTATE_TAX_FAQ} target="_blank" rel="noopener noreferrer">
+              FAQs: New Estate Tax Changes
+            </a>{" "}
+            (page updated October 31, 2024). Verified against mass.gov as of {LAST_REVIEWED}. The
+            department notes that the calculation steps changed for decedents dying on or after
+            August 1, 2025. Thresholds and calculation steps may change, and the amount of tax for
+            any estate is a question for your attorney and CPA.
           </p>
           <p>
             To see how the exemption works for married couples, and why funding is the step where
@@ -242,6 +268,10 @@ export default function FundingATrustGuide() {
             . For a wider view of how the pieces connect, see the{" "}
             <Link href="/guides/massachusetts-estate-planning">
               Massachusetts estate planning guide
+            </Link>
+            , and for how the threshold and credit work, read{" "}
+            <Link href="/guides/massachusetts-estate-tax-planning">
+              what the Massachusetts estate tax exemption may mean for your planning
             </Link>
             . If the trust labels themselves are unfamiliar, start with{" "}
             <Link href="/guides/types-of-trusts">
@@ -261,7 +291,7 @@ export default function FundingATrustGuide() {
               <h3>Taxable brokerage and bank accounts</h3>
               <ul>
                 <li>Ask your attorney whether each account should be retitled to the trust.</li>
-                <li>Request the custodian&apos;s retitling forms and the trust certification it requires.</li>
+                <li>Request the custodian&apos;s retitling forms and the trust certification it requires. Massachusetts law lets a trustee provide a certification of trust in place of the full trust document.</li>
                 <li>Confirm the new registration matches the trust name and date exactly.</li>
                 <li>Ask your CPA whether a change could affect reporting or cost basis records.</li>
               </ul>
@@ -288,6 +318,7 @@ export default function FundingATrustGuide() {
               <h3>Real estate</h3>
               <ul>
                 <li>Your attorney typically prepares and records any deed that moves property into the trust.</li>
+                <li>Ask whether a homestead declaration and the deeds excise tax come up for your home (see the Massachusetts notes below).</li>
                 <li>Ask the attorney how a transfer interacts with mortgage and homeowner&apos;s insurance terms.</li>
                 <li>Keep the recorded deed with your estate documents.</li>
                 <li>Your advisor may add the property to the household inventory for reference.</li>
@@ -299,6 +330,49 @@ export default function FundingATrustGuide() {
             case by case by your attorney. Before any change, make sure your attorney has confirmed
             it in writing. Retitling can have legal and tax effects that differ by asset, which is
             why the attorney and CPA decide and the advisor tracks the follow-through.
+          </p>
+
+          <h2>What Massachusetts rules may come up when funding a trust with a home?</h2>
+          <p>
+            Two Massachusetts topics often come up when a home is deeded to a trust. The first is
+            homestead. Under M.G.L. c. 188, § 10, a deed to the trustee of a trust for the benefit
+            of the grantor does not terminate that grantor&apos;s existing homestead, which continues
+            as to the grantor&apos;s interest as a trust beneficiary. Section 5 of the same chapter
+            sets out the requirements for a recorded declaration of homestead. Whether to record a
+            new declaration for a trust-owned home is a question for your attorney.
+          </p>
+          <p>
+            The second is the deeds excise tax. The Department of Revenue&apos;s Directive 89-16
+            states that the excise applies to realty that is sold and does not apply to deeds given
+            without consideration, including bona fide gifts, even when a deed recites nominal
+            consideration. The excise is based on consideration, exclusive of any lien or
+            encumbrance remaining on the property, so how a deed to your own trust is prepared is a
+            question for your attorney. Mortgage lender and homeowner&apos;s insurance terms are
+            separate items to raise before anything is recorded.
+          </p>
+          <p className="fine">
+            Sources: Massachusetts General Laws,{" "}
+            <a href={MA_HOMESTEAD_TERMINATION} target="_blank" rel="noopener noreferrer">
+              c. 188, § 10
+            </a>
+            ,{" "}
+            <a href={MA_HOMESTEAD_DECLARATION} target="_blank" rel="noopener noreferrer">
+              c. 188, § 5
+            </a>{" "}
+            and{" "}
+            <a href={MA_CERT_OF_TRUST} target="_blank" rel="noopener noreferrer">
+              c. 203E, § 1013 (certification of trust)
+            </a>
+            ; Massachusetts Department of Revenue,{" "}
+            <a href={MA_DEEDS_EXCISE_GIFT} target="_blank" rel="noopener noreferrer">
+              Directive 89-16: Deeds Excise Bona Fide Gift
+            </a>{" "}
+            (issued December 11, 1989); IRS,{" "}
+            <a href={IRS_PUB_590B} target="_blank" rel="noopener noreferrer">
+              Publication 590-B
+            </a>
+            . Verified as of {LAST_REVIEWED}. Statutes and directives may change, and this page does
+            not review any deed or trust.
           </p>
 
           <h2>How does the four-step funding workflow work?</h2>
@@ -512,8 +586,8 @@ export default function FundingATrustGuide() {
             advice. He does not draft legal documents or prepare tax returns. He coordinates with
             clients&apos; existing estate attorneys and CPAs. Tax treatment depends on individual
             circumstances, and legal and tax advice should be obtained from your own attorney and
-            CPA. Massachusetts estate tax figures were verified against mass.gov as of October 8,
-            2026 and may change.
+            CPA. Massachusetts and IRS references were verified against mass.gov, malegislature.gov,
+            and irs.gov as of October 23, 2026 and may change.
           </p>
         </div>
       </section>
