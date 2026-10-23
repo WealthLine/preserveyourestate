@@ -15,11 +15,6 @@ const OG_IMAGE =
 
 const MA_ESTATE_TAX_GUIDE = "https://www.mass.gov/info-details/estate-tax-guide";
 const MA_ESTATE_TAX_FAQ = "https://www.mass.gov/info-details/faqs-new-estate-tax-changes";
-const MA_CERT_OF_TRUST = "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter203E/Section1013";
-const MA_HOMESTEAD_TERMINATION = "https://malegislature.gov/laws/generallaws/partii/titlei/chapter188/section10";
-const MA_HOMESTEAD_DECLARATION = "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter188/Section5";
-const MA_DEEDS_EXCISE_GIFT = "https://www.mass.gov/directive/directive-89-16-deeds-excise-bona-fide-gift";
-const IRS_PUB_590B = "https://www.irs.gov/publications/p590b";
 
 const FAQ_TEXT: { q: string; a: string }[] = [
   {
@@ -36,7 +31,7 @@ const FAQ_TEXT: { q: string; a: string }[] = [
   },
   {
     q: "Do retirement accounts go into a trust?",
-    a: "Retirement accounts such as IRAs and workplace plans generally are not retitled into a living trust the way a taxable brokerage account may be, because a change of ownership could be treated as a distribution. Instead, a trust is sometimes named as a beneficiary. IRS Publication 590-B explains that a trust is not itself treated as a designated beneficiary, although the people behind a trust may be treated as one if specific requirements are met. Whether naming a trust fits your situation is a question for your attorney and CPA, who can weigh the legal and tax trade-offs.",
+    a: "Retirement accounts such as IRAs and workplace plans generally are not retitled into a living trust the way a taxable brokerage account may be, because a change of ownership could be treated as a distribution. Instead, a trust is sometimes named as a beneficiary. Whether naming a trust fits your situation is a question for your attorney and CPA, who can weigh the legal and tax trade-offs.",
   },
   {
     q: "What are the usual steps to fund a trust?",
@@ -97,14 +92,7 @@ const JSON_LD = {
       publisher: { "@id": "https://www.preserveyourestate.com/#org" },
       datePublished: "2026-10-08",
       dateModified: "2026-10-23",
-      citation: [
-        MA_ESTATE_TAX_GUIDE,
-        MA_ESTATE_TAX_FAQ,
-        MA_CERT_OF_TRUST,
-        MA_HOMESTEAD_TERMINATION,
-        MA_DEEDS_EXCISE_GIFT,
-        IRS_PUB_590B,
-      ],
+      citation: [MA_ESTATE_TAX_GUIDE, MA_ESTATE_TAX_FAQ],
     },
     {
       "@type": "Person",
@@ -291,7 +279,7 @@ export default function FundingATrustGuide() {
               <h3>Taxable brokerage and bank accounts</h3>
               <ul>
                 <li>Ask your attorney whether each account should be retitled to the trust.</li>
-                <li>Request the custodian&apos;s retitling forms and the trust certification it requires. Massachusetts law lets a trustee provide a certification of trust in place of the full trust document.</li>
+                <li>Request the custodian&apos;s retitling forms and the trust certification it requires.</li>
                 <li>Confirm the new registration matches the trust name and date exactly.</li>
                 <li>Ask your CPA whether a change could affect reporting or cost basis records.</li>
               </ul>
@@ -318,7 +306,6 @@ export default function FundingATrustGuide() {
               <h3>Real estate</h3>
               <ul>
                 <li>Your attorney typically prepares and records any deed that moves property into the trust.</li>
-                <li>Ask whether a homestead declaration and the deeds excise tax come up for your home (see the Massachusetts notes below).</li>
                 <li>Ask the attorney how a transfer interacts with mortgage and homeowner&apos;s insurance terms.</li>
                 <li>Keep the recorded deed with your estate documents.</li>
                 <li>Your advisor may add the property to the household inventory for reference.</li>
@@ -330,49 +317,6 @@ export default function FundingATrustGuide() {
             case by case by your attorney. Before any change, make sure your attorney has confirmed
             it in writing. Retitling can have legal and tax effects that differ by asset, which is
             why the attorney and CPA decide and the advisor tracks the follow-through.
-          </p>
-
-          <h2>What Massachusetts rules may come up when funding a trust with a home?</h2>
-          <p>
-            Two Massachusetts topics often come up when a home is deeded to a trust. The first is
-            homestead. Under M.G.L. c. 188, § 10, a deed to the trustee of a trust for the benefit
-            of the grantor does not terminate that grantor&apos;s existing homestead, which continues
-            as to the grantor&apos;s interest as a trust beneficiary. Section 5 of the same chapter
-            sets out the requirements for a recorded declaration of homestead. Whether to record a
-            new declaration for a trust-owned home is a question for your attorney.
-          </p>
-          <p>
-            The second is the deeds excise tax. The Department of Revenue&apos;s Directive 89-16
-            states that the excise applies to realty that is sold and does not apply to deeds given
-            without consideration, including bona fide gifts, even when a deed recites nominal
-            consideration. The excise is based on consideration, exclusive of any lien or
-            encumbrance remaining on the property, so how a deed to your own trust is prepared is a
-            question for your attorney. Mortgage lender and homeowner&apos;s insurance terms are
-            separate items to raise before anything is recorded.
-          </p>
-          <p className="fine">
-            Sources: Massachusetts General Laws,{" "}
-            <a href={MA_HOMESTEAD_TERMINATION} target="_blank" rel="noopener noreferrer">
-              c. 188, § 10
-            </a>
-            ,{" "}
-            <a href={MA_HOMESTEAD_DECLARATION} target="_blank" rel="noopener noreferrer">
-              c. 188, § 5
-            </a>{" "}
-            and{" "}
-            <a href={MA_CERT_OF_TRUST} target="_blank" rel="noopener noreferrer">
-              c. 203E, § 1013 (certification of trust)
-            </a>
-            ; Massachusetts Department of Revenue,{" "}
-            <a href={MA_DEEDS_EXCISE_GIFT} target="_blank" rel="noopener noreferrer">
-              Directive 89-16: Deeds Excise Bona Fide Gift
-            </a>{" "}
-            (issued December 11, 1989); IRS,{" "}
-            <a href={IRS_PUB_590B} target="_blank" rel="noopener noreferrer">
-              Publication 590-B
-            </a>
-            . Verified as of {LAST_REVIEWED}. Statutes and directives may change, and this page does
-            not review any deed or trust.
           </p>
 
           <h2>How does the four-step funding workflow work?</h2>
@@ -586,8 +530,8 @@ export default function FundingATrustGuide() {
             advice. He does not draft legal documents or prepare tax returns. He coordinates with
             clients&apos; existing estate attorneys and CPAs. Tax treatment depends on individual
             circumstances, and legal and tax advice should be obtained from your own attorney and
-            CPA. Massachusetts and IRS references were verified against mass.gov, malegislature.gov,
-            and irs.gov as of October 23, 2026 and may change.
+            CPA. Massachusetts estate tax figures were verified against mass.gov as of October 23,
+            2026 and may change.
           </p>
         </div>
       </section>
