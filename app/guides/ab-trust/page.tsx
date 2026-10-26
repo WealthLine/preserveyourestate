@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: seoTitle,
     description: seoDescription,
     publishedTime: "2026-07-01",
-    modifiedTime: "2026-09-29",
+    modifiedTime: "2026-10-26",
     authors: ["Michael Cammarata, CFP®"],
     images: [{
       url: "https://www.preserveyourestate.com/og?topic=A%2FB%20Trust%20Planning&label=Massachusetts%20guide",
@@ -50,7 +50,7 @@ const JSON_LD = {
     worksFor: { "@id": "https://www.preserveyourestate.com/#org" },
   },
   publisher: { "@type": "Organization", "@id": "https://www.preserveyourestate.com/#org", name: "MSA Financial, LLC" },
-  datePublished: "2026-07-01", dateModified: "2026-09-29",
+  datePublished: "2026-07-01", dateModified: "2026-10-26",
 };
 
 const taxExamples = [
@@ -80,7 +80,7 @@ export default function AbTrustGuide() {
           <p className="lead hero-anim d3">How married couples may use both $2 million Massachusetts estate tax exemptions through credit shelter and marital trust planning.</p>
           <p className="hero-anim d4" style={{ marginTop: "1.4rem" }}>
             <span className="badge" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.2)", color: "var(--gold-pale)" }}>Estate Structure Guide</span>{" "}
-            <span className="badge" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.2)", color: "var(--gold-pale)" }}>Updated September 2026</span>
+            <span className="badge" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.2)", color: "var(--gold-pale)" }}>Updated October 2026</span>
           </p>
           <p className={styles.heroByline}>Michael Cammarata, CFP® · MSA Financial, LLC</p>
           </div>
@@ -176,18 +176,18 @@ export default function AbTrustGuide() {
           <div className={styles.sectionBlock}>
           <p className={styles.kicker}>04 / A SIDE-BY-SIDE EXAMPLE</p>
           <h2>Worked example: an $8 million estate</h2>
-          <p>Holding asset values constant and using the same simplified Table B assumptions, the illustration compares what would be included in the survivor&apos;s estate at the second death. It does not account for growth, distributions, expenses, gifts, changes in law, or income tax consequences.</p>
+          <p>Using the same simplified Table B assumptions, the illustration compares what would be included in the survivor&apos;s estate at the second death. The first two rows hold asset values constant; the third row adds a hypothetical growth assumption. It does not otherwise account for distributions, expenses, gifts, changes in law, or income tax consequences.</p>
           <div className={`table-scroll ${styles.tableCard} ${styles.exampleTable}`}>
             <table>
-              <thead><tr><th scope="col">Approach</th><th scope="col">Estate taxed at second death</th><th scope="col">Estimated MA tax</th></tr></thead>
+              <thead><tr><th scope="col">Approach</th><th scope="col">Result</th></tr></thead>
               <tbody>
-                <tr><td>Everything passes outright to the survivor</td><td>$8,000,000</td><td>~$673,600</td></tr>
-                <tr><td>A/B plan: $2 million to Trust B; $6 million to Trust A</td><td>$6,000,000</td><td>~$411,200</td></tr>
-                <tr><th scope="row">Illustrative difference</th><td></td><td>~$262,400</td></tr>
+                <tr><td>No trust planning: everything to surviving spouse outright</td><td>Full $8M in the surviving spouse&apos;s estate. Estimated Massachusetts estate tax: about $673,600.</td></tr>
+                <tr><td>A/B trust plan: $2M to credit shelter trust, $6M to QTIP</td><td>Credit shelter trust at the first death: estimated $0. QTIP assets in the survivor&apos;s $6M estate: estimated about $411,200. Illustrative difference: about $262,400.</td></tr>
+                <tr><td>Credit shelter trust after 10 years at 6% growth</td><td>Trust may grow to about $3.6M outside the survivor&apos;s estate. Had the $1.6M of growth been in the survivor&apos;s estate, the illustrative estimate would rise from about $411,200 to about $619,200, a difference of about $208,000.</td></tr>
               </tbody>
             </table>
           </div>
-          <p className="fine">These figures are a current-law tax illustration, not a projection or a promised result. A properly drafted, elected, and funded plan is required; individual tax outcomes can differ. <a href={maGuide}>Source: Massachusetts Department of Revenue estate tax guide</a>.</p>
+          <p className="fine">Illustrative only. Figures use the <a href={maGuide}>Massachusetts Department of Revenue credit-table method</a> for 2026, assume all property is in Massachusetts, no deductions, and no change in the QTIP balance. Growth is hypothetical and not a prediction. Actual results depend on asset values, deductions, elections, and the law in effect at each death. Your CPA calculates any actual tax, and your estate attorney determines whether any trust structure fits your situation.</p>
           </div>
 
           <div className={styles.attorneyNote}>

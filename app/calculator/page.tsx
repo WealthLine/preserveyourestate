@@ -3,10 +3,15 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CalcTool from "./CalcTool";
+import { maEstateTax, maEstateTaxWithAB, fmtUSD } from "@/lib/matax";
+
+const maGuide = "https://www.mass.gov/info-details/estate-tax-guide";
+const TABLE_ESTATES = [2_000_000, 3_000_000, 4_000_000, 5_000_000, 6_000_000, 8_000_000, 10_000_000] as const;
 
 export const metadata: Metadata = {
-  title: "Massachusetts Estate Tax Calculator (2026), Free Estimate in 60 Seconds", description:
-    "Free Massachusetts estate tax calculator. Enter your estate value and see your estimated MA estate tax under 2026 law (M.G.L. c. 65C), plus what coordinated trust planning could save a married couple.",
+  title: { absolute: "Massachusetts Estate Tax Calculator (2026) | MSA Financial" },
+  description:
+    "Estimate Massachusetts estate tax under 2026 rules, including an illustrative married-couple trust scenario. Educational only; not tax or legal advice.",
   alternates: { canonical: "/calculator" },
   openGraph: {
     type: "website",
@@ -61,6 +66,38 @@ export default function CalculatorPage() {
       <section style={{ paddingTop: "4rem" }}>
         <div className="wrap">
           <CalcTool />
+        </div>
+      </section>
+
+      <section style={{ paddingTop: "1rem" }}>
+        <div className="wrap article">
+          <h2>Illustrative Massachusetts estate tax, 2026</h2>
+          <div className="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Total estate</th>
+                  <th scope="col">Single estate, no planning</th>
+                  <th scope="col">Married, with illustrative credit shelter trust</th>
+                </tr>
+              </thead>
+              <tbody>
+                {TABLE_ESTATES.map((estate) => (
+                  <tr key={estate}>
+                    <th scope="row">{fmtUSD(estate)}</th>
+                    <td>{fmtUSD(maEstateTax(estate))}</td>
+                    <td>{fmtUSD(maEstateTaxWithAB(estate))}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="fine">
+            Illustrative only. Figures use the <a href={maGuide}>Massachusetts Department of Revenue credit-table method</a> for 2026, assume all property is in Massachusetts, no deductions, and no change in the QTIP balance. Growth is hypothetical and not a prediction. Actual results depend on asset values, deductions, elections, and the law in effect at each death. Your CPA calculates any actual tax, and your estate attorney determines whether any trust structure fits your situation.
+          </p>
+          <p className="fine">
+            The married column assumes each spouse owns enough assets to fund the trust, and that the trust is properly drafted and funded.
+          </p>
         </div>
       </section>
 

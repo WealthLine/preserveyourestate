@@ -93,7 +93,6 @@
 .content .taxTable tbody td:last-child { color: var(--navy); font-weight: 800; font-variant-numeric: tabular-nums; }
 .content .taxPanel p.fine { font-size: .78rem; }
 .exampleTable { margin: 1.8rem 0 1rem; }
-.content .exampleTable tbody tr:last-child { background: #f9efd8; }
 .content .exampleTable tbody tr:last-child td { color: var(--navy); font-weight: 800; font-variant-numeric: tabular-nums; }
 
 .attorneyNote { display: grid; grid-template-columns: 50px 1fr; gap: 1.3rem; background: #fff8e9; border: 1px solid #e4c78f; border-radius: 14px; padding: clamp(1.5rem, 3vw, 2.7rem); }

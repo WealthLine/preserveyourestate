@@ -41,9 +41,9 @@ export default function CalcTool() {
     if (marital === "married" && savings > 0)
       return (
         <>
-          Coordinated planning could keep an estimated <b>{fmtUSD(savings)}</b> in your
-          family&apos;s hands instead of the Commonwealth&apos;s:{" "}
-          <b>a few documents and correct titling</b>, not a product.
+          For a married couple, the illustrative credit shelter trust scenario shows an
+          estimate of <b>{fmtUSD(after)}</b> instead of <b>{fmtUSD(before)}</b>. Actual
+          results depend on drafting, funding, asset values, and the law at each death.
         </>
       );
     return (
@@ -127,9 +127,12 @@ export default function CalcTool() {
         </div>
         <p className="fine" style={{ marginTop: "1.8rem" }}>
           Educational estimate under M.G.L. c. 65C (2026): graduated rates applied via the state
-          death tax credit method, less the $99,600 credit that shelters the first $2M. Married
-          &ldquo;with planning&rdquo; scenario illustrates a funded credit shelter (A/B) trust
-          preserving both spouses&apos; exemptions at the second death. Results are estimates
+          death tax credit method, less the $99,600 credit that shelters the first $2M. The married
+          &ldquo;with planning&rdquo; scenario is an illustration: it assumes $2M (or the full
+          first-spouse share, if less) funds a credit shelter trust at the first death, taxed at
+          $0, with the remainder taxed in the survivor&apos;s estate. It also assumes each spouse
+          owns enough assets to fund the trust, and that the trust is properly drafted and
+          funded. Results are estimates
           only and are not guaranteed. Not tax or legal advice; actual results depend on
           deductions, ownership, and elections. Verify with your CPA and estate attorney.
         </p>
@@ -161,7 +164,7 @@ export default function CalcTool() {
             <Link className="btn btn-gold" href="/#booking">
               Walk Through My Number: 45 Min, Free <span className="arrow">→</span>
             </Link>
-            <Link className="btn btn-ghost" href="/#guide">
+            <Link className="btn btn-ghost" href="/#booking-guide">
               Get the Full Planning Guide (PDF)
             </Link>
           </div>
