@@ -252,7 +252,7 @@ export default function AbTrustGuide() {
             </div>
           </div>
 
-          <p className="fine" style={{ marginTop: "2rem" }}>Michael Cammarata, CFP®, is an Investment Adviser Representative of MSA Financial, LLC (CRD #107768), a Registered Investment Adviser. This educational guide reflects Massachusetts law reviewed in September 2026. It is not legal, tax, or personalized investment advice. The figures above follow the <a href={maGuide}>Massachusetts Department of Revenue&apos;s Table B computation</a> under <a href={maLaw}>M.G.L. c. 65C, §2A</a>; actual results vary. Michael is not an attorney or CPA, does not draft legal documents or prepare tax returns, and coordinates with independent professionals selected and engaged by clients.</p>
+          <p className="fine" style={{ marginTop: "2rem" }}>Michael Cammarata, CFP®, is an Investment Adviser Representative of MSA Financial, LLC (CRD #107768), a Registered Investment Adviser. This educational guide reflects Massachusetts law reviewed in October 2026. It is not legal, tax, or personalized investment advice. The figures above follow the <a href={maGuide}>Massachusetts Department of Revenue&apos;s Table B computation</a> under <a href={maLaw}>M.G.L. c. 65C, §2A</a>; actual results vary. Michael is not an attorney or CPA, does not draft legal documents or prepare tax returns, and coordinates with independent professionals selected and engaged by clients.</p>
         </div>
       </section>
 

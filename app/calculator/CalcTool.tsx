@@ -34,7 +34,7 @@ export default function CalcTool() {
     if (before === 0)
       return (
         <>
-          Under the $2M threshold, no Massachusetts estate tax is due today, but growth, inheritance, or a home sale can change that quickly. The best planning happens{" "}
+          Under the $2M threshold, no Massachusetts estate tax is due today, but growth, inheritance, or a home sale can change that quickly. Planning options may be broader{" "}
           <b>before</b> you cross the line.
         </>
       );

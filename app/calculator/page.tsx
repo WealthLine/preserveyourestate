@@ -116,7 +116,7 @@ export default function CalculatorPage() {
               <p>
                 Massachusetts computes tax on your <b>entire</b> taxable estate using graduated
                 rates, then subtracts a $99,600 credit, the amount that exactly cancels the tax on
-                $2M. Everything above the line is taxed from dollar one of the excess. For a
+                $2M. The dollars above $2M are taxed at the bracket rates where they fall. For a
                 plain-language, educational explanation, read{" "}
                 <Link href="/guides/massachusetts-estate-tax-planning">
                   how the Massachusetts estate tax exemption works and what it means for your household

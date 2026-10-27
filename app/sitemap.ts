@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/calculator`,
-      lastModified: LAST_UPDATED,
+      lastModified: new Date("2026-10-26"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/guides/ab-trust`,
-      lastModified: new Date("2026-09-29"),
+      lastModified: new Date("2026-10-26"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
