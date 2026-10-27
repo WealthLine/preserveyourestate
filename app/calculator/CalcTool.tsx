@@ -28,13 +28,13 @@ export default function CalcTool() {
       return (
         <>
           The Massachusetts estate tax applies to MA residents and to non-residents who own
-          Massachusetts real estate or tangible property. If that may describe you (a Cape house, a Boston condo), the planning conversation still matters.
+          Massachusetts real estate or tangible property. If that may describe you (a Cape house, a Boston condo), it may be worth discussing with your attorney and CPA.
         </>
       );
     if (before === 0)
       return (
         <>
-          Under the $2M threshold, no Massachusetts estate tax is due today, but growth, inheritance, or a home sale can change that quickly. Planning options may be broader{" "}
+          At or under the $2M threshold, this calculator shows no Massachusetts estate tax, but growth, inheritance, or a home sale may change that. It may be worthwhile to review your situation with your attorney and CPA{" "}
           <b>before</b> you cross the line.
         </>
       );
@@ -48,9 +48,9 @@ export default function CalcTool() {
       );
     return (
       <>
-        For single filers, planning levers include gifting strategies, ILITs, charitable
-        structures, and Roth/drawdown coordination. The right mix depends on your goals.
-        That&apos;s what the complimentary review maps out.
+        Planning considerations for single filers depend on individual goals and
+        circumstances, and may involve legal and tax questions for your attorney and CPA. The
+        complimentary review can help organize those questions.
       </>
     );
   })();

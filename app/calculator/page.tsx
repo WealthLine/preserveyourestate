@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "MSA Financial",
     title: "Massachusetts Estate Tax Calculator (2026)",
     description:
-      "Estimate your Massachusetts estate tax under 2026 law and see what coordinated planning could change.",
+      "Estimate your Massachusetts estate tax under 2026 law, including an illustrative married-couple trust scenario.",
     images: [
       {
         url: "https://www.preserveyourestate.com/og?topic=Massachusetts%20Estate%20Tax%20Calculator&label=Educational%20planning%20resource",
@@ -57,7 +57,7 @@ export default function CalculatorPage() {
           </h1>
           <p className="lead hero-anim d3">
             Massachusetts taxes estates over $2 million on a graduated scale up to 16%. Model your
-            estate under 2026 law, and see what coordinated planning could change. No email
+            estate under 2026 law, including an illustrative married-couple trust scenario. No email
             required.
           </p>
         </div>
@@ -93,7 +93,7 @@ export default function CalculatorPage() {
             </table>
           </div>
           <p className="fine">
-            Illustrative only. Figures use the <a href={maGuide}>Massachusetts Department of Revenue credit-table method</a> for 2026, assume all property is in Massachusetts, no deductions, and no change in the QTIP balance. Growth is hypothetical and not a prediction. Actual results depend on asset values, deductions, elections, and the law in effect at each death. Your CPA calculates any actual tax, and your estate attorney determines whether any trust structure fits your situation.
+            Illustrative only. Figures use the <a href={maGuide}>Massachusetts Department of Revenue credit-table method</a> for 2026 and assume all property is in Massachusetts and no deductions. Actual results depend on asset values, deductions, elections, and the law in effect at each death. Your CPA calculates any actual tax, and your estate attorney determines whether any trust structure fits your situation.
           </p>
           <p className="fine">
             The married column assumes each spouse owns enough assets to fund the trust, and that the trust is properly drafted and funded.
@@ -128,16 +128,16 @@ export default function CalculatorPage() {
               <h3>No spousal portability</h3>
               <p>
                 Unlike federal law, a surviving spouse cannot inherit the unused exemption. Without
-                a funded credit shelter trust, a couple&apos;s two $2M exemptions quietly become
-                one.
+                a funded credit shelter trust or similar planning, a couple&apos;s two $2M exemptions
+                may effectively become one, depending on titling and how assets pass.
               </p>
             </div>
             <div className="coord-card">
               <h3>Your house counts</h3>
               <p>
-                Home equity, IRAs, 401(k)s, and life insurance you own all count toward the $2M
-                line. With Massachusetts real estate values, ordinary families cross it without
-                noticing.
+                Home equity, IRAs, 401(k)s, and life insurance you own may count toward the $2M
+                line, depending on ownership and beneficiary designations. With Massachusetts real
+                estate values, some families may cross it without realizing.
               </p>
             </div>
           </div>

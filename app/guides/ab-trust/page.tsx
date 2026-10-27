@@ -109,7 +109,7 @@ export default function AbTrustGuide() {
           <ul className={styles.overviewGrid}>
             <li><span className={styles.overviewNumber}>01</span><div><b>The gap</b><span>Massachusetts has a $2 million estate tax threshold, but no portability of a spouse&apos;s unused state exemption. <a href={maGuide}>Massachusetts Department of Revenue</a></span></div></li>
             <li><span className={styles.overviewNumber}>02</span><div><b>The structure</b><span>An A/B trust can divide assets at the first death so both spouses&apos; exemptions may be used, depending on the trust terms and estate.</span></div></li>
-            <li><span className={styles.overviewNumber}>03</span><div><b>The possible impact</b><span>Under the simplified assumptions below, an unplanned $4 million estate has estimated Massachusetts tax of $180,800 at the second death. Proper planning could reduce it, potentially to zero; actual results vary.</span></div></li>
+            <li><span className={styles.overviewNumber}>03</span><div><b>The possible impact</b><span>Under the simplified assumptions below, an unplanned $4 million estate has estimated Massachusetts tax of $180,800 at the second death. Under the same assumptions, an A/B trust plan may produce a lower estimate, depending on drafting and funding; actual results vary.</span></div></li>
             <li><span className={styles.overviewNumber}>04</span><div><b>The follow-through</b><span>Documents alone are not enough. The estate planning team needs to review asset titling and beneficiary designations.</span></div></li>
           </ul>
           </div>
@@ -170,24 +170,23 @@ export default function AbTrustGuide() {
               <p>For deaths under current law, Massachusetts uses a graduated schedule, Table B, based on the taxable estate after applicable deductions and adjustments, not simply a flat rate on the dollars over $2 million. It then allows a credit of up to $99,600 under M.G.L. c. 65C, §2A(f). The filing threshold, taxable estate, and resulting liability are different calculations. Read the <a href={maGuide}>Department of Revenue&apos;s computation and Table B</a> and <a href={maLaw}>the statute</a>.</p>
             </div>
           </div>
-          <p className="fine">Illustrative calculations using the <a href={maGuide}>Massachusetts Department of Revenue Table B</a> as of September 2026: assume all taxable property is subject to Massachusetts estate tax, no deductions and no prior taxable gifts; the Table B adjusted taxable estate is the stated taxable estate less $60,000, followed by the $99,600 state credit. This is not an estimate for a particular family. An estate planning attorney or CPA should calculate the actual liability.</p>
+          <p className="fine">Illustrative calculations using the <a href={maGuide}>Massachusetts Department of Revenue Table B</a> as of October 2026: assume all taxable property is subject to Massachusetts estate tax, no deductions and no prior taxable gifts; the Table B adjusted taxable estate is the stated taxable estate less $60,000, followed by the $99,600 state credit. This is not an estimate for a particular family. An estate attorney or CPA should calculate the actual liability.</p>
           </div>
 
           <div className={styles.sectionBlock}>
           <p className={styles.kicker}>04 / A SIDE-BY-SIDE EXAMPLE</p>
           <h2>Worked example: an $8 million estate</h2>
-          <p>Using the same simplified Table B assumptions, the illustration compares what would be included in the survivor&apos;s estate at the second death. The first two rows hold asset values constant; the third row adds a hypothetical growth assumption. It does not otherwise account for distributions, expenses, gifts, changes in law, or income tax consequences.</p>
+          <p>Holding asset values constant and using the same simplified Table B assumptions, the illustration compares what would be included in the survivor&apos;s estate at the second death. It does not account for growth, distributions, expenses, gifts, changes in law, or income tax consequences.</p>
           <div className={`table-scroll ${styles.tableCard} ${styles.exampleTable}`}>
             <table>
               <thead><tr><th scope="col">Approach</th><th scope="col">Result</th></tr></thead>
               <tbody>
                 <tr><td>No trust planning: everything to surviving spouse outright</td><td>Full $8M in the surviving spouse&apos;s estate. Estimated Massachusetts estate tax: about $673,600.</td></tr>
-                <tr><td>A/B trust plan: $2M to credit shelter trust, $6M to QTIP</td><td>Credit shelter trust at the first death: estimated $0. QTIP assets in the survivor&apos;s $6M estate: estimated about $411,200. Illustrative difference: about $262,400.</td></tr>
-                <tr><td>Credit shelter trust after 10 years at 6% growth</td><td>Trust may grow to about $3.6M outside the survivor&apos;s estate. Had the $1.6M of growth been in the survivor&apos;s estate, the illustrative estimate would rise from about $411,200 to about $619,200, a difference of about $208,000.</td></tr>
+                <tr><td>A/B trust plan: $2M to credit shelter trust, $6M to QTIP</td><td>Credit shelter trust at the first death: estimated $0. QTIP assets in the survivor&apos;s $6M estate: estimated about $411,200.</td></tr>
               </tbody>
             </table>
           </div>
-          <p className="fine">Illustrative only. Figures use the <a href={maGuide}>Massachusetts Department of Revenue credit-table method</a> for 2026, assume all property is in Massachusetts, no deductions, and no change in the QTIP balance. Growth is hypothetical and not a prediction. Actual results depend on asset values, deductions, elections, and the law in effect at each death. Your CPA calculates any actual tax, and your estate attorney determines whether any trust structure fits your situation.</p>
+          <p className="fine">Illustrative only. Figures use the <a href={maGuide}>Massachusetts Department of Revenue credit-table method</a> for 2026, assume all property is in Massachusetts, no deductions, and no change in the QTIP balance. Actual results depend on asset values, deductions, elections, and the law in effect at each death. Your CPA calculates any actual tax, and your estate attorney determines whether any trust structure fits your situation.</p>
           </div>
 
           <div className={styles.attorneyNote}>
@@ -226,9 +225,9 @@ export default function AbTrustGuide() {
           <div className={styles.sectionBlock} id="team">
           <p className={styles.kicker}>07 / THE PROFESSIONAL TEAM</p>
           <h2>Who does what</h2>
-          <p>A Massachusetts estate planning attorney drafts the legal documents. Michael Cammarata, CFP®, does not draft trusts, provide legal or tax advice, or prepare tax returns. His role is to coordinate the financial planning and implementation with the professionals you engage.</p>
+          <p>A Massachusetts estate attorney drafts the legal documents. Michael Cammarata, CFP®, does not draft trusts, provide legal or tax advice, or prepare tax returns. His role is to coordinate the financial planning and implementation with the professionals you engage.</p>
           <p>If you already have an attorney and CPA, Michael can coordinate with them on the asset picture, titling, and the plan&apos;s financial assumptions.</p>
-          <div className={styles.networkCallout}><b>A professional network for coordinated planning</b><p>Michael also works with a network of independent Massachusetts estate planning attorneys and CPAs to help coordinate these plans. If you need an attorney or CPA, he can make an introduction. You choose whom to hire and engage them directly; Michael remains the point of coordination for the financial plan.</p></div>
+          <div className={styles.networkCallout}><b>A professional network for coordinated planning</b><p>Michael also works with a network of independent Massachusetts estate attorneys and CPAs to help coordinate these plans. If you need an attorney or CPA, he can make an introduction. You choose whom to hire and engage them directly; Michael remains the point of coordination for the financial plan.</p></div>
           <ol className={styles.processGrid}>
             <li><b>Map the estate.</b> Organize assets, titling, and beneficiary designations for review with the attorney.</li>
             <li><b>Support the design.</b> Provide financial information and illustrations to help the attorney evaluate the trust structure.</li>
