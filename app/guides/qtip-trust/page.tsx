@@ -353,7 +353,11 @@ export default function QtipTrustGuide() {
             not included in the decedent&apos;s federal gross estate and for which a Massachusetts
             estate tax deduction was allowed when it was transferred to the decedent. Your attorney
             and CPA can explain whether a federal election, a Massachusetts election, or both are
-            relevant to your trust.
+            relevant to your trust. For who files Form M-706 and the nine-month timeline, read{" "}
+            <Link href="/guides/massachusetts-estate-tax-return">
+              when a Massachusetts estate tax return is required and who prepares it
+            </Link>
+            .
           </p>
           <p>
             Federal law is a separate calculation. The IRS states that the federal basic exclusion

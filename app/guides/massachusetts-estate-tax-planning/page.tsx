@@ -364,6 +364,12 @@ export default function MassachusettsEstateTaxPlanningGuide() {
             months after death, and interest may accrue on any unpaid tax from the original due
             date even when an extension applies. Ask your CPA and attorney how an estate might
             raise cash, who would be responsible for filing, and what timing questions could arise.
+            For the filing and payment timeline, read{" "}
+            <Link href="/guides/massachusetts-estate-tax-return">
+              who files a Massachusetts estate tax return, when it is due, and what information
+              your CPA and attorney may ask for
+            </Link>
+            .
           </p>
           <p>
             Income tax is a separate matter. For tax year 2026, Massachusetts applies a 4% surtax
