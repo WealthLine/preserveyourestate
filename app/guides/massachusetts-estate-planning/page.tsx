@@ -8,8 +8,8 @@ const GUIDE_PATH = "/guides/massachusetts-estate-planning";
 const GUIDE_URL = `https://www.preserveyourestate.com${GUIDE_PATH}`;
 const SEO_TITLE = "Estate Planning in Massachusetts: What to Know (2026)";
 const SEO_DESCRIPTION =
-  "Estate planning in Massachusetts explained: key documents, the $2M estate tax filing threshold, no spousal portability, and coordinating your attorney and CPA.";
-const LAST_REVIEWED = "October 23, 2026";
+  "Estate planning in Massachusetts: key documents, the $2M estate tax threshold, no spousal portability, and how your attorney, CPA and advisor coordinate.";
+const LAST_REVIEWED = "October 28, 2026";
 const OG_IMAGE =
   "https://www.preserveyourestate.com/og?topic=Massachusetts%20Estate%20Planning%20Guide&label=Educational%20guide";
 
@@ -33,7 +33,11 @@ const FAQ_TEXT: { q: string; a: string }[] = [
   },
   {
     q: "Does Massachusetts have an estate tax?",
-    a: "Yes. For Massachusetts residents dying on or after January 1, 2023, the Department of Revenue requires a return when the gross estate plus adjusted taxable gifts exceeds $2,000,000, and allows a credit of up to $99,600. The federal exclusion is a separate system. Figures were verified against official sources as of October 23, 2026 and may change.",
+    a: "Yes. For Massachusetts residents dying on or after January 1, 2023, the Department of Revenue requires a return when the gross estate plus adjusted taxable gifts exceeds $2,000,000, and allows a credit of up to $99,600. The federal exclusion is a separate system. Figures were verified against official sources as of October 28, 2026 and may change.",
+  },
+  {
+    q: "What counts toward the Massachusetts estate tax?",
+    a: "The Department of Revenue tests the gross estate plus adjusted taxable gifts against $2,000,000. Its definitions describe the gross estate as property the decedent beneficially owned at death, whether held jointly or alone, real or personal, wherever situated. Whether a specific asset counts, and how it is valued, is a question for your CPA and estate attorney. Figures were verified as of October 28, 2026 and may change.",
   },
   {
     q: "Can a financial advisor help with estate planning?",
@@ -58,7 +62,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description: SEO_DESCRIPTION,
     publishedTime: "2026-09-08",
-    modifiedTime: "2026-10-23",
+    modifiedTime: "2026-10-28",
     authors: ["Michael Cammarata, CFP®"],
     images: [
       {
@@ -85,7 +89,7 @@ const JSON_LD = {
       author: { "@id": "https://www.preserveyourestate.com/#michael" },
       publisher: { "@id": "https://www.preserveyourestate.com/#org" },
       datePublished: "2026-09-08",
-      dateModified: "2026-10-23",
+      dateModified: "2026-10-28",
       citation: [MA_ESTATE_TAX_GUIDE, MA_ESTATE_TAX_FAQ, MA_SURTAX, IRS_WHATS_NEW],
     },
     {
@@ -210,6 +214,17 @@ export default function MassachusettsEstatePlanningGuide() {
             . Verified as of {LAST_REVIEWED}. Thresholds, credits, and calculation steps may change.
           </p>
 
+          <h2>What counts toward the Massachusetts estate tax?</h2>
+          <p>
+            In general, the Department of Revenue describes the gross estate broadly: property the
+            decedent beneficially owned at death, whether held jointly or in the decedent&apos;s name
+            alone, real or personal, wherever situated. Its Estate Tax Guide lists stocks, bank
+            accounts, insurance, and pensions as examples of intangible property. The same guide
+            separates probate property, which passes by will or intestacy, from nonprobate property,
+            such as assets held jointly or in a trust and life insurance not payable to the estate.
+            Whether a particular asset counts, and how it is valued, is a question for your CPA and
+            estate attorney.
+          </p>
           <p>
             For families with substantial real estate, retirement accounts, concentrated business
             ownership, life insurance, or interests held through trusts and entities, the first task
@@ -275,6 +290,11 @@ export default function MassachusettsEstatePlanningGuide() {
           </p>
 
           <h2>Which documents are part of a Massachusetts estate plan?</h2>
+          <p>
+            <b>In short:</b> many plans start with a will, a durable power of attorney, and a health
+            care proxy, and some add a revocable trust. Your estate attorney advises which documents
+            fit your situation and prepares them.
+          </p>
           <p>
             An estate planning attorney can advise on the documents that fit your situation. For a
             sophisticated household, the documents should be read as an operating system rather than
@@ -448,6 +468,45 @@ export default function MassachusettsEstatePlanningGuide() {
             Part 2A, available at adviserinfo.sec.gov.
           </p>
 
+          <h2>What estate planning gaps may come up in Massachusetts?</h2>
+          <p>
+            These are educational examples of items a household may want to raise with its estate
+            attorney and CPA. They are not a review of any particular plan.
+          </p>
+          <div className="callout reveal">
+            <p>
+              <b>Gaps a periodic review may surface</b>
+            </p>
+            <ul>
+              <li>
+                Documents that have not been reviewed since a move, marriage, death in the family,
+                retirement, or change in the law.
+              </li>
+              <li>Beneficiary designations that no longer match what the signed documents say.</li>
+              <li>
+                A trust that was signed but whose accounts and property were never retitled, which
+                may leave it unfunded.
+              </li>
+              <li>
+                An estate that may exceed the $2,000,000 threshold once adjusted taxable gifts are
+                counted, with no current estimate.
+              </li>
+              <li>
+                Documents for a married couple that do not address the lack of spousal portability
+                in Massachusetts.
+              </li>
+              <li>
+                A personal representative or successor trustee who has not been told about the role
+                or where the documents are kept.
+              </li>
+              <li>No plan for how an estate could pay a tax bill, if one applies.</li>
+            </ul>
+          </div>
+          <p className="fine">
+            Addressing any of these may involve cost, time, and legal or tax review, and the right
+            approach depends on individual circumstances.
+          </p>
+
           <h2>What questions should you ask your attorney and CPA?</h2>
           <p>
             These questions are educational starting points. Your professionals can answer them for
@@ -511,7 +570,7 @@ export default function MassachusettsEstatePlanningGuide() {
             legal documents or prepare tax returns. He coordinates with clients&apos; existing
             estate attorneys and CPAs. Tax treatment depends on individual circumstances, and legal
             and tax advice should be obtained from your own attorney and CPA. The Massachusetts and
-            federal tax figures were verified against mass.gov and irs.gov as of October 23, 2026
+            federal tax figures were verified against mass.gov and irs.gov as of October 28, 2026
             and may change.
           </p>
         </div>
