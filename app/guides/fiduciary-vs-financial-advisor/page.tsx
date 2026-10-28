@@ -123,6 +123,7 @@ const JSON_LD = {
       "@type": "Organization",
       "@id": "https://www.preserveyourestate.com/#org",
       name: "MSA Financial, LLC",
+      alternateName: "Preserve Your Estate",
       url: "https://www.preserveyourestate.com",
     },
     {

@@ -109,12 +109,12 @@ const FAQ_ITEMS: FaqItem[] = [
 const JSON_LD = {
   "@context": "https://schema.org", "@graph": [
     {
-      "@type": ["FinancialService", "Organization"], "@id": "https://www.preserveyourestate.com/#org", name: "MSA Financial, LLC", url: "https://www.preserveyourestate.com/", telephone: "+1-781-843-3500", foundingDate: "1997", description:
+      "@type": ["FinancialService", "Organization"], "@id": "https://www.preserveyourestate.com/#org", name: "MSA Financial, LLC", alternateName: "Preserve Your Estate", url: "https://www.preserveyourestate.com/", telephone: "+1-781-843-3500", foundingDate: "1997", description:
         "Independent SEC-registered investment adviser (CRD #107768) providing coordinated wealth, estate, and tax planning across Massachusetts.", address: OFFICES.map((office) => ({
         "@type": "PostalAddress", streetAddress: office.streetAddress, addressLocality: office.city, addressRegion: "MA", postalCode: office.postalCode, addressCountry: "US",
       })), areaServed: { "@type": "State", name: "Massachusetts" }, sameAs: ["https://www.msaplan.com/", "https://adviserinfo.sec.gov/firm/summary/107768"], }, {
       "@type": "Person", "@id": "https://www.preserveyourestate.com/#michael", name: "Michael Cammarata", honorificSuffix: "CFP®", jobTitle: "Managing Partner and Owner", image: "https://www.preserveyourestate.com/michael-cammarata.jpg", worksFor: { "@id": "https://www.preserveyourestate.com/#org" }, knowsAbout: [
-        "Massachusetts estate tax", "Roth conversion planning", "trust funding", "tax-efficient investing", ], }, { "@type": "WebSite", url: "https://www.preserveyourestate.com/", name: "Preserve Your Estate" }, {
+        "Massachusetts estate tax", "Roth conversion planning", "trust funding", "tax-efficient investing", ], }, { "@type": "WebSite", url: "https://www.preserveyourestate.com/", name: "Preserve Your Estate", publisher: { "@id": "https://www.preserveyourestate.com/#org" } }, {
       "@type": "FAQPage", mainEntity: FAQ_TEXT.map((f) => ({
         "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a }, })), }, ],
 };

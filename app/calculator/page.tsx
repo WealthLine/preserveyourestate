@@ -164,6 +164,42 @@ export default function CalculatorPage() {
         </div>
       </section>
 
+      <section style={{ paddingTop: "1rem" }}>
+        <div className="wrap article">
+          <div className="next-step reveal-scale">
+            <p className="eyebrow" style={{ justifyContent: "center" }}>
+              Next Step
+            </p>
+            <h3>Take your estimate into one coordinated conversation</h3>
+            <p>
+              Schedule a conversation to discuss your estimate, your account inventory, and the
+              questions you may want to take to your estate attorney and CPA. The calculator is
+              educational and is not legal or tax advice.
+            </p>
+            <div className="hero-ctas">
+              <Link className="btn btn-gold" href="/#booking">
+                Schedule a Coordination Conversation <span className="arrow">→</span>
+              </Link>
+            </div>
+          </div>
+
+          <p className="fine guide-disclosure" style={{ marginTop: "2rem" }}>
+            This calculator is for educational purposes only and does not constitute individualized
+            legal, tax, or investment advice. Its results are illustrative and do not recommend any
+            strategy for any reader. Investment advisory services are offered through MSA Financial,
+            LLC, a Registered Investment Adviser (CRD #107768). MSA Financial is an SEC-registered
+            investment adviser. Registration with the SEC does not imply a certain level of skill or
+            training. Investing involves risk, including the potential loss of principal. Michael
+            Cammarata is not an attorney or CPA and does not provide legal or tax advice. He does
+            not draft legal documents or prepare tax returns. He coordinates with clients&apos;
+            existing estate attorneys and CPAs. Tax treatment depends on individual circumstances,
+            and legal and tax advice should be obtained from your own attorney and CPA. The
+            $2,000,000 Massachusetts threshold and $99,600 credit were verified against mass.gov
+            as of October 28, 2026 and may change.
+          </p>
+        </div>
+      </section>
+
       <Footer compact />
     </>
   );
