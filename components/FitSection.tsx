@@ -17,19 +17,19 @@ const CRITERIA = [
     icon: CircleDollarSign,
     title: "$2M+ in net investable assets",
     description:
-      "Planning above the Massachusetts estate tax threshold is what this practice is built for. It's where coordination may pay for itself many times over.",
+      "Planning questions can become more complex above the Massachusetts estate tax threshold, which is where this practice focuses.",
   },
   {
     icon: MapPin,
     title: "Massachusetts resident or estate owner",
     description:
-      "State-specific expertise in Massachusetts estate tax law, M.G.L. c. 65C, and local trust planning is the core of the work.",
+      "The practice focuses on Massachusetts estate tax considerations under M.G.L. c. 65C and local planning questions. Michael is not an attorney or CPA.",
   },
   {
     icon: CalendarClock,
     title: "In or approaching the decade before retirement",
     description:
-      "The decade before retirement is often when estate and tax decisions become harder to unwind. That's usually when planning matters most.",
+      "Estate and tax decisions can become harder to change as retirement approaches, so many households review them in the decade beforehand.",
   },
   {
     icon: GitMerge,
@@ -46,7 +46,7 @@ const CRITERIA = [
     icon: Scale,
     title: "Ready for a fiduciary conversation",
     description:
-      "No products to sell, no commissions at stake. A CFP® whose job is making your estate plan, tax return, and portfolio agree.",
+      "Michael is a fiduciary and fee-based. A CFP® whose role is coordinating among your estate plan, tax return, and portfolio information. He does not draft legal documents or prepare tax returns.",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function FitSection() {
             transition={{ duration: 0.4, delay: 0.2, ease: EASE }}
           >
             <a className="btn btn-gold" href="#booking">
-              Schedule a Review <span className="arrow">→</span>
+              Schedule a Coordination Conversation <span className="arrow">→</span>
             </a>
             <a className="btn btn-ghost" href="#booking-guide">
               Get the Free Guide

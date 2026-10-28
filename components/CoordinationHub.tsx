@@ -10,7 +10,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 /* Six services, one per coordination gap (numbered to match the cards above). */
 const NODES = [
-  { num: "01", name: "Trust Funding", icon: FileCheck, x: 50, y: 10 }, { num: "02", name: "A/B Trust Structure", icon: Landmark, x: 84.6, y: 30 }, { num: "03", name: "Roth & RMD Strategy", icon: CalendarClock, x: 84.6, y: 70 }, { num: "04", name: "MA Estate Tax", icon: Percent, x: 50, y: 90 }, { num: "05", name: "Gains & Surtax", icon: TrendingUp, x: 15.4, y: 70 }, { num: "06", name: "Attorney & CPA", icon: Users, x: 15.4, y: 30 },
+  { num: "01", name: "Trust Funding", icon: FileCheck, x: 50, y: 10 }, { num: "02", name: "A/B Trust Structure", icon: Landmark, x: 84.6, y: 30 }, { num: "03", name: "Roth & RMD Review", icon: CalendarClock, x: 84.6, y: 70 }, { num: "04", name: "MA Estate Tax", icon: Percent, x: 50, y: 90 }, { num: "05", name: "Gains & Surtax", icon: TrendingUp, x: 15.4, y: 70 }, { num: "06", name: "Attorney & CPA", icon: Users, x: 15.4, y: 30 },
 ];
 
 const container: Variants = {
@@ -45,10 +45,10 @@ export default function CoordinationHub() {
           viewport={{ once: true, margin: "-80px" }}
         >
           <motion.p variants={fadeUp} className="eyebrow">
-            How the Gaps Get Closed
+            How Coordination May Help
           </motion.p>
           <motion.h2 variants={fadeUp} style={{ margin: "1rem 0 1.1rem" }}>
-            Six gaps. <em>One planning hub.</em>
+            Six gaps. <em>One coordination hub.</em>
           </motion.h2>
           <motion.p variants={fadeUp} className="lead">
             Every service runs through one CFP® who also manages the portfolio. Your
@@ -56,7 +56,7 @@ export default function CoordinationHub() {
           </motion.p>
           <motion.div variants={fadeUp} className="hub-actions">
             <a className="btn btn-navy" href="#booking">
-              Schedule the 45-Minute Review <span className="arrow">→</span>
+              Schedule a Coordination Conversation <span className="arrow">→</span>
             </a>
             <div className="hub-status">
               <span className="pulse-dot">
@@ -68,7 +68,7 @@ export default function CoordinationHub() {
                   />
                 )}
               </span>
-              Fiduciary · Fee-Based · One Coordinated Plan
+              Fiduciary · Fee-Based · Coordination-Focused
             </div>
           </motion.div>
         </motion.div>
@@ -79,7 +79,7 @@ export default function CoordinationHub() {
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
           role="img"
-          aria-label="Service map showing trust funding, A/B trust structure, Roth and RMD strategy, Massachusetts estate tax, gains and surtax management, and attorney-CPA coordination all connected to Preserve Your Estate, the planning hub"
+          aria-label="Service map showing trust funding, A/B trust structure, Roth and RMD review, Massachusetts estate tax, gains and surtax management, and attorney-CPA coordination all connected to Preserve Your Estate, the planning hub"
           className="hub-canvas"
         >
           <div className="hub-halo" aria-hidden="true" />
@@ -187,19 +187,19 @@ export default function CoordinationHub() {
           <div className="step">
             <div className="step-dot">1</div>
             <span className="step-tag">Discovery</span>
-            <h3>Estate &amp; Tax Diagnostic</h3>
+            <h3>Estate &amp; Tax Information Review</h3>
             <p>
-              Where your estate plan, investment strategy, and tax position stand today, and
-              where they quietly disagree.
+              Where your estate documents, investment accounts, and tax information stand today,
+              and where they may not line up.
             </p>
           </div>
           <div className="step">
             <div className="step-dot">2</div>
-            <span className="step-tag">Strategy</span>
-            <h3>One Written Plan</h3>
+            <span className="step-tag">Summary</span>
+            <h3>A Written Summary of Open Questions</h3>
             <p>
-              Your estate structure, Roth conversion targets, capital-gains plan, and portfolio
-              positioning as one set of decisions.
+              Your accounts, titling, and beneficiaries, with questions for your attorney and CPA,
+              who advise on legal and tax decisions.
             </p>
           </div>
           <div className="step">
@@ -207,8 +207,8 @@ export default function CoordinationHub() {
             <span className="step-tag">Execution</span>
             <h3>Implementation &amp; Introductions</h3>
             <p>
-              Direct introductions to independent Massachusetts estate attorneys and CPAs, with
-              timing and follow-through coordinated.
+              Introductions to independent Massachusetts estate attorneys and CPAs if you ask.
+              You choose and engage them, and the advisor helps track follow-up.
             </p>
           </div>
           <div className="step">
@@ -216,8 +216,8 @@ export default function CoordinationHub() {
             <span className="step-tag">Ongoing</span>
             <h3>Monitoring &amp; Maintenance</h3>
             <p>
-              Estate plans erode and tax law changes. We aim to keep everything current with
-              regular reviews.
+              Family circumstances and tax rules change, so a plan may need periodic review with
+              your professionals.
             </p>
           </div>
         </div>

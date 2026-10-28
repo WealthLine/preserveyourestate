@@ -95,7 +95,7 @@ export default function Hero() {
                 Calculate My Estate Tax <span className="arrow">→</span>
               </Link>
               <a className="btn btn-ghost" href="#booking">
-                Schedule a Review
+                Schedule a Coordination Conversation
               </a>
             </div>
           </motion.div>

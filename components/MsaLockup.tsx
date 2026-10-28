@@ -12,7 +12,7 @@ export default function MsaLockup() {
       <Image
         className="msa-logo"
         src="/msa-financial-logo.png"
-        alt="MSA Financial — Financial Planning, Asset Management, Since 1997"
+        alt="MSA Financial: Financial Planning, Asset Management, Since 1997"
         width={600}
         height={132}
         sizes="(max-width: 640px) 240px, 300px"

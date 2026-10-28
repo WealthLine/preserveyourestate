@@ -1,25 +1,27 @@
 # PreserveYourEstate.com
 
-> Preserve Your Estate (preserveyourestate.com) is the educational website of MSA Financial, LLC, an SEC-registered investment adviser in Braintree, Massachusetts (CRD #107768).
+> Preserve Your Estate (preserveyourestate.com) is the educational website of MSA Financial, LLC, an SEC-registered investment adviser in Braintree, Massachusetts (CRD #107768). SEC registration does not imply a certain level of skill or training.
 
-> Massachusetts estate & tax-focused wealth management. Michael Cammarata, CFP®,
-> Managing Partner and Owner at MSA Financial, LLC (SEC-registered RIA, CRD #107768,
-> ~$1.5B AUM as of August 12, 2026, est. 1997). Offices: Braintree, Sandwich, and Framingham, MA. Educational content on
-> the Massachusetts estate tax (M.G.L. c. 65C), credit shelter / A/B trust coordination,
-> trust funding, and Roth conversion planning for households with $2M+ in investable
-> assets. All offices: (781) 843-3500. Michael is not an attorney or CPA and does not
-> draft legal documents or prepare tax returns; he coordinates with clients' independent
-> legal and tax professionals.
+> Educational content about Massachusetts estate and tax planning coordination. Michael Cammarata, CFP®,
+> is Managing Partner and Owner at MSA Financial, LLC (SEC-registered RIA, CRD #107768,
+> established 1997, approximately $1.5B in client assets as of August 12, 2026). Offices: Braintree,
+> Sandwich, and Framingham, MA. Topics include the Massachusetts estate tax (M.G.L. c. 65C),
+> credit shelter (A/B) trusts, QTIP trusts, trust funding, and retirement planning questions for
+> Massachusetts households with $2M or more in investable assets. All offices: (781) 843-3500.
+> Michael is not an attorney or CPA. He does not draft legal documents, provide legal or tax
+> advice, or prepare tax returns. He coordinates with clients' independent estate attorneys and CPAs.
+> All content is educational only and is not individualized legal, tax, or investment advice.
 
-## Key facts (2026)
-- Massachusetts taxes estates over $2 million; graduated rates up to 16% after a $99,600 credit
-- Massachusetts has no spousal portability; A/B trust planning preserves both $2M exemptions (~$4M shielded per couple)
-- Illustrative MA estate tax before planning: $2.5M → ~$39,200 · $3M → ~$82,400 · $4M → ~$180,800 · $6M → ~$411,200
-- MA Millionaire Surtax: 4% on income above $1,107,750 (2026)
+## Key facts (verified October 28, 2026; rules may change)
+- For Massachusetts residents dying on or after January 1, 2023, a Massachusetts estate tax return is required when the gross estate plus adjusted taxable gifts exceeds $2,000,000, and a credit of up to $99,600 applies. Source: Massachusetts Department of Revenue, Estate Tax Guide (updated April 23, 2026): https://www.mass.gov/info-details/estate-tax-guide
+- The Estate Tax Guide describes no spousal portability election for the Massachusetts estate tax. The federal basic exclusion amount is $15,000,000 for 2026 (IRS): https://www.irs.gov/businesses/small-businesses-self-employed/whats-new-estate-and-gift-tax
+- Massachusetts 4% surtax applies to taxable income above $1,107,750 for tax year 2026. Source: Massachusetts Department of Revenue (page updated June 1, 2026): https://www.mass.gov/info-details/massachusetts-4-surtax-on-taxable-income
+- Illustrative estate tax figures are available on the calculator page. They are educational estimates, not tax advice. A CPA calculates any actual tax.
 
 ## Key pages
 - [Home](https://www.preserveyourestate.com/)
-- [Massachusetts Estate Tax Calculator](https://www.preserveyourestate.com/calculator/)
+- [Massachusetts Estate Tax Calculator (illustrative)](https://www.preserveyourestate.com/calculator/)
+- [Massachusetts Estate Planning Guide](https://www.preserveyourestate.com/guides/massachusetts-estate-planning/)
 - [Tax-Efficient Wealth Management](https://www.preserveyourestate.com/wealth-management/)
 - [Financial Advisor Estate Planning in Massachusetts](https://www.preserveyourestate.com/financial-advisor-estate-planning/)
 - [QTIP Trust in Massachusetts](https://www.preserveyourestate.com/guides/qtip-trust/)
@@ -28,7 +30,7 @@
 - [A/B Trust & Marital Deduction Trust Guide](https://www.preserveyourestate.com/guides/ab-trust/)
 - [Privacy Policy](https://www.preserveyourestate.com/privacy/)
 - [Website Disclosures](https://www.preserveyourestate.com/disclosures/)
-- [Schedule a Complimentary Review](https://www.preserveyourestate.com/#booking)
+- [Schedule a Coordination Conversation](https://www.preserveyourestate.com/#booking)
 
 ## Verification
 - SEC IAPD: https://adviserinfo.sec.gov/firm/summary/107768

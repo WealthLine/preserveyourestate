@@ -8,7 +8,7 @@ const TIMELINE_OPTIONS = [
   "Already Retired", "Within 2 Years", "3–5 Years", "6–10 Years", "More Than 10 Years",
 ];
 const CONCERN_OPTIONS = [
-  "Massachusetts Estate Tax", "Roth Conversion Strategy", "Trust Funding & Structure", "Tax-Efficient Investing", "RMD Planning", "Multiple: I need comprehensive coordination",
+  "Massachusetts Estate Tax", "Roth Conversion Planning", "Trust Funding & Structure", "Tax-Efficient Investing", "RMD Planning", "Multiple: I need comprehensive coordination",
 ];
 
 function Select({ id, label, options, required = false }: { id: string; label: string; options: string[]; required?: boolean }) {
@@ -93,7 +93,7 @@ export function BookingForm() {
             aria-hidden="true"
             style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
           />
-          <h3>{isReview ? "Request a Complimentary Review" : "Get the Free Guide"}</h3>
+          <h3>{isReview ? "Schedule a Coordination Conversation" : "Get the Free Guide"}</h3>
           <div className="intent-toggle" role="radiogroup" aria-label="What would you like?">
             <button
               type="button"
@@ -103,7 +103,7 @@ export function BookingForm() {
               disabled={pending}
               onClick={() => setIntent("review")}
             >
-              The 45-Minute Review
+              Coordination Conversation
             </button>
             <button
               type="button"
@@ -149,7 +149,7 @@ export function BookingForm() {
             </p>
           )}
           <button className={`btn ${isReview ? "btn-navy" : "btn-gold"}`} type="submit" disabled={pending}>
-            {pending ? "Sending…" : isReview ? "Request a Complimentary Review" : "Send Me the Free Guide"}
+            {pending ? "Sending…" : isReview ? "Schedule a Coordination Conversation" : "Send Me the Free Guide"}
           </button>
           <p className="fine" style={{ marginTop: "1rem" }}>
             {isReview

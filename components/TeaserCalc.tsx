@@ -33,8 +33,10 @@ export default function TeaserCalc() {
         <span className={`calc-result-num ${tax === 0 ? "zero" : ""}`}>{fmtUSD(shown)}</span>
       </div>
       <p className="fine">
-        Educational estimate under M.G.L. c. 65C (2026). Results are estimates only and are not
-        guaranteed. Not tax advice. The full calculator models married-couple planning.
+        Illustrative estimate under M.G.L. c. 65C (2026), assuming all property is in
+        Massachusetts and no deductions. Results are estimates only and are not guaranteed. Not
+        tax advice. Your CPA calculates any actual tax. The full calculator includes an
+        illustrative married-couple scenario.
       </p>
     </div>
   );
