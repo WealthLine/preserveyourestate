@@ -340,7 +340,11 @@ export default function MassachusettsEstateTaxPlanningGuide() {
             <Link href="/guides/ab-trust">
               A/B trust guide on how both spouses&apos; Massachusetts exemptions may be considered
             </Link>
-            , and use the{" "}
+            , read{" "}
+            <Link href="/guides/types-of-trusts">
+              the main types of trusts Massachusetts families review and how they differ
+            </Link>
+            {" "}for the labels you may hear, and use the{" "}
             <Link href="/calculator">Massachusetts estate tax calculator</Link> for a general,
             educational estimate.
           </p>

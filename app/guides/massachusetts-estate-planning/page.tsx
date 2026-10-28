@@ -233,7 +233,9 @@ export default function MassachusettsEstatePlanningGuide() {
             <Link href="/guides/estate-tax-vs-inheritance-tax">estate tax versus inheritance tax in Massachusetts</Link>.
             Considering lifetime gifts? This educational explanation of{" "}
             <Link href="/guides/lifetime-gift-tax-exemption">how the federal lifetime gift tax exemption differs from the Massachusetts estate tax</Link>{" "}
-            may help you prepare questions for your attorney and CPA.
+            may help you prepare questions for your attorney and CPA. If a return may be involved, this
+            guide explains{" "}
+            <Link href="/guides/massachusetts-estate-tax-return">who files a Massachusetts estate tax return, when it is due, and what information your CPA and attorney may ask for</Link>.
           </p>
 
           <p>
@@ -403,7 +405,11 @@ export default function MassachusettsEstatePlanningGuide() {
             <Link href="/financial-advisor-estate-planning">a financial advisor coordinates estate planning in Massachusetts</Link>.
             Estate questions also connect to income, investments, and tax planning, which the{" "}
             <Link href="/comprehensive-financial-planning">comprehensive financial planning overview</Link>{" "}
-            describes.
+            describes. If you are comparing advisors, read{" "}
+            <Link href="/guides/fiduciary-vs-financial-advisor">what a fiduciary financial advisor is and how it differs from other advisors</Link>.
+            Households with a business interest may also review the{" "}
+            <Link href="/guides/business-owner-retirement-planning">Massachusetts business owner retirement planning guide</Link>{" "}
+            for questions to bring to their professionals.
           </p>
 
           <h2>What is an unfunded trust, and why does it come up?</h2>

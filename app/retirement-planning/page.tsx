@@ -233,6 +233,10 @@ export default function RetirementPlanningPage() {
             <Link href="/comprehensive-financial-planning">
               what comprehensive financial planning includes and how the roles are divided
             </Link>
+            . If you are comparing advisors, read{" "}
+            <Link href="/guides/fiduciary-vs-financial-advisor">
+              how fiduciary and suitability standards differ and how advisors are paid
+            </Link>
             .
           </p>
 

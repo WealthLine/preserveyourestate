@@ -472,6 +472,21 @@ export default function Home() {
               </span>
             </Link>
           </div>
+          <p className="fine" style={{ marginTop: "1.6rem" }}>
+            Comparing advisors? Read{" "}
+            <Link href="/guides/fiduciary-vs-financial-advisor">
+              what a fiduciary financial advisor is and how it differs from other advisors
+            </Link>
+            . Unfamiliar with the trust labels? Read{" "}
+            <Link href="/guides/types-of-trusts">
+              the main types of trusts Massachusetts families review
+            </Link>
+            . Thinking about gifts? Read{" "}
+            <Link href="/guides/lifetime-gift-tax-exemption">
+              how the federal lifetime gift tax exemption differs from the Massachusetts estate tax
+            </Link>
+            . These guides are educational only.
+          </p>
 
         </div>
       </section>

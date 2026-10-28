@@ -372,6 +372,8 @@ export default function FinancialAdvisorEstatePlanningPage() {
             <Link href="/guides/ab-trust">A/B trust planning guide</Link>, and for the marital trust
             often paired with it, read{" "}
             <Link href="/guides/qtip-trust">how a QTIP trust may work for a married Massachusetts couple</Link>.
+            For the trust categories you may hear about in those conversations, read{" "}
+            <Link href="/guides/types-of-trusts">the main types of trusts Massachusetts families review and how they differ</Link>.
             Any structure should be evaluated and drafted by a qualified estate planning attorney.
           </p>
           <p>
@@ -381,6 +383,14 @@ export default function FinancialAdvisorEstatePlanningPage() {
             discussion, read{" "}
             <Link href="/guides/massachusetts-estate-tax-planning">
               what Massachusetts pre-retirees may want to review before the $2M estate tax threshold
+            </Link>
+            . For the filing side, read{" "}
+            <Link href="/guides/massachusetts-estate-tax-return">
+              who files a Massachusetts estate tax return and when it is due
+            </Link>
+            , and for gifting concepts, read{" "}
+            <Link href="/guides/lifetime-gift-tax-exemption">
+              how the federal lifetime gift tax exemption differs from the Massachusetts estate tax
             </Link>
             .
           </p>

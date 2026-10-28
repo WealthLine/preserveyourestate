@@ -206,7 +206,16 @@ export default function HighNetWorthFinancialPlanningPage() {
             <Link href="/guides/business-owner-retirement-planning">Massachusetts business owner retirement planning guide</Link>{" "}
             for questions about household income, ownership and liquidity, estate documents, and
             coordination with your CPA and attorney. A business transition can involve uncertain
-            timing and proceeds, so this guide is a starting point for professional discussion.
+            timing and proceeds, so this guide is a starting point for professional discussion. For the
+            account side of that conversation, read how{" "}
+            <Link href="/guides/tax-advantaged-retirement-accounts">
+              tax-advantaged retirement accounts differ and what to ask your CPA
+            </Link>{" "}
+            and how to{" "}
+            <Link href="/guides/retirement-planning-tools">
+              organize an account and income inventory before retirement planning conversations
+            </Link>
+            .
           </p>
 
           <p>

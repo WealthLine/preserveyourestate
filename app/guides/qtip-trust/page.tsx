@@ -394,6 +394,10 @@ export default function QtipTrustGuide() {
             <Link href="/guides/massachusetts-estate-planning">
               Massachusetts estate planning guide
             </Link>
+            . Lifetime gifts are a separate topic, covered in{" "}
+            <Link href="/guides/lifetime-gift-tax-exemption">
+              how the federal lifetime gift tax exemption differs from the Massachusetts estate tax
+            </Link>
             .
           </p>
 

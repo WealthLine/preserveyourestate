@@ -230,6 +230,23 @@ export default function WealthManagementPage() {
           </p>
 
           <p>
+            Investment decisions often connect to account types and retirement timing. For background,
+            read how{" "}
+            <Link href="/guides/tax-advantaged-retirement-accounts">
+              tax-advantaged retirement accounts differ and what to ask your CPA
+            </Link>
+            , how to{" "}
+            <Link href="/guides/retirement-planning-tools">
+              organize an account and income inventory before retirement planning conversations
+            </Link>
+            , and how{" "}
+            <Link href="/guides/business-owner-retirement-planning">
+              business owners may organize a retirement transition
+            </Link>
+            . These guides are educational and are not tax or legal advice.
+          </p>
+
+          <p>
             To see how a financial advisor fits alongside your attorney and CPA, read how{" "}
             <Link href="/financial-advisor-estate-planning">a financial advisor fits into estate planning</Link>{" "}
             for Massachusetts families.
