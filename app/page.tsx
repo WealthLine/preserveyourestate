@@ -500,6 +500,30 @@ export default function Home() {
                 <span className="text-link">Read the Massachusetts Estate Planning Guide →</span>
               </span>
             </Link>
+            <Link className="guide-card" href="/guides/qtip-trust">
+              <span className="guide-tag">Estate Structure</span>
+              <h3>What Is a QTIP Trust, and How Does It Fit a Massachusetts Estate Plan?</h3>
+              <p>
+                An educational overview of how a QTIP trust may work for married couples, how it may
+                sit alongside an A/B trust, and what to ask your attorney and CPA.
+              </p>
+              <span className="guide-meta">
+                <span>QTIP trust guide</span>
+                <span className="text-link">Read the QTIP Trust Guide →</span>
+              </span>
+            </Link>
+            <Link className="guide-card" href="/guides/massachusetts-estate-tax-planning">
+              <span className="guide-tag">Massachusetts Estate Tax</span>
+              <h3>What Does the Massachusetts Estate Tax Exemption Mean for Your Planning?</h3>
+              <p>
+                The $2M filing threshold, spousal portability, and the questions that may be worth
+                reviewing with your attorney and CPA.
+              </p>
+              <span className="guide-meta">
+                <span>Estate tax planning guide</span>
+                <span className="text-link">Read the Estate Tax Planning Guide →</span>
+              </span>
+            </Link>
           </div>
           <p className="fine" style={{ marginTop: "1.6rem" }}>
             Comparing advisors? Read{" "}
@@ -509,6 +533,10 @@ export default function Home() {
             . Unfamiliar with the trust labels? Read{" "}
             <Link href="/guides/types-of-trusts">
               the main types of trusts Massachusetts families review
+            </Link>
+            . Wondering how a trust gets funded? Read{" "}
+            <Link href="/guides/funding-a-trust">
+              how funding a Massachusetts trust may be coordinated between your attorney, CPA, and advisor
             </Link>
             . Thinking about gifts? Read{" "}
             <Link href="/guides/lifetime-gift-tax-exemption">

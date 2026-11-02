@@ -3,6 +3,7 @@
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
 import { siteManifest } from "@/lib/site-manifest";
+import { trackEvent } from "@/lib/analytics";
 import { analyticsAllowed, CONSENT_COOKIE, CONSENT_MAX_AGE, MODE_COOKIE, OPEN_PREFERENCES_EVENT, parseConsent, type ConsentValue, type PrivacyMode } from "@/lib/consent";
 import styles from "./VisitorTracking.module.css";
 
@@ -48,6 +49,28 @@ export default function VisitorTracking() {
       .then(data => applyMode(data.mode === "opt-out" ? "opt-out" : "opt-in"))
       .catch(() => applyMode("opt-in"));
     return () => { cancelled = true; };
+  }, []);
+
+  // Click measurement for booking/guide calls to action and homepage guide cards.
+  // Events are sent only when analytics is allowed (see trackEvent).
+  useEffect(() => {
+    function onClick(event: MouseEvent) {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const link = target.closest("a");
+      if (!link) return;
+      const href = link.getAttribute("href") || "";
+      const text = (link.textContent || "").replace(/\s+/g, " ").replace(/[→]/g, "").trim().slice(0, 80);
+      const page = window.location.pathname;
+      const hash = href.includes("#") ? href.slice(href.indexOf("#")) : "";
+      if (hash === "#booking" || hash === "#booking-guide") {
+        trackEvent("cta_click", { cta_target: hash === "#booking" ? "coordination_conversation" : "free_guide", cta_text: text, page_path: page });
+      } else if (link.classList.contains("guide-card")) {
+        trackEvent("guide_card_click", { guide_href: href, page_path: page });
+      }
+    }
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
   }, []);
 
   useEffect(() => {

@@ -2,6 +2,7 @@
 
 import { startTransition, useActionState, useEffect, useState } from "react";
 import { submitLead, type LeadState } from "@/app/actions/lead";
+import { trackEvent } from "@/lib/analytics";
 
 const ASSET_OPTIONS = ["Under $1M", "$1M–$2M", "$2M–$3M", "$3M–$5M", "$5M–$10M", "Over $10M"];
 const TIMELINE_OPTIONS = [
@@ -63,6 +64,17 @@ export function BookingForm() {
     window.addEventListener("hashchange", syncFromHash);
     return () => window.removeEventListener("hashchange", syncFromHash);
   }, []);
+
+  // Reports a successful submission to Google Analytics (no personal data is sent).
+  useEffect(() => {
+    if (state.status === "success") {
+      trackEvent("generate_lead", {
+        lead_intent: state.intent === "guide" ? "free_guide" : "coordination_conversation",
+        form_id: "booking-guide",
+        page_path: window.location.pathname,
+      });
+    }
+  }, [state]);
 
   const isReview = intent === "review";
 

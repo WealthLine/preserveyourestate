@@ -12,9 +12,9 @@ const maForms = "https://www.mass.gov/info-details/dor-estate-tax-forms-and-inst
 const irsExclusion = "https://www.irs.gov/businesses/small-businesses-self-employed/whats-new-estate-and-gift-tax";
 const irsBasis = "https://www.irs.gov/pub/irs-drop/rr-23-02.pdf";
 
-const seoTitle = "A/B Trust in Massachusetts: Using Both $2M Exemptions";
+const seoTitle = "A/B Trust Massachusetts: How Couples May Use Both $2M Exemptions";
 const seoDescription =
-  "How may an A/B trust use both $2M Massachusetts exemptions? See how credit shelter and QTIP trusts work and how to coordinate with your attorney and CPA.";
+  "What is an A/B trust in Massachusetts? An overview of how credit shelter and QTIP trusts may use both $2M exemptions, and questions for your attorney and CPA.";
 
 export const metadata: Metadata = {
   title: { absolute: seoTitle },
