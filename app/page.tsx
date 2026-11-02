@@ -516,8 +516,9 @@ export default function Home() {
               <span className="guide-tag">Massachusetts Estate Tax</span>
               <h3>What Does the Massachusetts Estate Tax Exemption Mean for Your Planning?</h3>
               <p>
-                The $2M filing threshold, spousal portability, and the questions that may be worth
-                reviewing with your attorney and CPA.
+                An educational overview of the Massachusetts estate tax filing threshold, how spousal
+                portability is treated, and questions that may be worth reviewing with your attorney
+                and CPA.
               </p>
               <span className="guide-meta">
                 <span>Estate tax planning guide</span>
