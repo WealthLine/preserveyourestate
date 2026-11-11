@@ -190,6 +190,11 @@ export default function HighNetWorthFinancialPlanningPage() {
             <Link href="/guides/massachusetts-estate-tax-planning">
               Massachusetts estate tax planning questions to bring to your attorney and CPA
             </Link>
+            . For a separate educational guide to how the household, estate attorney, CPA and
+            advisor may coordinate, read{" "}
+            <Link href="/guides/estate-planning-for-high-net-worth">
+              what estate planning looks like for a high net worth Massachusetts household
+            </Link>
             .
           </p>
 

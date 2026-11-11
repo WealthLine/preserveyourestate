@@ -255,6 +255,14 @@ export default function MassachusettsEstatePlanningGuide() {
           </p>
 
           <p>
+            If your household has $2,000,000 or more in investable assets, this guide explains{" "}
+            <Link href="/guides/estate-planning-for-high-net-worth">
+              how a high net worth Massachusetts household, estate attorney, CPA and advisor may coordinate estate planning
+            </Link>
+            .
+          </p>
+
+          <p>
             For a question-by-question checklist to prepare before meeting your professionals, read{" "}
             <Link href="/guides/massachusetts-estate-tax-planning">
               what Massachusetts pre-retirees may want to review in estate tax planning

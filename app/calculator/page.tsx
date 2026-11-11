@@ -159,6 +159,8 @@ export default function CalculatorPage() {
             <Link href="/guides/massachusetts-estate-tax-planning">what Massachusetts pre-retirees may want to review before the $2M estate tax threshold</Link>.
             To see who files Form M-706 and what a CPA and attorney may ask you to gather, read{" "}
             <Link href="/guides/massachusetts-estate-tax-return">the guide to the Massachusetts estate tax return</Link>.
+            For how a household, estate attorney, CPA and advisor may coordinate around an estimate, read{" "}
+            <Link href="/guides/estate-planning-for-high-net-worth">what estate planning looks like for a high net worth Massachusetts household</Link>.
             All of these guides are educational only; your attorney and CPA can address your individual situation.
           </p>
         </div>

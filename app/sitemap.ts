@@ -79,6 +79,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/guides/estate-planning-for-high-net-worth`,
+      lastModified: new Date("2026-11-11"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/guides/massachusetts-estate-tax-planning`,
       lastModified: new Date("2026-10-14"),
       changeFrequency: "monthly",

@@ -236,6 +236,8 @@ export default function AbTrustGuide() {
           </ol>
           </div>
 
+          <p>For the wider picture of how a household, estate attorney, CPA, and advisor may coordinate, read <Link href="/guides/estate-planning-for-high-net-worth">what estate planning looks like for a high net worth Massachusetts household</Link>.</p>
+
           <div className="byline-card">
             <Image className="byline-photo" src="/michael-cammarata.jpg" alt="" width={60} height={60} />
             <div><b>Michael Cammarata, CFP®</b><p>Managing Partner and Owner, MSA Financial, LLC. Michael coordinates wealth, estate, tax, and retirement planning for Massachusetts families with their chosen attorneys and CPAs.</p></div>
